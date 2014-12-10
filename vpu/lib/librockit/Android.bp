@@ -1,0 +1,9 @@
+cc_prebuilt_library_shared {
+    name: "librockit",
+    compile_multilib: "32",
+    strip: {
+      none: true,
+    },
+    srcs: ["librockit.so"],
+    check_elf_files: false,
+}

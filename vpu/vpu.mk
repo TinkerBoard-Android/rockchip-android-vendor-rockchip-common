@@ -100,7 +100,7 @@ else
     endif
 endif
 
-ifeq ($(PRODUCT_BUILD_MODULE),car)
+ifneq ($(filter px5%, $(PRODUCT_BUILD_MODULE)), )
 PRODUCT_PACKAGES += \
      libdrivingrecoder
 endif

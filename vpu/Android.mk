@@ -550,7 +550,7 @@ include $(BUILD_PREBUILT)
 
 endif
 
-ifeq ($(strip $(PRODUCT_BUILD_MODULE)),car)
+ifneq ($(filter px5%, $(PRODUCT_BUILD_MODULE)), )
 include $(CLEAR_VARS)
 LOCAL_MODULE := libdrivingrecoder
 LOCAL_MODULE_TAGS := optional

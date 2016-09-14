@@ -57,6 +57,12 @@ PRODUCT_COPY_FILES += \
 	vendor/rockchip/common/vpu/lib/arm/rk3366/libjpeghwenc.so:system/lib/libjpeghwenc.so
 endif
 
+ifeq ($(strip $(TARGET_BOARD_PLATFORM)), rk3288)
+PRODUCT_COPY_FILES += \
+	vendor/rockchip/common/vpu/lib/arm/rk3288/libjpeghwenc.so:system/lib/libjpeghwenc.so
+endif
+
+
 
 
 ifneq ($(filter rk%, $(TARGET_BOARD_PLATFORM)), )

@@ -49,7 +49,9 @@ endif
 ifeq ($(strip $(TARGET_BOARD_PLATFORM)), rk3399)
 PRODUCT_COPY_FILES += \
 	vendor/rockchip/common/vpu/lib/arm/rk3399/libjpeghwenc.so:system/lib/libjpeghwenc.so \
-	vendor/rockchip/common/vpu/lib/arm/rk3399/libjpeghwdec.so:system/lib/libjpeghwdec.so
+	vendor/rockchip/common/vpu/lib/arm/rk3399/libjpeghwdec.so:system/lib/libjpeghwdec.so \
+	vendor/rockchip/common/vpu/lib/arm64/rk3399/libjpeghwenc.so:system/lib64/libjpeghwenc.so \
+	vendor/rockchip/common/vpu/lib/arm64/rk3399/libjpeghwdec.so:system/lib64/libjpeghwdec.so
 endif
 
 ifeq ($(strip $(TARGET_BOARD_PLATFORM)), rk3366)

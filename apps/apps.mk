@@ -37,8 +37,13 @@ ifeq ($(strip $(TARGET_BOARD_PLATFORM_PRODUCT)), box)
 PRODUCT_PACKAGES += \
     RkBoxVideoPlayer
 else
+ifeq ($(strip $(PRODUCT_BUILD_MODULE)), px5car)
+PRODUCT_PACKAGES += \
+	Rk3grVideoPlayer
+else
 PRODUCT_PACKAGES += \
     Rk4kVideoPlayer
+endif
 endif
 endif
 endif
@@ -47,8 +52,13 @@ ifeq ($(strip $(TARGET_BOARD_PLATFORM)), sofia3gr)
 PRODUCT_PACKAGES += \
     Rk3grExplorer
 else
+ifeq ($(strip $(PRODUCT_BUILD_MODULE)), px5car)
+PRODUCT_PACKAGES += \
+    Rk3grExplorer
+else
 PRODUCT_PACKAGES += \
     RkExplorer
+endif
 endif
 endif
 

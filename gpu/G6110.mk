@@ -4,6 +4,10 @@ PRODUCT_COPY_FILES += \
     vendor/rockchip/common/gpu/libG6110/G6110_64/lib/egl/egl.cfg:system/lib/egl/egl.cfg \
     vendor/rockchip/common/gpu/libG6110/G6110_64/lib/modules/pvrsrvkm.ko:system/lib/modules/pvrsrvkm.ko
 
+# vendor/firmware
+PRODUCT_COPY_FILES += \
+   vendor/rockchip/common/gpu/libG6110/G6110_64/vendor/firmware/rgx.fw.signed:system/vendor/firmware/rgx.fw.signed
+
 # vendor/bin
 PRODUCT_COPY_FILES += \
     vendor/rockchip/common/gpu/libG6110/G6110_64/vendor/bin/pvrsrvctl:system/vendor/bin/pvrsrvctl \
@@ -43,7 +47,8 @@ PRODUCT_COPY_FILES += \
     vendor/rockchip/common/gpu/libG6110/G6110_64/vendor/lib64/libusc.so:system/vendor/lib64/libusc.so \
     vendor/rockchip/common/gpu/libG6110/G6110_64/vendor/lib64/libPVROCL.so:system/vendor/lib64/libPVROCL.so \
     vendor/rockchip/common/gpu/libG6110/G6110_64/vendor/lib64/liboclcompiler.so:system/vendor/lib64/liboclcompiler.so \
-    vendor/rockchip/common/gpu/libG6110/G6110_64/vendor/lib64/libufwriter.so:system/vendor/lib64/libufwriter.so
+    vendor/rockchip/common/gpu/libG6110/G6110_64/vendor/lib64/libufwriter.so:system/vendor/lib64/libufwriter.so \
+    vendor/rockchip/common/gpu/libG6110/G6110_64/vendor/lib64/libsutu_display.so:system/vendor/lib64/libsutu_display.so
 else
 PRODUCT_COPY_FILES += \
     vendor/rockchip/common/gpu/libG6110/G6110_32/lib/egl/egl.cfg:system/lib/egl/egl.cfg \

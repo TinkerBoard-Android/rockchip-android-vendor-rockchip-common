@@ -19,6 +19,7 @@ PRODUCT_COPY_FILES += \
     vendor/rockchip/common/gpu/libG6110/G6110_64/vendor/lib/egl/libGLESv1_CM_POWERVR_ROGUE.so:system/vendor/lib/egl/libGLESv1_CM_POWERVR_ROGUE.so \
     vendor/rockchip/common/gpu/libG6110/G6110_64/vendor/lib/egl/libGLESv2_POWERVR_ROGUE.so:system/vendor/lib/egl/libGLESv2_POWERVR_ROGUE.so \
     vendor/rockchip/common/gpu/libG6110/G6110_64/vendor/lib/hw/gralloc.rk3368.so:system/vendor/lib/hw/gralloc.rk3368.so \
+    vendor/rockchip/common/gpu/libG6110/G6110_64/vendor/lib/hw/vulkan.rk3368.so:system/vendor/lib/hw/vulkan.rk3368.so \
     vendor/rockchip/common/gpu/libG6110/G6110_64/vendor/lib/hw/memtrack.rk3368.so:system/vendor/lib/hw/memtrack.rk3368.so \
     vendor/rockchip/common/gpu/libG6110/G6110_64/vendor/lib/libcreatesurface.so:system/vendor/lib/libcreatesurface.so \
     vendor/rockchip/common/gpu/libG6110/G6110_64/vendor/lib/libglslcompiler.so:system/vendor/lib/libglslcompiler.so \
@@ -37,6 +38,7 @@ PRODUCT_COPY_FILES += \
     vendor/rockchip/common/gpu/libG6110/G6110_64/vendor/lib64/egl/libGLESv1_CM_POWERVR_ROGUE.so:system/vendor/lib64/egl/libGLESv1_CM_POWERVR_ROGUE.so \
     vendor/rockchip/common/gpu/libG6110/G6110_64/vendor/lib64/egl/libGLESv2_POWERVR_ROGUE.so:system/vendor/lib64/egl/libGLESv2_POWERVR_ROGUE.so \
     vendor/rockchip/common/gpu/libG6110/G6110_64/vendor/lib64/hw/gralloc.rk3368.so:system/vendor/lib64/hw/gralloc.rk3368.so \
+    vendor/rockchip/common/gpu/libG6110/G6110_64/vendor/lib64/hw/vulkan.rk3368.so:system/vendor/lib64/hw/vulkan.rk3368.so \
     vendor/rockchip/common/gpu/libG6110/G6110_64/vendor/lib64/libcreatesurface.so:system/vendor/lib64/libcreatesurface.so \
     vendor/rockchip/common/gpu/libG6110/G6110_64/vendor/lib64/libglslcompiler.so:system/vendor/lib64/libglslcompiler.so \
     vendor/rockchip/common/gpu/libG6110/G6110_64/vendor/lib64/libIMGegl.so:system/vendor/lib64/libIMGegl.so \

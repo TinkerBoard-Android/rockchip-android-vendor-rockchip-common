@@ -273,7 +273,7 @@ int process_log_event(char *rootdir, char *triggername, int mode) {
 int process_aplog_event(struct watch_entry *entry, struct inotify_event *event) {
 
     return process_log_event(entry->eventpath, event->name,
-            ((event->name && strncmp(event->name,"bz",2) == 0 ) ? MODE_BZ : MODE_APLOGS ));/*event->name necessary not null*/
+            (((event->size != 0) && strncmp(event->name,"bz",2) == 0 ) ? MODE_BZ : MODE_APLOGS ));/*event->name necessary not null*/
 }
 
 int process_stat_event(struct watch_entry *entry, struct inotify_event *event) {

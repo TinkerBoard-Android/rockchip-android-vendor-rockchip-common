@@ -89,7 +89,7 @@ static int extract_trap_info(const char *filename) {
         return 0;
     }
     while ( freadline(fd, line) > 0 ) {
-        fprintf(fp,"%s", line);
+        fprintf(fp, line);
         if (strstr(line, SUCCESS_FLAG)) {
             trap_detected = 1;
         }

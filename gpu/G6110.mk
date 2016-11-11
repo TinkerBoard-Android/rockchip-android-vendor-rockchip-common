@@ -30,7 +30,9 @@ PRODUCT_COPY_FILES += \
     vendor/rockchip/common/gpu/libG6110/G6110_64/vendor/lib/libusc.so:system/vendor/lib/libusc.so \
     vendor/rockchip/common/gpu/libG6110/G6110_64/vendor/lib/libPVROCL.so:system/vendor/lib/libPVROCL.so \
     vendor/rockchip/common/gpu/libG6110/G6110_64/vendor/lib/liboclcompiler.so:system/vendor/lib/liboclcompiler.so \
-    vendor/rockchip/common/gpu/libG6110/G6110_64/vendor/lib/libufwriter.so:system/vendor/lib/libufwriter.so
+    vendor/rockchip/common/gpu/libG6110/G6110_64/vendor/lib/libufwriter.so:system/vendor/lib/libufwriter.so \
+    vendor/rockchip/common/gpu/libG6110/G6110_64/vendor/lib/libLLVMIMG.so:system/vendor/lib/libLLVMIMG.so \
+    vendor/rockchip/common/gpu/libG6110/G6110_64/vendor/lib/libclangIMG.so:system/vendor/lib/libclangIMG.so
 
 # vendor/lib64
 PRODUCT_COPY_FILES += \
@@ -50,7 +52,10 @@ PRODUCT_COPY_FILES += \
     vendor/rockchip/common/gpu/libG6110/G6110_64/vendor/lib64/libPVROCL.so:system/vendor/lib64/libPVROCL.so \
     vendor/rockchip/common/gpu/libG6110/G6110_64/vendor/lib64/liboclcompiler.so:system/vendor/lib64/liboclcompiler.so \
     vendor/rockchip/common/gpu/libG6110/G6110_64/vendor/lib64/libufwriter.so:system/vendor/lib64/libufwriter.so \
-    vendor/rockchip/common/gpu/libG6110/G6110_64/vendor/lib64/libsutu_display.so:system/vendor/lib64/libsutu_display.so
+    vendor/rockchip/common/gpu/libG6110/G6110_64/vendor/lib64/libsutu_display.so:system/vendor/lib64/libsutu_display.so \
+    vendor/rockchip/common/gpu/libG6110/G6110_64/vendor/lib64/libLLVMIMG.so:system/vendor/lib64/libLLVMIMG.so \
+    vendor/rockchip/common/gpu/libG6110/G6110_64/vendor/lib64/libclangIMG.so:system/vendor/lib64/libclangIMG.so
+
 else
 PRODUCT_COPY_FILES += \
     vendor/rockchip/common/gpu/libG6110/G6110_32/lib/egl/egl.cfg:system/lib/egl/egl.cfg \

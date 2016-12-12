@@ -37,7 +37,7 @@ PRODUCT_PACKAGES += \
     libjpeghwenc
 endif
 
-ifeq ($(strip $(TARGET_BOARD_PLATFORM)), rk322x)
+ifneq ($(filter rk3228 rk3229 rk322x rk3328, $(strip $(TARGET_BOARD_PLATFORM))), )
 PRODUCT_COPY_FILES += \
 	vendor/rockchip/common/vpu/lib/arm/rk322x/libmpp.so:system/lib/libmpp.so \
 	vendor/rockchip/common/vpu/lib/arm/rk322x/libvpu.so:system/lib/libvpu.so \
@@ -74,7 +74,7 @@ PRODUCT_PACKAGES += \
     iso
 endif
 
-ifneq ($(filter rk3228 rk3288 rk3366 rk3399, $(strip $(TARGET_BOARD_PLATFORM))), )
+ifneq ($(filter rk3228 rk3288 rk3328 rk3366 rk3399, $(strip $(TARGET_BOARD_PLATFORM))), )
 PRODUCT_PACKAGES += \
     libmpp \
     libvpu

@@ -111,3 +111,5 @@ endif
 ifeq ($(PRODUCT_HAVE_PLUGINSVC),true)
 $(call inherit-product-if-exists, vendor/rockchip/common/pluginsvc/pluginsvc.mk)
 endif
+
+$(call inherit-product-if-exists, vendor/rockchip/common/pppoe/pppoe.mk)

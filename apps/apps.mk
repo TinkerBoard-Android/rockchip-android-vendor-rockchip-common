@@ -99,7 +99,9 @@ PRODUCT_PACKAGES += \
     eHomeMediaCenter_box	\
     ITVLauncher	\
     RkMusic	\
-    Settings2
+    Settings2 \
+    MediaCenter
+
   ifeq ($(strip $(BOARD_USE_LOW_MEM256)), true)
         PRODUCT_PACKAGES += \
               SimpleLauncher

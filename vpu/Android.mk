@@ -208,23 +208,6 @@ endif
 include $(BUILD_PREBUILT)
 endif
 
-ifneq ($(filter rk3228 rk3229 rk322x rk3328 rk3399, $(strip $(TARGET_BOARD_PLATFORM))), )
-include $(CLEAR_VARS)
-LOCAL_MODULE := libffmpeg_vp9dec
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-LOCAL_MODULE_STEM := $(LOCAL_MODULE)
-LOCAL_MODULE_SUFFIX := .so
-ifneq ($(strip $(TARGET_2ND_ARCH)), )
-LOCAL_MULTILIB := both
-LOCAL_SRC_FILES_$(TARGET_ARCH) := lib/$(TARGET_ARCH)/$(LOCAL_MODULE)$(LOCAL_MODULE_SUFFIX)
-LOCAL_SRC_FILES_$(TARGET_2ND_ARCH) := lib/$(TARGET_2ND_ARCH)/$(LOCAL_MODULE)$(LOCAL_MODULE_SUFFIX)
-else
-LOCAL_SRC_FILES := lib/$(TARGET_ARCH)/$(LOCAL_MODULE)$(LOCAL_MODULE_SUFFIX)
-endif
-include $(BUILD_PREBUILT)
-endif
-
 #ape and rkaudio dec will be dropped on sofia platform
 ifneq ($(filter rk%, $(TARGET_BOARD_PLATFORM)), )
 

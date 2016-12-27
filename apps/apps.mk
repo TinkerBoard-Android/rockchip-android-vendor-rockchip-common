@@ -100,7 +100,8 @@ PRODUCT_PACKAGES += \
     ITVLauncher	\
     RkMusic	\
     Settings2 \
-    MediaCenter
+    MediaCenter \
+    PinyinIME
 
   ifeq ($(strip $(BOARD_USE_LOW_MEM256)), true)
         PRODUCT_PACKAGES += \

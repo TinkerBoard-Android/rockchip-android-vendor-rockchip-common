@@ -18,7 +18,7 @@ ifneq ($(strip $(TARGET_BOARD_PLATFORM_PRODUCT)), vr)
 PRODUCT_PACKAGES += \
     RkApkinstaller  \
     userExperienceService
-ifneq ($(strip $(TARGET_BOARD_PLATFORM)), sofia3gr)
+ifneq ($(strip $(TARGET_BOARD_PLATFORM_PRODUCT)), box)
 PRODUCT_PACKAGES += \
     MediaFloat      \
 endif
@@ -48,10 +48,6 @@ endif
 endif
 endif
 
-ifeq ($(strip $(TARGET_BOARD_PLATFORM)), sofia3gr)
-PRODUCT_PACKAGES += \
-    Rk3grExplorer
-else
 ifeq ($(strip $(PRODUCT_BUILD_MODULE)), px5car)
 PRODUCT_PACKAGES += \
     Rk3grExplorer
@@ -60,25 +56,12 @@ PRODUCT_PACKAGES += \
     RkExplorer
 endif
 endif
-endif
-
 
 
 ifeq ($(strip $(BOARD_HAS_STRESSTEST_APP)), true)
     PRODUCT_PACKAGES += \
     StressTest \
     DeviceTest
-endif
-
-
-ifeq ($(strip $(TARGET_BOARD_PLATFORM)), sofia3gr)
-PRODUCT_PACKAGES += \
-    ituxd\
-    com.rockchip.alarmhelper \
-    RFTest
-
-#PRODUCT_COPY_FILES += \
-#        $(LOCAL_PATH)/ituxd/lib/x86/libthermalJNI.so:system/lib/libthermalJNI.so
 endif
 
 ##################for vr app#####################
@@ -101,7 +84,7 @@ PRODUCT_PACKAGES += \
     RkMusic	\
     Settings2 \
     MediaCenter \
-    PinyinIME
+    PinyinIME 
 
   ifeq ($(strip $(BOARD_USE_LOW_MEM256)), true)
         PRODUCT_PACKAGES += \

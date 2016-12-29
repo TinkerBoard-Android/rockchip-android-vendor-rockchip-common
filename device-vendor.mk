@@ -113,3 +113,5 @@ $(call inherit-product-if-exists, vendor/rockchip/common/pluginsvc/pluginsvc.mk)
 endif
 
 $(call inherit-product-if-exists, vendor/rockchip/common/pppoe/pppoe.mk)
+
+$(call inherit-product-if-exists, vendor/rockchip/common/gpu/gpu_performance/face_detection.mk)

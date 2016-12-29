@@ -1,4 +1,4 @@
 PRODUCT_PACKAGES += \
-    librockcv \
+    librockcv_java \
     libcam_facedetection
 

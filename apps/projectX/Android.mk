@@ -17,7 +17,6 @@ LOCAL_PREBUILT_JNI_LIBS := lib/libasm.so \
                            lib/libdcnn.so \
                            lib/libdistance.so \
                            lib/libface_detection_native.so \
-                           lib/libFFTEm.so \
                            lib/libgifmerge.so \
                            lib/libopencv_java.so \
                            lib/libscreenshot.so

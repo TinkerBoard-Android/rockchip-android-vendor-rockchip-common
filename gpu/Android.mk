@@ -16,3 +16,4 @@ LOCAL_MODULE_PATH_64 := $(TARGET_OUT_VENDOR)/lib64/egl
 include $(BUILD_PREBUILT)
 endif
 
+include $(LOCAL_PATH)/gpu_performance/Android.mk

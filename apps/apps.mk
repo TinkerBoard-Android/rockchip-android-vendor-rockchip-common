@@ -84,7 +84,8 @@ PRODUCT_PACKAGES += \
     RkMusic	\
     Settings2 \
     MediaCenter \
-    PinyinIME 
+    PinyinIME \
+    RkBoxVideoPlayer
 
   ifeq ($(strip $(BOARD_USE_LOW_MEM256)), true)
         PRODUCT_PACKAGES += \

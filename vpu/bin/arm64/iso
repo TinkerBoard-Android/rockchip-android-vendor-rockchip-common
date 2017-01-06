@@ -1,18 +1,18 @@
-#!/system/bin/busybox1.11 sh
+#!/system/bin/sh
 
 SETPROP=/system/bin/setprop
 GETPROP=/system/bin/getprop
+BUSYBOX=/system/bin/busybox
+CFGPATH="/data/media/0/iso.cfg"
 ECHO="/system/bin/log -t ISOSH"
 
-$ECHO "Method: $1"
-$ECHO "Param1: $2"
 
 #define defalut loop device
 loopdevice="/dev/block/loop7"
 
 #check /mnt/iso
 checkdevicebusy() {
-	local number=`lsof|grep  /mnt/iso | busybox wc -l`
+	local number=`lsof|grep  /mnt/iso | $BUSYBOX wc -l`
 	$ECHO "checkdevicebusy(): $number"
 	return $number
 }
@@ -24,7 +24,7 @@ getfreeloop() {
 	while [ $loop -le 7 ]
 	do
 		local device="/dev/block/loop$loop"
-		local status=`busybox1.11 losetup $device`
+		local status=`$BUSYBOX losetup $device`
 		$ECHO "getfreeloop $device : $status"
 		if [ "$status" = "" ] ; then
 			$ECHO "getfreeloop origin:$loopdevice<---target:$device"
@@ -37,7 +37,7 @@ getfreeloop() {
 
 releaseLoop() {
 	local devicename=`$GETPROP "sys.video.loop" ""`
-	local status=`busybox1.11 losetup $devicename`
+	local status=`$BUSYBOX losetup $devicename`
 	if [ "$status" != "" ] ; then
 		$ECHO "releaseLoop $devicename"
 		Unmount $devicename
@@ -45,7 +45,7 @@ releaseLoop() {
 }
 
 getFreeLoopDevice() {
-	local devicename=`busybox1.11 losetup -f`
+	local devicename=`$BUSYBOX losetup -f`
 	$ECHO "getFreeLoopDevice: $devicename"
 	local loop=0
 	while [ $loop -le 7 ]
@@ -62,53 +62,73 @@ getFreeLoopDevice() {
 
 Mount() {
 	$ECHO "Mount"
-	$ECHO "Mount(): $1 "
-	$ECHO "Mount(): $2"
-	while read LINE;
-	do
-		$ECHO "Path: $LINE"
-		busybox1.11 losetup $1 "$LINE"
-		if [ "$?" != 0 ] ; then
-			$ECHO "busybox1.11 losetup $1 "$LINE" $?"
-			return
-		fi
-		busybox1.11 mount -t udf $1 /mnt/iso >> /data/iso.txt
-		if [ "$?" != 0 ] ; then
-			$ECHO "busybox1.11 mount -t udf $1 /mnt/iso $?"
-			return
-		fi
-	done < $2
+	$ECHO "Mount(): loop:$1"
+	$ECHO "Mount(): path:$2"
+	
+	$BUSYBOX losetup $1 "$2"
+	if [ "$?" != 0 ] ; then
+		$ECHO "$BUSYBOX losetup $1 $2 $?"
+		return
+	fi
+	$BUSYBOX mount -t udf $1 /mnt/iso
+	if [ "$?" != 0 ] ; then
+		$ECHO "$BUSYBOX mount -t udf $1 /mnt/iso $?"
+		return
+	fi
+
 	$SETPROP "sys.video.loop" "$loopdevice"
 	exit 0
 }
 
 Unmount() {
 	$ECHO "Unmount: $1"
-	busybox1.11 losetup -d $1
+	$BUSYBOX losetup -d $1
 	if [ "$?" != 0 ] ; then
-		$ECHO "busybox1.11 losetup -d $1, result $?"
+		$ECHO "$BUSYBOX losetup -d $1, result $?"
 		return
 	fi
 	usleep 100
-	busybox1.11 umount -l /mnt/iso
+	$BUSYBOX umount -l /mnt/iso
 	if [ "$?" != 0 ] ; then
-		$ECHO "busybox1.11 umount -l /mnt/iso, result $?"
+		$ECHO "$BUSYBOX umount -l /mnt/iso, result $?"
 		return
 	fi
 }
 
-if [ $1 == "mount" ]; then
+ReadCfg() {
+	$ECHO "ReadCfg"
+	$ECHO "ReadCfg CFG PATH: $CFGPATH"
+	while read LINE;
+	do
+		$ECHO "LINE: $LINE"
+		local prefix=`echo $LINE|cut -d ':' -f 1`
+		local tmp=`echo $LINE|cut -d ':' -f 2`
+		$ECHO "prefix: $prefix"
+		$ECHO "tmp: $tmp"
+		if [ $prefix == "method" ]; then
+			METHOD=$tmp
+			$ECHO "METHOD: $tmp"
+		elif [ $prefix == "path" ]; then
+			PATH=$tmp
+			$ECHO "PATH: $PATH"
+		fi	
+	done < $CFGPATH
+}
+
+ReadCfg
+$ECHO "METHOD111 : $METHOD"
+if [ $METHOD == "mount" ]; then
 	checkdevicebusy
 	releaseLoop
 	getfreeloop
-	Mount $loopdevice $2
-	rm -rf $2
-elif [ $1 == "unmount" ]; then
+	$ECHO "PATH111 : $PATH"
+	Mount $loopdevice $PATH
+elif [ $METHOD == "unmount" ]; then
 	$ECHO "unmount"
 	local devicename=`$GETPROP "sys.video.loop" ""`
 	$ECHO "unmount:$devicename***********"
 	Unmount $devicename
 	$SETPROP "sys.video.loop" ""
-elif [ $1 == "reset" ]; then
-	busybox1.11 pkill mediaserver
+elif [ $METHOD == "reset" ]; then
+	$BUSYBOX pkill mediaserver
 fi

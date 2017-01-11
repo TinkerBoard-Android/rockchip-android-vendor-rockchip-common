@@ -80,6 +80,11 @@ PRODUCT_PACKAGES += \
     libvpu
 endif
 
+ifneq ($(filter rk3328, $(TARGET_BOARD_PLATFORM)), )
+    PRODUCT_COPY_FILES += \
+        vendor/rockchip/common/vpu/firmware/monet.bin:system/etc/firmware/monet.bin
+endif
+
 PRODUCT_COPY_FILES += \
     vendor/rockchip/common/vpu/etc/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
     vendor/rockchip/common/vpu/etc/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml \

@@ -175,6 +175,13 @@ Only the three quirks included above are recognized at this point:
             <Feature name="bitrate-modes" value="VBR,CBR" />
 	    <Limit name="concurrent-instances" max="4" />
         </MediaCodec>
+        <MediaCodec name="OMX.rk.video_encoder.hevc" type="video/hevc" >
+            <Limit name="size" min="176x144" max="1920x1088" />
+            <Limit name="alignment" value="16x8" />
+            <Limit name="bitrate" range="1-40000000" />
+            <Feature name="bitrate-modes" value="VBR,CBR" />
+	          <Limit name="concurrent-instances" max="4" />
+        </MediaCodec>
     </Encoders>
     <Include href="media_codecs_rk_vpu.xml" />
     <Include href="media_codecs_google_video.xml" />

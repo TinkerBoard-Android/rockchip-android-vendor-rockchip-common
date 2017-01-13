@@ -85,7 +85,8 @@ PRODUCT_PACKAGES += \
     Settings2 \
     MediaCenter \
     PinyinIME \
-    RkBoxVideoPlayer
+    RkBoxVideoPlayer \
+    rkmcapp-armeabi-v7a-debug
 
   ifeq ($(strip $(BOARD_USE_LOW_MEM256)), true)
         PRODUCT_PACKAGES += \

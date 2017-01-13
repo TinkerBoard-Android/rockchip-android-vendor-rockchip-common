@@ -122,7 +122,7 @@ if [ $METHOD == "mount" ]; then
 	releaseLoop
 	getfreeloop
 	$ECHO "PATH111 : $PATH"
-	Mount $loopdevice $PATH
+	Mount $loopdevice "$PATH"
 elif [ $METHOD == "unmount" ]; then
 	$ECHO "unmount"
 	local devicename=`$GETPROP "sys.video.loop" ""`

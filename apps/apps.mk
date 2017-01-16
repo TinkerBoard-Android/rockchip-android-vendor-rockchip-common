@@ -16,11 +16,11 @@ endif
 
 ifneq ($(strip $(TARGET_BOARD_PLATFORM_PRODUCT)), vr)
 PRODUCT_PACKAGES += \
-    RkApkinstaller  \
     userExperienceService
 ifneq ($(strip $(TARGET_BOARD_PLATFORM_PRODUCT)), box)
 PRODUCT_PACKAGES += \
     MediaFloat      \
+    RkApkinstaller
 endif
 
 ifeq ($(strip $(TARGET_BOARD_PLATFORM)), rk3288)
@@ -54,7 +54,6 @@ PRODUCT_PACKAGES += \
 else
 PRODUCT_PACKAGES += \
     RkExplorer
-endif
 endif
 
 

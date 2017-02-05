@@ -84,7 +84,8 @@ PRODUCT_PACKAGES += \
     PinyinIME \
     RkBoxVideoPlayer \
     rkmcapp-armeabi-v7a-debug \
-    ChangeLedStatus
+    ChangeLedStatus \
+    WifiDisplay
   ifeq ($(strip $(BOARD_USE_LOW_MEM256)), true)
         PRODUCT_PACKAGES += \
               SimpleLauncher

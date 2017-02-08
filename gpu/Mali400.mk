@@ -8,6 +8,10 @@ ifeq ($(strip $(TARGET_BOARD_PLATFORM)), rk322x)
 PRODUCT_COPY_FILES += \
     vendor/rockchip/common/gpu/Mali400/lib/$(TARGET_ARCH)/rk322x/libGLES_mali.so:system/lib/egl/libGLES_mali.so \
     vendor/rockchip/common/gpu/Mali400/lib/$(TARGET_ARCH)/rk322x/libGLES_mali.so:obj/lib/libGLES_mali.so
+else ifeq ($(strip $(TARGET_BOARD_PLATFORM)), rk3188)
+PRODUCT_COPY_FILES += \
+    vendor/rockchip/common/gpu/Mali400/lib/$(TARGET_ARCH)/rk3188/libGLES_mali.so:system/lib/egl/libGLES_mali.so \
+    vendor/rockchip/common/gpu/Mali400/lib/$(TARGET_ARCH)/rk3188/libGLES_mali.so:obj/lib/libGLES_mali.so
 else
 PRODUCT_COPY_FILES += \
     vendor/rockchip/common/gpu/Mali400/lib/$(TARGET_ARCH)/libGLES_mali.so:system/lib/egl/libGLES_mali.so \

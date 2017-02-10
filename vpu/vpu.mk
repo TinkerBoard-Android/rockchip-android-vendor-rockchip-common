@@ -71,6 +71,7 @@ ifneq ($(filter rk%, $(TARGET_BOARD_PLATFORM)), )
 PRODUCT_PACKAGES += \
     librkffplayer \
     libffmpeg \
+    libcsiconv \
     iso
 endif
 

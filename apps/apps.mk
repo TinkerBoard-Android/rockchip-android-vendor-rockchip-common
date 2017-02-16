@@ -82,7 +82,6 @@ PRODUCT_PACKAGES += \
     Settings2 \
     MediaCenter \
     PinyinIME \
-    RkBoxVideoPlayer \
     rkmcapp-armeabi-v7a-debug \
     ChangeLedStatus \
     WifiDisplay

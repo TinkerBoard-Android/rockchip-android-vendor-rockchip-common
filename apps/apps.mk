@@ -42,7 +42,6 @@ PRODUCT_PACKAGES += \
 endif
 endif
 endif
-endif
 
 ifeq ($(strip $(PRODUCT_BUILD_MODULE)), px5car)
 PRODUCT_PACKAGES += \

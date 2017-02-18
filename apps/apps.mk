@@ -33,10 +33,6 @@ ifeq ($(strip $(TARGET_BOARD_PLATFORM)), rk312x)
 PRODUCT_PACKAGES += \
     RkVideoPlayer
 else
-ifeq ($(strip $(TARGET_BOARD_PLATFORM_PRODUCT)), box)
-PRODUCT_PACKAGES += \
-    RkBoxVideoPlayer
-else
 ifeq ($(strip $(PRODUCT_BUILD_MODULE)), px5car)
 PRODUCT_PACKAGES += \
 	Rk3grVideoPlayer

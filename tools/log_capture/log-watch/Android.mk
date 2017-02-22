@@ -44,6 +44,10 @@ LOCAL_CPPFLAGS := \
     -Werror \
     -DANDROID_TARGET
 
+ifeq ($(strip $(TARGET_BOARD_PLATFORM)),rk3188)
+LOCAL_CFLAGS += -DKLOG
+endif
+
 LOCAL_SHARED_LIBRARIES := liblct liblog
 LOCAL_STATIC_LIBRARIES := libintelconfig
 LOCAL_PROPRIETARY_MODULE := true

@@ -27,7 +27,11 @@
 #include "LogItem.h"
 #include "LwLog.h"
 
+#ifdef KLOG
+#define FPATH "/proc/kmsg"
+#else
 #define FPATH "/dev/kmsg"
+#endif
 
 #define USEC_IN_SEC 1000000L
 #define NSEC_IN_USEC 1000L

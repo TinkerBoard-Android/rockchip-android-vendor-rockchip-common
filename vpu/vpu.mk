@@ -82,8 +82,9 @@ PRODUCT_PACKAGES += \
 endif
 
 ifneq ($(filter rk3328, $(TARGET_BOARD_PLATFORM)), )
-    PRODUCT_COPY_FILES += \
-        vendor/rockchip/common/vpu/firmware/monet.bin:system/etc/firmware/monet.bin
+PRODUCT_COPY_FILES += \
+    vendor/rockchip/common/vpu/firmware/monet.bin:system/etc/firmware/monet.bin \
+    vendor/rockchip/common/vpu/lib/arm/libihton.so:system/lib/libihton.so
 endif
 
 PRODUCT_COPY_FILES += \

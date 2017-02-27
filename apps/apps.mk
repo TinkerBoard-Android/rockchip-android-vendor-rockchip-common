@@ -76,7 +76,6 @@ ifeq ($(strip $(TARGET_BOARD_PLATFORM_PRODUCT)), box)
 PRODUCT_PACKAGES += \
     AllApp	\
     ITVLauncher	\
-    Settings2 \
     MediaCenter \
     PinyinIME \
     rkmcapp-armeabi-v7a-debug \

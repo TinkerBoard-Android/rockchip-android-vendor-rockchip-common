@@ -80,7 +80,8 @@ PRODUCT_PACKAGES += \
     PinyinIME \
     rkmcapp-armeabi-v7a-debug \
     ChangeLedStatus \
-    WifiDisplay
+    WifiDisplay \
+    RKDeviceTest
   ifeq ($(strip $(BOARD_USE_LOW_MEM256)), true)
         PRODUCT_PACKAGES += \
               SimpleLauncher

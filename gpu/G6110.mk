@@ -6,7 +6,7 @@ PRODUCT_COPY_FILES += \
 
 # vendor/firmware
 PRODUCT_COPY_FILES += \
-   vendor/rockchip/common/gpu/libG6110/G6110_64/vendor/firmware/rgx.fw.signed:system/vendor/firmware/rgx.fw.signed
+   vendor/rockchip/common/gpu/libG6110/G6110_64/vendor/firmware/rgx.fw.signed.5.9.1.46:system/vendor/firmware/rgx.fw.signed.5.9.1.46
 
 # vendor/bin
 PRODUCT_COPY_FILES += \

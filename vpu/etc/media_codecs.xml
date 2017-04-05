@@ -85,6 +85,8 @@ Only the three quirks included above are recognized at this point:
     </Settings>
     <Decoders>
         <MediaCodec name="OMX.rk.video_decoder.avc" type="video/avc">
+            <Quirk name="requires-allocate-on-input-ports" />
+            <Quirk name="requires-allocate-on-output-ports" />
             <Limit name="size" max="4096x2160" min="176x144"/>
             <Limit name="alignment" value="8x8"/>
             <Limit name="block-size" value="16x16"/>
@@ -94,6 +96,8 @@ Only the three quirks included above are recognized at this point:
             <Limit name="concurrent-instances" max="6" />
         </MediaCodec>
         <MediaCodec name="OMX.rk.video_decoder.m2v" type="video/mpeg2">
+            <Quirk name="requires-allocate-on-input-ports" />
+            <Quirk name="requires-allocate-on-output-ports" />
             <Limit name="size" max="1920x1088" min="176x144"/>
             <Limit name="alignment" value="8x8"/>
             <Limit name="block-size" value="16x8"/>
@@ -103,6 +107,8 @@ Only the three quirks included above are recognized at this point:
             <Limit name="concurrent-instances" max="6" />
         </MediaCodec> 
         <MediaCodec name="OMX.rk.video_decoder.vp8" type="video/x-vnd.on2.vp8">
+            <Quirk name="requires-allocate-on-input-ports" />
+            <Quirk name="requires-allocate-on-output-ports" />
             <Limit name="size" max="1920x1088" min="176x144"/>
             <Limit name="alignment" value="8x8"/>
             <Limit name="block-size" value="16x16"/>
@@ -112,6 +118,8 @@ Only the three quirks included above are recognized at this point:
             <Limit name="concurrent-instances" max="6" />
         </MediaCodec>  
         <MediaCodec name="OMX.rk.video_decoder.h263" type="video/3gpp">
+            <Quirk name="requires-allocate-on-input-ports" />
+            <Quirk name="requires-allocate-on-output-ports" />
             <Limit name="size" max="1920x1088" min="176x144"/>
             <Limit name="alignment" value="8x8"/>
             <Limit name="block-size" value="16x16"/>
@@ -121,6 +129,8 @@ Only the three quirks included above are recognized at this point:
             <Limit name="concurrent-instances" max="6" />
         </MediaCodec>
         <MediaCodec name="OMX.rk.video_decoder.m4v" type="video/mp4v-es">
+            <Quirk name="requires-allocate-on-input-ports" />
+            <Quirk name="requires-allocate-on-output-ports" />
             <Limit name="size" max="1920x1088" min="176x144"/>
             <Limit name="alignment" value="8x8"/>
             <Limit name="block-size" value="16x16"/>
@@ -130,6 +140,8 @@ Only the three quirks included above are recognized at this point:
             <Limit name="concurrent-instances" max="6" />
         </MediaCodec>
         <MediaCodec name="OMX.rk.video_decoder.flv1" type="video/flv">
+            <Quirk name="requires-allocate-on-input-ports" />
+            <Quirk name="requires-allocate-on-output-ports" />
             <Limit name="size" max="1920x1088" min="176x144"/>
             <Limit name="alignment" value="8x8"/>
             <Limit name="block-size" value="16x16"/>
@@ -139,6 +151,8 @@ Only the three quirks included above are recognized at this point:
             <Limit name="concurrent-instances" max="6" />
         </MediaCodec>
         <MediaCodec name="OMX.rk.video_decoder.mjpeg" type="video/mjpeg">
+            <Quirk name="requires-allocate-on-input-ports" />
+            <Quirk name="requires-allocate-on-output-ports" />
             <Limit name="size" max="1920x1088" min="176x144"/>
             <Limit name="alignment" value="8x8"/>
             <Limit name="block-size" value="16x16"/>
@@ -148,6 +162,8 @@ Only the three quirks included above are recognized at this point:
             <Limit name="concurrent-instances" max="6" />
         </MediaCodec>
 	<MediaCodec name="OMX.rk.video_decoder.hevc" type="video/hevc">
+            <Quirk name="requires-allocate-on-input-ports" />
+            <Quirk name="requires-allocate-on-output-ports" />
 	    <Limit name="size" max="4096x2160" min="176x144"/>
 	    <Limit name="alignment" value="8x8"/>
 	    <Limit name="block-size" value="16x16"/>
@@ -160,6 +176,8 @@ Only the three quirks included above are recognized at this point:
 
     <Encoders>
         <MediaCodec name="OMX.rk.video_encoder.avc" type="video/avc" >
+            <Quirk name="requires-allocate-on-input-ports" />
+            <Quirk name="requires-allocate-on-output-ports" />
             <Limit name="size" min="176x144" max="1920x1088" />
             <Limit name="alignment" value="16x8" />
             <Limit name="bitrate" range="1-40000000" />

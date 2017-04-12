@@ -31,7 +31,7 @@ LOCAL_PREBUILT_JNI_LIBS := \
 	lib/arm/libKODI_adsp-arm.so \
 	lib/arm/libKODI_audioengine-arm.so \
 	lib/arm/libKODI_guilib-arm.so \
-	lib/arm/libkodi.so \
+	lib/arm/librkmc.so \
 	lib/arm/libnfs.so \
 	lib/arm/libplist.so \
 	lib/arm/libRKCodec-arm.so \

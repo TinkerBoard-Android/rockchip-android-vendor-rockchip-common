@@ -5,7 +5,7 @@
 PRODUCT_COPY_FILES += \
 	vendor/rockchip/common/security/optee/ta/258be795-f9ca-40e6-a8699ce6886c5d5d.ta:system/lib/optee_armtz/258be795-f9ca-40e6-a8699ce6886c5d5d.ta	\
 	vendor/rockchip/common/security/optee/ta/0b82bae5-0cd0-49a5-9521516dba9c43ba.ta:system/lib/optee_armtz/0b82bae5-0cd0-49a5-9521516dba9c43ba.ta	\
-	vendor/rockchip/common/security/optee/tee-supplicant:system/bin/tee-supplicant	\
+	vendor/rockchip/common/security/optee/lib/arm/tee-supplicant:system/bin/tee-supplicant	\
 	vendor/rockchip/common/security/optee/lib/arm/libteec.so:system/lib/libteec.so	\
 	vendor/rockchip/common/security/optee/lib/arm/libkeymaster2.so:system/lib/libkeymaster2.so	\
 	vendor/rockchip/common/security/optee/lib/arm/libRkTeeKeymaster.so:system/lib/libRkTeeKeymaster.so	\
@@ -18,6 +18,7 @@ PRODUCT_COPY_FILES += \
 
 ifeq ($(strip $(TARGET_ARCH)), arm64)
 PRODUCT_COPY_FILES += \
+	vendor/rockchip/common/security/optee/lib/arm64/tee-supplicant:system/bin/tee-supplicant	\
 	vendor/rockchip/common/security/optee/lib/arm64/libteec.so:system/lib64/libteec.so	\
 	vendor/rockchip/common/security/optee/lib/arm64/libkeymaster2.so:system/lib64/libkeymaster2.so	\
 	vendor/rockchip/common/security/optee/lib/arm64/libRkTeeKeymaster.so:system/lib64/libRkTeeKeymaster.so	\

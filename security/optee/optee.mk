@@ -2,6 +2,7 @@
 #        vendor/rockchip/common/security/optee/optee.ko:system/lib/modules/optee.ko \
 #	vendor/rockchip/common/security/optee/optee_armtz.ko:system/lib/modules/optee_armtz.ko	
 #ifneq ($(filter rk312x, $(strip $(TARGET_BOARD_PLATFORM))), )
+ifeq ($(strip $(TARGET_BOARD_PLATFORM_PRODUCT)), tablet)
 PRODUCT_COPY_FILES += \
 	vendor/rockchip/common/security/optee/ta/258be795-f9ca-40e6-a8699ce6886c5d5d.ta:system/lib/optee_armtz/258be795-f9ca-40e6-a8699ce6886c5d5d.ta	\
 	vendor/rockchip/common/security/optee/ta/0b82bae5-0cd0-49a5-9521516dba9c43ba.ta:system/lib/optee_armtz/0b82bae5-0cd0-49a5-9521516dba9c43ba.ta	\
@@ -27,6 +28,7 @@ PRODUCT_COPY_FILES += \
 	vendor/rockchip/common/security/optee/lib/arm64/libRkTeeGatekeeper.so:system/lib64/libRkTeeGatekeeper.so	\
 	vendor/rockchip/common/security/optee/lib/arm64/librkgatekeeper.so:system/lib64/librkgatekeeper.so	\
 	vendor/rockchip/common/security/optee/lib/arm64/gatekeeper.rk30board.so:system/lib64/hw/gatekeeper.rk30board.so	
+endif
 endif
 #LOCAL_PATH := $(call my-dir)
 #OPTEE_KO_FILES := $(shell ls $(LOCAL_PATH)/*.ko)

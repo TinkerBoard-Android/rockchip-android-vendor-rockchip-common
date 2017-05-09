@@ -71,8 +71,9 @@
             <Limit name="measured-frame-rate-1920x1080" range="51-51" />
         </MediaCodec>
         <MediaCodec name="OMX.google.hevc.decoder" type="video/hevc" update="true">
-            <Limit name="measured-frame-rate-352x288" range="100-100" />
+            <Limit name="measured-frame-rate-352x288" range="253-253" />
             <Limit name="measured-frame-rate-640x360" range="50-50" />
+            <Limit name="measured-frame-rate-720x480" range="104-104" />
             <Limit name="measured-frame-rate-1280x720" range="38-38" />
         </MediaCodec>
         <MediaCodec name="OMX.google.vp8.decoder" type="video/x-vnd.on2.vp8" update="true">

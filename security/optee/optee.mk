@@ -1,7 +1,7 @@
 #PRODUCT_COPY_FILES += \
 #        vendor/rockchip/common/security/optee/optee.ko:system/lib/modules/optee.ko \
 #	vendor/rockchip/common/security/optee/optee_armtz.ko:system/lib/modules/optee_armtz.ko	
-#ifneq ($(filter rk312x, $(strip $(TARGET_BOARD_PLATFORM))), )
+#ifneq ($(filter rk312x rk3126c, $(strip $(TARGET_BOARD_PLATFORM))), )
 ifeq ($(strip $(TARGET_BOARD_PLATFORM_PRODUCT)), tablet)
 PRODUCT_COPY_FILES += \
 	vendor/rockchip/common/security/optee/ta/258be795-f9ca-40e6-a8699ce6886c5d5d.ta:system/lib/optee_armtz/258be795-f9ca-40e6-a8699ce6886c5d5d.ta	\

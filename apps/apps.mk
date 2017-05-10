@@ -29,7 +29,7 @@ PRODUCT_PACKAGES += \
     projectX
 endif
 
-ifeq ($(strip $(TARGET_BOARD_PLATFORM)), rk312x)
+ifneq ($(filter rk312x rk3126c, $(TARGET_BOARD_PLATFORM)), )
 PRODUCT_PACKAGES += \
     RkVideoPlayer
 else

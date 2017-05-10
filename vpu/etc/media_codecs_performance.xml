@@ -72,7 +72,7 @@
         </MediaCodec>
         <MediaCodec name="OMX.google.hevc.decoder" type="video/hevc" update="true">
             <Limit name="measured-frame-rate-352x288" range="253-253" />
-            <Limit name="measured-frame-rate-640x360" range="50-50" />
+            <Limit name="measured-frame-rate-640x360" range="128-128" />
             <Limit name="measured-frame-rate-720x480" range="104-104" />
             <Limit name="measured-frame-rate-1280x720" range="38-38" />
         </MediaCodec>

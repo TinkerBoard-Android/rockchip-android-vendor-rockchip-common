@@ -33,6 +33,12 @@ PRODUCT_COPY_FILES += \
 
 endif
 endif
+ifeq ($(ENABLE_KEYBOX_PROVISION),true)
+
+PRODUCT_COPY_FILES += \
+	vendor/rockchip/common/security/optee/optee_user/rk_widevine/c11fe8ac-b997-48cf-a28de2a55e5240ef.ta:system/lib/optee_armtz/c11fe8ac-b997-48cf-a28de2a55e5240ef.ta	\
+	vendor/rockchip/common/security/optee/optee_user/rk_widevine/rk_store_keybox:system/bin/rk_store_keybox
+endif
 #LOCAL_PATH := $(call my-dir)
 #OPTEE_KO_FILES := $(shell ls $(LOCAL_PATH)/*.ko)
 #PRODUCT_COPY_FILES += \

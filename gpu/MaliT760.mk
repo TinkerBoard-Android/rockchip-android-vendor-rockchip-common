@@ -8,12 +8,13 @@ PRODUCT_COPY_FILES += \
 endif
 endif
 
-ifeq ($(strip $(ENABLE_STEREO_DEFORM)), true)
-PRODUCT_COPY_FILES += \
-	vendor/rockchip/common/gpu/libs/libGLES.so:system/lib/egl/libGLES.so
-endif
-##################for vr lib#####################
-ifeq ($(strip $(TARGET_BOARD_PLATFORM_PRODUCT)), vr)
-PRODUCT_COPY_FILES += \
-	vendor/rockchip/common/gpu/libs/libvsync.so:system/lib/egl/libvsync.so
-endif
+#
+#ifeq ($(strip $(ENABLE_STEREO_DEFORM)), true)
+#PRODUCT_COPY_FILES += \
+#	vendor/rockchip/common/gpu/libs/libGLES.so:system/lib/egl/libGLES.so
+#endif
+###################for vr lib#####################
+#ifeq ($(strip $(TARGET_BOARD_PLATFORM_PRODUCT)), vr)
+#PRODUCT_COPY_FILES += \
+#	vendor/rockchip/common/gpu/libs/libvsync.so:system/lib/egl/libvsync.so
+#endif

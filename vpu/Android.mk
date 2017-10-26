@@ -131,7 +131,7 @@ endif
 
 # use new vpu framework mpp
 USE_MPP := false
-ifneq ($(filter rk3366 rk3399 rk3288, $(strip $(TARGET_BOARD_PLATFORM))), )
+ifneq ($(filter rk3366 rk3126c rk3399 rk3288, $(strip $(TARGET_BOARD_PLATFORM))), )
 USE_MPP := true
 endif 
 
@@ -155,7 +155,11 @@ else
 ifeq ($(strip $(TARGET_BOARD_PLATFORM)), rk3288)
 LOCAL_SRC_FILES :=lib/$(TARGET_ARCH)/rk3288/$(LOCAL_MODULE)$(LOCAL_MODULE_SUFFIX)
 else
+ifeq ($(strip $(TARGET_BOARD_PLATFORM)), rk3126c)
+LOCAL_SRC_FILES :=lib/$(TARGET_ARCH)/rk312x/$(LOCAL_MODULE)$(LOCAL_MODULE_SUFFIX)
+else
 LOCAL_SRC_FILES := lib/arm/mpp/$(LOCAL_MODULE)$(LOCAL_MODULE_SUFFIX)
+endif
 endif 
 endif
 
@@ -180,9 +184,12 @@ else
 ifeq ($(strip $(TARGET_BOARD_PLATFORM)), rk3288)
 LOCAL_SRC_FILES :=lib/$(TARGET_ARCH)/rk3288/$(LOCAL_MODULE)$(LOCAL_MODULE_SUFFIX)
 else
+ifeq ($(strip $(TARGET_BOARD_PLATFORM)), rk3126c)
+LOCAL_SRC_FILES :=lib/$(TARGET_ARCH)/rk312x/$(LOCAL_MODULE)$(LOCAL_MODULE_SUFFIX)
+else
 LOCAL_SRC_FILES := lib/arm/mpp/$(LOCAL_MODULE)$(LOCAL_MODULE_SUFFIX)
 endif 
-
+endif
 endif
 
 include $(BUILD_PREBUILT)

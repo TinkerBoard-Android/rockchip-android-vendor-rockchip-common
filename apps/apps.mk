@@ -4,6 +4,11 @@ PRODUCT_PACKAGES += \
     RKUpdateService
 
 ifeq ($(strip $(TARGET_BOARD_HARDWARE)), rk30board)
+ifneq ($(strip $(BUILD_WITH_GOOGLE_MARKET)), true)
+PRODUCT_PACKAGES += \
+       Lightning
+endif
+
 ifeq ($(strip $(TARGET_ARCH)), arm)
 PRODUCT_COPY_FILES += \
        vendor/rockchip/common/apps/RKUpdateService/lib/arm/librockchip_update_jni.so:vendor/lib/librockchip_update_jni.so

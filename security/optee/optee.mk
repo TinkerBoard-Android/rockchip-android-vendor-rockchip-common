@@ -42,8 +42,9 @@ endif
 #PRODUCT_COPY_FILES += \
 #    $(foreach file, $(OPTEE_KO_FILES), $(LOCAL_PATH)/$(file):system/lib/modules/$(file))
 
-# new gatekeeper HAL
+# new gatekeeper HAL (atv or box no need)
+ifeq ($(filter atv box, $(strip $(TARGET_BOARD_PLATFORM_PRODUCT))), )
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl \
     android.hardware.gatekeeper@1.0-service
-
+endif

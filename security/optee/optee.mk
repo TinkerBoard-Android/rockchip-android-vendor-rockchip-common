@@ -30,13 +30,13 @@ endif
 ifeq ($(strip $(TARGET_ARCH)), arm64)
 PRODUCT_COPY_FILES += \
 	vendor/rockchip/common/security/optee/lib/arm64/tee-supplicant:vendor/bin/tee-supplicant        \
-        vendor/rockchip/common/security/optee/lib/arm64/libteec.so:vendor/lib64/libteec.so
+	vendor/rockchip/common/security/optee/lib/arm64/libteec.so:vendor/lib64/libteec.so
 else
 PRODUCT_COPY_FILES += \
-        vendor/rockchip/common/security/optee/lib/arm/tee-supplicant:vendor/bin/tee-supplicant	\
-	vendor/rockchip/common/security/optee/lib/arm/libteec.so:vendor/lib/libteec.so
+        vendor/rockchip/common/security/optee/lib/arm/tee-supplicant:vendor/bin/tee-supplicant
 endif
-
+PRODUCT_COPY_FILES += \
+        vendor/rockchip/common/security/optee/lib/arm/libteec.so:vendor/lib/libteec.so
 #LOCAL_PATH := $(call my-dir)
 #OPTEE_KO_FILES := $(shell ls $(LOCAL_PATH)/*.ko)
 #PRODUCT_COPY_FILES += \

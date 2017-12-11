@@ -3,7 +3,7 @@ include $(CLEAR_VARS)
 
 LOCAL_MODULE_TAGS := optional
 
-LOCAL_STATIC_JAVA_LIBRARIES := com.intel.internal.telephony.ModemClient
+#LOCAL_STATIC_JAVA_LIBRARIES := com.intel.internal.telephony.ModemClient
 
 LOCAL_SRC_FILES := $(call all-java-files-under, src)
 # Only compile source java files in this apk.

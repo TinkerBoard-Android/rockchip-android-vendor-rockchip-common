@@ -24,7 +24,6 @@ PRODUCT_PACKAGES += \
     userExperienceService
 ifneq ($(strip $(TARGET_BOARD_PLATFORM_PRODUCT)), box)
 PRODUCT_PACKAGES += \
-    MediaFloat      \
     RkApkinstaller
 endif
 

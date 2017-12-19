@@ -185,6 +185,5 @@ Only the three quirks included above are recognized at this point:
 	    <Limit name="concurrent-instances" max="4" />
         </MediaCodec>
     </Encoders>
-    <Include href="media_codecs_rk_vpu.xml" />
     <Include href="media_codecs_google_video.xml" />
 </MediaCodecs>

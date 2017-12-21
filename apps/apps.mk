@@ -4,18 +4,13 @@ PRODUCT_PACKAGES += \
     RKUpdateService
 
 ifeq ($(strip $(TARGET_BOARD_HARDWARE)), rk30board)
-ifneq ($(strip $(BUILD_WITH_GOOGLE_MARKET)), true)
-PRODUCT_PACKAGES += \
-       Lightning
-endif
-
 ifeq ($(strip $(TARGET_ARCH)), arm)
 PRODUCT_COPY_FILES += \
-       vendor/rockchip/common/apps/RKUpdateService/lib/arm/librockchip_update_jni.so:vendor/lib/librockchip_update_jni.so
+       vendor/rockchip/common/apps/RKUpdateService/lib/arm/librockchip_update_jni.so:system/lib/librockchip_update_jni.so
 else ifeq ($(strip $(TARGET_ARCH)), arm64)
 PRODUCT_COPY_FILES += \
-       vendor/rockchip/common/apps/RKUpdateService/lib/arm/librockchip_update_jni.so:vendor/lib/librockchip_update_jni.so \
-       vendor/rockchip/common/apps/RKUpdateService/lib/arm64/librockchip_update_jni.so:vendor/lib64/librockchip_update_jni.so
+       vendor/rockchip/common/apps/RKUpdateService/lib/arm/librockchip_update_jni.so:system/lib/librockchip_update_jni.so \
+       vendor/rockchip/common/apps/RKUpdateService/lib/arm64/librockchip_update_jni.so:system/lib64/librockchip_update_jni.so
 endif
 endif
 
@@ -24,7 +19,9 @@ PRODUCT_PACKAGES += \
     userExperienceService
 ifneq ($(strip $(TARGET_BOARD_PLATFORM_PRODUCT)), box)
 PRODUCT_PACKAGES += \
-    RkApkinstaller
+    MediaFloat      \
+    RkApkinstaller \
+    Lightning
 endif
 
 #ifeq ($(strip $(TARGET_BOARD_PLATFORM)), rk3288)
@@ -78,17 +75,17 @@ endif
 ###########for box app ################
 ifeq ($(strip $(TARGET_BOARD_PLATFORM_PRODUCT)), box)
 PRODUCT_PACKAGES += \
-    AllApp	\
-    ITVLauncher	\
+    RKTvLauncher \
     MediaCenter \
     PinyinIME \
     rkmcapp-armeabi-v7a-debug \
     ChangeLedStatus \
     WifiDisplay \
     RKDeviceTest \
-	Lightning
+    Lightning \
+    DLNA
   ifeq ($(strip $(BOARD_USE_LOW_MEM256)), true)
-        PRODUCT_PACKAGES += \
-              SimpleLauncher
+#        PRODUCT_PACKAGES += \
+#              SimpleLauncher
   endif
 endif

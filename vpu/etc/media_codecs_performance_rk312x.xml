@@ -39,7 +39,6 @@
             <Limit name="measured-frame-rate-720x480" range="132-132" />
             <Limit name="measured-frame-rate-1280x720" range="132-132" />
             <Limit name="measured-frame-rate-1920x1080" range="90-90" />
-            <Limit name="measured-frame-rate-3840x2160" range="30-30" />
         </MediaCodec>
         <MediaCodec name="OMX.rk.video_decoder.vp8" type="video/x-vnd.on2.vp8" update="true">
             <Limit name="measured-frame-rate-320x180" range="400-400" />

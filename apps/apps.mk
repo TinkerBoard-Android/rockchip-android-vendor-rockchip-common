@@ -14,14 +14,18 @@ PRODUCT_COPY_FILES += \
 endif
 endif
 
+ifneq ($(strip $(BUILD_WITH_GOOGLE_MARKET)), true)
+PRODUCT_PACKAGES += \
+	       Lightning
+endif
+
 ifneq ($(strip $(TARGET_BOARD_PLATFORM_PRODUCT)), vr)
 PRODUCT_PACKAGES += \
     userExperienceService
 ifneq ($(strip $(TARGET_BOARD_PLATFORM_PRODUCT)), box)
 PRODUCT_PACKAGES += \
     MediaFloat      \
-    RkApkinstaller \
-    Lightning
+    RkApkinstaller
 endif
 
 #ifeq ($(strip $(TARGET_BOARD_PLATFORM)), rk3288)
@@ -82,7 +86,6 @@ PRODUCT_PACKAGES += \
     ChangeLedStatus \
     WifiDisplay \
     RKDeviceTest \
-    Lightning \
     DLNA
   ifeq ($(strip $(BOARD_USE_LOW_MEM256)), true)
 #        PRODUCT_PACKAGES += \

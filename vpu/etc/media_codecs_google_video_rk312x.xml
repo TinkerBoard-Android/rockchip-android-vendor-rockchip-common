@@ -28,7 +28,7 @@
         </MediaCodec>
         <MediaCodec name="OMX.google.hevc.decoder" type="video/hevc">
             <Limit name="size" max="1024x1024" min="64x64"/>
-            <Limit name="alignment" value="8x8"/>
+            <Limit name="alignment" value="2x2"/>
             <Limit name="block-size" value="16x16"/>
             <Limit name="blocks-per-second" max="244800" min="1"/>
             <Limit name="bitrate" range="1-10000000"/>

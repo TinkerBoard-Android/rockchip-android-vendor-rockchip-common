@@ -39,8 +39,6 @@ endif
 
 ifneq ($(filter rk3228 rk3229 rk322x rk3328, $(strip $(TARGET_BOARD_PLATFORM))), )
 PRODUCT_COPY_FILES += \
-	vendor/rockchip/common/vpu/lib/arm/rk322x/libmpp.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmpp.so \
-	vendor/rockchip/common/vpu/lib/arm/rk322x/libvpu.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvpu.so \
 	vendor/rockchip/common/vpu/lib/arm/rk322x/modules/vcodec_service.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/vcodec_service.ko
 PRODUCT_PACKAGES += \
 	libiep 
@@ -68,8 +66,6 @@ endif
 
 ifeq ($(strip $(TARGET_BOARD_PLATFORM)), rk3288)
 PRODUCT_COPY_FILES += \
-        vendor/rockchip/common/vpu/lib/arm/rk3288/libmpp.so:$(TARGET_COPY_OUT_VENDOR)/lib/libmpp.so \
-        vendor/rockchip/common/vpu/lib/arm/rk3288/libvpu.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvpu.so \
         vendor/rockchip/common/vpu/lib/arm/rk3288/librk_vpuapi.so:$(TARGET_COPY_OUT_VENDOR)/lib/librk_vpuapi.so \
 	vendor/rockchip/common/vpu/lib/arm/rk3288/libjpeghwenc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libjpeghwenc.so
 endif
@@ -82,7 +78,7 @@ PRODUCT_PACKAGES += \
     iso
 endif
 
-ifneq ($(filter rk3228 rk3288 rk3328 rk3126c rk3366 rk3399, $(strip $(TARGET_BOARD_PLATFORM))), )
+ifneq ($(filter rk3228 rk3229 rk322x rk3288 rk3328 rk3126c rk3366 rk3368 rk3399, $(strip $(TARGET_BOARD_PLATFORM))), )
 PRODUCT_PACKAGES += \
     libmpp \
     libvpu

@@ -74,8 +74,10 @@ ifneq ($(filter rk%, $(TARGET_BOARD_PLATFORM)), )
 PRODUCT_PACKAGES += \
     librkffplayer \
     libffmpeg \
-    libcsiconv \
-    iso
+    libcsiconv
+
+PRODUCT_COPY_FILES += \
+    vendor/rockchip/common/vpu/bin/arm/iso:$(TARGET_COPY_OUT_VENDOR)/bin/iso	
 endif
 
 ifneq ($(filter rk3228 rk3229 rk322x rk3288 rk3328 rk3126c rk3366 rk3368 rk3399, $(strip $(TARGET_BOARD_PLATFORM))), )

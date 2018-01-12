@@ -82,7 +82,6 @@ PRODUCT_PACKAGES += \
     RKTvLauncher \
     MediaCenter \
     PinyinIME \
-    rkmcapp-armeabi-v7a-debug \
     ChangeLedStatus \
     WifiDisplay \
     RKDeviceTest \

@@ -158,7 +158,7 @@ Only the three quirks included above are recognized at this point:
         </MediaCodec>
 	<MediaCodec name="OMX.rk.video_decoder.hevc" type="video/hevc">
 	    <Limit name="size" max="4096x2160" min="176x144"/>
-	    <Limit name="alignment" value="8x8"/>
+	    <Limit name="alignment" value="2x2"/>
 	    <Limit name="block-size" value="16x16"/>
 	    <Limit name="blocks-per-second" max="244800" min="1"/>
 	    <Limit name="bitrate" range="1-10000000"/>
@@ -169,7 +169,7 @@ Only the three quirks included above are recognized at this point:
 
     <Encoders>
         <MediaCodec name="OMX.rk.video_encoder.avc" type="video/avc" >
-            <Limit name="size" min="256x144" max="1920x1088" />
+            <Limit name="size" min="176x144" max="1920x1088" />
             <Limit name="alignment" value="16x8" />
             <Limit name="bitrate" range="1-40000000" />
             <Feature name="bitrate-modes" value="VBR,CBR" />

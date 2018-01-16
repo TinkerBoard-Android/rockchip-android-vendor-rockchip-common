@@ -34,6 +34,12 @@
             <Limit name="measured-frame-rate-1280x720" range="20-30" />
             <Limit name="measured-frame-rate-1920x1080" range="32-32" />
         </MediaCodec>
+        <MediaCodec name="OMX.google.h264.encoder" type="video/avc" update="true">
+            <Limit name="measured-frame-rate-320x240" range="200-300" />
+            <Limit name="measured-frame-rate-720x480" range="70-110" />
+            <Limit name="measured-frame-rate-1280x720" range="60-80" />
+            <Limit name="measured-frame-rate-1920x1080" range="34-34" />
+        </MediaCodec>
     </Encoders>
     <Decoders>
         <MediaCodec name="OMX.rk.video_decoder.avc" type="video/avc" update="true">

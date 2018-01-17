@@ -80,7 +80,7 @@ PRODUCT_COPY_FILES += \
     vendor/rockchip/common/vpu/bin/arm/iso:$(TARGET_COPY_OUT_VENDOR)/bin/iso	
 endif
 
-ifneq ($(filter rk3228 rk3229 rk322x rk3288 rk3328 rk3126c rk3366 rk3368 rk3399, $(strip $(TARGET_BOARD_PLATFORM))), )
+ifneq ($(filter rk3228 rk3229 rk322x rk3288 rk3328 rk3126c rk3366 rk3368 rk3399 rk3326, $(strip $(TARGET_BOARD_PLATFORM))), )
 PRODUCT_PACKAGES += \
     libmpp \
     libvpu
@@ -95,7 +95,7 @@ endif
 PRODUCT_COPY_FILES += \
     vendor/rockchip/common/vpu/etc/media_codecs_rk_vpu.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_rk_vpu.xml
 
-ifneq ($(filter rk312x rk3126c rk3128 rk3188, $(TARGET_BOARD_PLATFORM)), )
+ifneq ($(filter rk312x rk3126c rk3128 rk3188 rk3326, $(TARGET_BOARD_PLATFORM)), )
 PRODUCT_COPY_FILES += \
     vendor/rockchip/common/vpu/etc/media_codecs_google_audio_rk312x.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_audio.xml \
     vendor/rockchip/common/vpu/etc/media_codecs_google_video_rk312x.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video.xml
@@ -105,7 +105,7 @@ PRODUCT_COPY_FILES += \
     vendor/rockchip/common/vpu/etc/media_codecs_google_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video.xml
 endif
 
-ifneq ($(filter rk312x rk3126c rk3128 rk3188, $(TARGET_BOARD_PLATFORM)), )
+ifneq ($(filter rk312x rk3126c rk3128 rk3188 rk3326, $(TARGET_BOARD_PLATFORM)), )
 PRODUCT_COPY_FILES += \
     vendor/rockchip/common/vpu/etc/media_codecs_performance_rk312x.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml
 else ifneq ($(filter rk3228 rk3288 rk3366 rk3399, $(TARGET_BOARD_PLATFORM)), )
@@ -122,7 +122,7 @@ PRODUCT_COPY_FILES += \
     vendor/rockchip/common/vpu/etc/media_codecs_performance.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml
 endif
 
-ifneq ($(filter rk312x rk3126c rk3128 rk3188, $(TARGET_BOARD_PLATFORM)), )
+ifneq ($(filter rk312x rk3126c rk3128 rk3188 rk3326, $(TARGET_BOARD_PLATFORM)), )
 PRODUCT_COPY_FILES += \
     vendor/rockchip/common/vpu/etc/media_codecs_rk312x.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml
 else ifneq ($(filter rk3328, $(TARGET_BOARD_PLATFORM)), )

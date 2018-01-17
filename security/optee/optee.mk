@@ -2,7 +2,7 @@
 #        vendor/rockchip/common/security/optee/optee.ko:system/lib/modules/optee.ko \
 #	vendor/rockchip/common/security/optee/optee_armtz.ko:system/lib/modules/optee_armtz.ko	
 #ifneq ($(filter rk312x rk3126c, $(strip $(TARGET_BOARD_PLATFORM))), )
-ifneq ($(filter atv tablet, $(strip $(TARGET_BOARD_PLATFORM_PRODUCT))), )
+ifneq ($(filter atv box tablet, $(strip $(TARGET_BOARD_PLATFORM_PRODUCT))), )
 PRODUCT_COPY_FILES += \
 	vendor/rockchip/common/security/optee/ta/258be795-f9ca-40e6-a8699ce6886c5d5d.ta:vendor/lib/optee_armtz/258be795-f9ca-40e6-a8699ce6886c5d5d.ta	\
 	vendor/rockchip/common/security/optee/ta/0b82bae5-0cd0-49a5-9521516dba9c43ba.ta:vendor/lib/optee_armtz/0b82bae5-0cd0-49a5-9521516dba9c43ba.ta	\
@@ -42,7 +42,7 @@ PRODUCT_COPY_FILES += \
 #PRODUCT_COPY_FILES += \
 #    $(foreach file, $(OPTEE_KO_FILES), $(LOCAL_PATH)/$(file):system/lib/modules/$(file))
 
-# new gatekeeper HAL (atv or box no need)
+# new gatekeeper HAL
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl \
     android.hardware.gatekeeper@1.0-service

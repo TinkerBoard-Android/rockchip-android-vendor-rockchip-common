@@ -18,7 +18,6 @@
 <MediaCodecs>
     <Decoders>
         <MediaCodec name="RkAudioDecoder_WAV" type="audio/wav" />
-        <MediaCodec name="FLACDecoder" type="audio/flac" />
     </Decoders>
     <Encoders>
         <MediaCodec name="RkVpuEncoder" type="video/avc" />

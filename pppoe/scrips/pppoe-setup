@@ -2,8 +2,8 @@
 
 # Paths to programs
 #IFCONFIG=/system/bin/ifconfig
-PPPD=/system/bin/pppd
-PPPOE=/system/bin/pppoe
+PPPD=/vendor/bin/pppd
+PPPOE=/vendor/bin/pppoe
 ECHO="/system/bin/log -t pppoe_setup"
 #ECHO=echo
 

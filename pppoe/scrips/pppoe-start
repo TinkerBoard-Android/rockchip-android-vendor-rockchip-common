@@ -29,7 +29,7 @@ exec_prefix=${prefix}
 SETPROP=/system/bin/setprop
 
 # Paths to programs
-CONNECT=/system/bin/pppoe-connect
+CONNECT=/vendor/bin/pppoe-connect
 ECHO="/system/bin/log -t pppoe_start"
 #ECHO=echo
 #IFCONFIG=$BUSYBOX ifconfig
@@ -151,7 +151,7 @@ if [ -r "$PIDFILE" ] ; then
 
         processLine=`ps | grep $PID`
         ProcessName=`echo $processLine | $BUSYBOX awk '{print $9}'`
-        if [ $ProcessName = /system/bin/pppd ]; then
+        if [ $ProcessName = /vendor/bin/pppd ]; then
               $ECHO "$ME: There already seems to be a PPPoE connection up (PID $PID)"
               exit 1
         fi
@@ -197,7 +197,7 @@ fi
 # Monitor connection
 TIME=0
 while [ true ] ; do
-    /system/bin/pppoe-status $CONFIG > /dev/null 2>&1
+    /vendor/bin/pppoe-status $CONFIG > /dev/null 2>&1
 
     # Looks like the interface came up
     if [ $? = 0 ] ; then

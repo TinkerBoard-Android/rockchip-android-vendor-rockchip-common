@@ -4,7 +4,7 @@ PRODUCT_COPY_FILES += $(SOURCE_PPPOE_CONF_DIR)/pap-secrets:$(TARGET_PPPOE_CONF_D
                         $(SOURCE_PPPOE_CONF_DIR)/pppoe.conf:$(TARGET_PPPOE_CONF_DIR)/pppoe.conf
 
 SOURCE_PPPOE_SCRIPT_DIR := vendor/rockchip/common/pppoe/scrips
-TARGET_PPPOE_script_DIR := system/bin
+TARGET_PPPOE_script_DIR := vendor/bin
 PRODUCT_COPY_FILES += $(SOURCE_PPPOE_SCRIPT_DIR)/pppoe-stop:$(TARGET_PPPOE_script_DIR)/pppoe-stop \
                         $(SOURCE_PPPOE_SCRIPT_DIR)/pppoe-connect:$(TARGET_PPPOE_script_DIR)/pppoe-connect \
                         $(SOURCE_PPPOE_SCRIPT_DIR)/pppoe-setup:$(TARGET_PPPOE_script_DIR)/pppoe-setup \

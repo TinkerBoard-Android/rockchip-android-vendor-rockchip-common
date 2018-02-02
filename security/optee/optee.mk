@@ -1,6 +1,3 @@
-#PRODUCT_COPY_FILES += \
-#        vendor/rockchip/common/security/optee/optee.ko:system/lib/modules/optee.ko \
-#	vendor/rockchip/common/security/optee/optee_armtz.ko:system/lib/modules/optee_armtz.ko	
 #ifneq ($(filter rk312x rk3126c, $(strip $(TARGET_BOARD_PLATFORM))), )
 ifneq ($(filter atv box tablet, $(strip $(TARGET_BOARD_PLATFORM_PRODUCT))), )
 PRODUCT_COPY_FILES += \
@@ -37,10 +34,6 @@ PRODUCT_COPY_FILES += \
 endif
 PRODUCT_COPY_FILES += \
         vendor/rockchip/common/security/optee/lib/arm/libteec.so:vendor/lib/libteec.so
-#LOCAL_PATH := $(call my-dir)
-#OPTEE_KO_FILES := $(shell ls $(LOCAL_PATH)/*.ko)
-#PRODUCT_COPY_FILES += \
-#    $(foreach file, $(OPTEE_KO_FILES), $(LOCAL_PATH)/$(file):system/lib/modules/$(file))
 
 # new gatekeeper HAL
 PRODUCT_PACKAGES += \

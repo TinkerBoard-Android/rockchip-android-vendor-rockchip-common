@@ -5,8 +5,8 @@
 ifeq ($(strip $(TARGET_BOARD_PLATFORM_GPU)), mali-t720)
 ifeq ($(strip $(TARGET_ARCH)), arm64)
 PRODUCT_COPY_FILES += \
-    vendor/rockchip/common/gpu/MaliT720/lib64/arm/libGLES_mali.so:system/vendor/lib64/egl/libGLES_mali.so \
-    vendor/rockchip/common/gpu/MaliT720/lib/arm/libGLES_mali.so:system/vendor/lib/egl/libGLES_mali.so
+    vendor/rockchip/common/gpu/MaliT720/lib64/arm/libGLES_mali.so:vendor/lib64/egl/libGLES_mali.so \
+    vendor/rockchip/common/gpu/MaliT720/lib/arm/libGLES_mali.so:vendor/lib/egl/libGLES_mali.so
 endif
 endif
 

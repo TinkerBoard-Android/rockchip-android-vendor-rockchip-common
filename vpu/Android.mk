@@ -133,6 +133,26 @@ endif
 include $(BUILD_PREBUILT)
 endif
 
+# use secure video path
+USE_SVP := false
+ifneq ($(filter rk3328, $(strip $(TARGET_BOARD_PLATFORM))), )
+USE_SVP := true
+endif
+
+ifeq ($(USE_SVP), true)
+include $(CLEAR_VARS)
+LOCAL_MODULE := libvpu_secure
+LOCAL_MODULE_TAGS := optional
+LOCAL_PROPRIETARY_MODULE := true
+LOCAL_MULTILIB := 32
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MODULE_STEM := $(LOCAL_MODULE)
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_SRC_FILES :=lib/arm/rk322x/$(LOCAL_MODULE)$(LOCAL_MODULE_SUFFIX)
+include $(BUILD_PREBUILT)
+endif
+
+
 # use new vpu framework mpp
 USE_MPP := false
 ifneq ($(filter rk3228 rk3229 rk322x rk3288 rk3328 rk3126c rk3366 rk3368 rk3399 rk3326, $(strip $(TARGET_BOARD_PLATFORM))), )

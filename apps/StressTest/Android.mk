@@ -15,8 +15,8 @@ LOCAL_CERTIFICATE := PRESIGNED
 #LOCAL_OVERRIDES_PACKAGES := 
 
 ifeq ($(strip $(TARGET_BOARD_HARDWARE)), rk30board)
-  ifeq ($(strip $(TARGET_BOARD_PLATFORM_PRODUCT)), box)
-    LOCAL_SRC_FILES := $(LOCAL_MODULE)_box.apk
+  ifneq ($(filter atv box, $(strip $(TARGET_BOARD_PLATFORM_PRODUCT))), )
+	LOCAL_SRC_FILES := $(LOCAL_MODULE)_box.apk
   else
 	LOCAL_SRC_FILES := $(LOCAL_MODULE).apk
   endif

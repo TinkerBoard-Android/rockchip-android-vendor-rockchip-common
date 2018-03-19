@@ -6,7 +6,7 @@ LOCAL_PATH := $(call my-dir)
 #ifeq ($(strip $(TARGET_ARCH)), arm)
 
 ###############################################################################
-ifneq (,$(filter userdebug eng,$(TARGET_BUILD_VARIANT)))
+ifneq (,$(filter user userdebug eng,$(TARGET_BUILD_VARIANT)))
 # busybox
 include $(CLEAR_VARS)
 LOCAL_MODULE := busybox

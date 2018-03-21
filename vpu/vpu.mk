@@ -78,7 +78,6 @@ endif
 
 ifeq ($(strip $(TARGET_BOARD_PLATFORM)), rk3288)
 PRODUCT_COPY_FILES += \
-        vendor/rockchip/common/vpu/lib/arm/rk3288/librk_vpuapi.so:$(TARGET_COPY_OUT_VENDOR)/lib/librk_vpuapi.so \
 	vendor/rockchip/common/vpu/lib/arm/rk3288/libjpeghwenc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libjpeghwenc.so
 endif
 

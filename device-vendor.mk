@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-ifeq ($(PRODUCT_HAVE_RKAPPS), true)
+ifeq ($(PRODUCT_HAVE_RKAPPS)|$(BUILD_WITH_GOOGLE_GMS_EXPRESS), true|false)
 $(call inherit-product-if-exists, vendor/rockchip/common/apps/apps.mk)
 endif
 

@@ -143,7 +143,7 @@ PRODUCT_COPY_FILES += \
 else ifneq ($(filter rk3326, $(TARGET_BOARD_PLATFORM)), )
 PRODUCT_COPY_FILES += \
     vendor/rockchip/common/vpu/etc/media_codecs_rk3326.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml
-else ifneq ($(filter rk3328, $(TARGET_BOARD_PLATFORM)), )
+else ifneq ($(filter rk3328 rk3229, $(TARGET_BOARD_PLATFORM)), )
 PRODUCT_COPY_FILES += \
     vendor/rockchip/common/vpu/etc/media_codecs_rk3328.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml
 else ifneq ($(filter rk%, $(TARGET_BOARD_PLATFORM)), )

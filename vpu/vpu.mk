@@ -120,7 +120,7 @@ endif
 ifneq ($(filter rk312x rk3126c rk3128 rk3188, $(TARGET_BOARD_PLATFORM)), )
 PRODUCT_COPY_FILES += \
     vendor/rockchip/common/vpu/etc/media_codecs_performance_rk312x.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml
-else ifneq ($(filter rk3228 rk3288 rk3366 rk3399, $(TARGET_BOARD_PLATFORM)), )
+else ifneq ($(filter rk3228 rk3366 rk3399, $(TARGET_BOARD_PLATFORM)), )
 PRODUCT_COPY_FILES += \
     vendor/rockchip/common/vpu/etc/media_codecs_performance_mpp.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml
 else ifneq ($(filter rk3328, $(TARGET_BOARD_PLATFORM)), )
@@ -132,6 +132,9 @@ PRODUCT_COPY_FILES += \
 else ifneq ($(filter rk3326, $(TARGET_BOARD_PLATFORM)), )
 PRODUCT_COPY_FILES += \
     vendor/rockchip/common/vpu/etc/media_codecs_performance_rk3326.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml
+else ifneq ($(filter rk3288, $(TARGET_BOARD_PLATFORM)), )
+PRODUCT_COPY_FILES += \
+    vendor/rockchip/common/vpu/etc/media_codecs_performance_rk3288.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml
 else
 PRODUCT_COPY_FILES += \
     vendor/rockchip/common/vpu/etc/media_codecs_performance.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml

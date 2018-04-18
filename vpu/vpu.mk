@@ -37,14 +37,14 @@ PRODUCT_PACKAGES += \
     libjpeghwenc
 endif
 
-ifneq ($(filter rk3228 rk3229 rk322x rk3328, $(strip $(TARGET_BOARD_PLATFORM))), )
+ifneq ($(filter rk3228 rk3229 rk322x rk3128h rk3328, $(strip $(TARGET_BOARD_PLATFORM))), )
 PRODUCT_COPY_FILES += \
 	vendor/rockchip/common/vpu/lib/arm/rk322x/modules/vcodec_service.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/vcodec_service.ko
 PRODUCT_PACKAGES += \
 	libiep 
 endif
 
-ifneq ($(filter rk3228 rk3229 rk322x rk3328, $(strip $(TARGET_BOARD_PLATFORM))), )
+ifneq ($(filter rk3228 rk3229 rk322x rk3128h rk3328, $(strip $(TARGET_BOARD_PLATFORM))), )
 PRODUCT_COPY_FILES += \
         vendor/rockchip/common/vpu/lib/arm/rk322x/libffmpeg_omx.so:$(TARGET_COPY_OUT_VENDOR)/lib/libffmpeg_omx.so \
         vendor/rockchip/common/vpu/lib/arm/rk322x/libffmpeg_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libffmpeg_utils.so \
@@ -91,7 +91,7 @@ PRODUCT_COPY_FILES += \
     vendor/rockchip/common/vpu/bin/arm/iso:$(TARGET_COPY_OUT_VENDOR)/bin/iso	
 endif
 
-ifneq ($(filter rk3228 rk3229 rk322x rk3288 rk3328 rk3126c rk3366 rk3368 rk3399 rk3326, $(strip $(TARGET_BOARD_PLATFORM))), )
+ifneq ($(filter rk3228 rk3229 rk322x rk3128h rk3288 rk3328 rk3126c rk3366 rk3368 rk3399 rk3326, $(strip $(TARGET_BOARD_PLATFORM))), )
 PRODUCT_PACKAGES += \
     libmpp \
     libvpu \
@@ -152,7 +152,7 @@ PRODUCT_COPY_FILES += \
 else ifneq ($(filter rk3326, $(TARGET_BOARD_PLATFORM)), )
 PRODUCT_COPY_FILES += \
     vendor/rockchip/common/vpu/etc/media_codecs_rk3326.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml
-else ifneq ($(filter rk3328 rk322x, $(TARGET_BOARD_PLATFORM)), )
+else ifneq ($(filter rk3328 rk3128h rk322x, $(TARGET_BOARD_PLATFORM)), )
 PRODUCT_COPY_FILES += \
     vendor/rockchip/common/vpu/etc/media_codecs_rk3328.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml
 else ifneq ($(filter rk%, $(TARGET_BOARD_PLATFORM)), )

@@ -28,7 +28,7 @@
             <Limit name="measured-frame-rate-1280x720" range="58-58" />
         </MediaCodec>
         <MediaCodec name="OMX.google.h263.encoder" type="video/3gpp" update="true">
-            <Limit name="measured-frame-rate-176x144" range="218-218" />
+            <Limit name="measured-frame-rate-176x144" range="619-619" />
         </MediaCodec>
         <MediaCodec name="OMX.google.mpeg4.encoder" type="video/mp4v-es" update="true">
             <Limit name="measured-frame-rate-176x144" range="619-619" />

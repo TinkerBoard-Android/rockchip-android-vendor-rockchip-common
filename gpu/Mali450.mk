@@ -23,6 +23,9 @@ ifeq ($(strip $(TARGET_ARCH)), arm64)
 PRODUCT_COPY_FILES += \
 	vendor/rockchip/common/gpu/Mali450/lib/arm64/libGLES_mali.so:$(TARGET_COPY_OUT_VENDOR)/lib64/egl/libGLES_mali.so \
 	vendor/rockchip/common/gpu/Mali450/lib/arm/libGLES_mali.so:$(TARGET_COPY_OUT_VENDOR)/lib/egl/libGLES_mali.so
+else
+PRODUCT_COPY_FILES += \
+	vendor/rockchip/common/gpu/Mali450/lib/arm/libGLES_mali.so:$(TARGET_COPY_OUT_VENDOR)/lib/egl/libGLES_mali.so
 endif
 
 endif

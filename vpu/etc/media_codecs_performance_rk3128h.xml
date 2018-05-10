@@ -19,7 +19,7 @@
         <MediaCodec name="OMX.rk.video_encoder.avc" type="video/avc" update="true">
             <Limit name="measured-frame-rate-320x240" range="376-376" />
             <Limit name="measured-frame-rate-720x480" range="149-149" />
-            <Limit name="measured-frame-rate-1280x720" range="73-73" />
+            <Limit name="measured-frame-rate-1280x720" range="25-35" />
             <Limit name="measured-frame-rate-1920x1080" range="14-30" />
         </MediaCodec>
         <MediaCodec name="OMX.google.h263.encoder" type="video/3gpp" update="true">

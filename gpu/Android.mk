@@ -22,4 +22,23 @@ LOCAL_POST_INSTALL_CMD := \
 include $(BUILD_PREBUILT)
 endif
 
+ifeq ($(strip $(TARGET_BOARD_PLATFORM_GPU)), mali-t760)
+include $(CLEAR_VARS)
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE := libGLES_mali
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_SRC_FILES := MaliT760/lib/arm/rk3288w/libGLES_mali.so
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib/egl
+
+# Create symlinks.
+LOCAL_POST_INSTALL_CMD := \
+	cd $(TARGET_OUT_VENDOR)/lib; \
+	ln -sf egl/libGLES_mali.so libOpenCL.so.1.1; \
+	ln -sf libOpenCL.so.1.1 libOpenCL.so.1; \
+	ln -sf libOpenCL.so.1 libOpenCL.so; \
+	cd -;
+
+include $(BUILD_PREBUILT)
+endif
+
 include $(LOCAL_PATH)/gpu_performance/Android.mk

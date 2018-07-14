@@ -170,8 +170,8 @@ Only the three quirks included above are recognized at this point:
             <Limit name="size" max="4096x2160" min="176x144"/>
             <Limit name="alignment" value="2x2"/>
             <Limit name="block-size" value="16x16"/>
-            <Limit name="blocks-per-second" max="244800" min="1"/>
-            <Limit name="bitrate" range="1-10000000"/>
+            <Limit name="blocks-per-second" max="972000" min="1"/>
+            <Limit name="bitrate" range="1-300000000"/>
             <Feature name="adaptive-playback"/>
             <Limit name="concurrent-instances" max="6" />
         </MediaCodec>

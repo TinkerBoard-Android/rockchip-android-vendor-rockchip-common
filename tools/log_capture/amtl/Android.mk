@@ -23,7 +23,7 @@ LOCAL_REQUIRED_MODULES += \
 LOCAL_PROGUARD_ENABLED := disabled
 
 LOCAL_PROPRIETARY_MODULE := true
-include $(BUILD_PACKAGE)
+#include $(BUILD_PACKAGE)
 
 # Use the following include to make our test apk.
-include $(call first-makefiles-under,$(LOCAL_PATH))
+#include $(call first-makefiles-under,$(LOCAL_PATH))

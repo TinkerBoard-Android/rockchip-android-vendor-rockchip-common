@@ -64,7 +64,15 @@ endif
 ifeq ($(strip $(BOARD_HAS_STRESSTEST_APP)), true)
     PRODUCT_PACKAGES += \
     StressTest \
+ifneq ($(filter atv box, $(strip $(TARGET_BOARD_PLATFORM_PRODUCT))), )
+PRODUCT_PACKAGES += \
+    RKDeviceTest
+
+else
+PRODUCT_PACKAGES += \
     DeviceTest
+
+endif
 endif
 
 ##################for vr app#####################
@@ -86,7 +94,6 @@ PRODUCT_PACKAGES += \
     PinyinIME \
     ChangeLedStatus \
     WifiDisplay \
-    RKDeviceTest \
     DLNA
   ifeq ($(strip $(BOARD_USE_LOW_MEM256)), true)
 #        PRODUCT_PACKAGES += \

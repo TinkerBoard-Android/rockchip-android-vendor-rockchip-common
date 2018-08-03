@@ -63,7 +63,8 @@ endif
 
 ifeq ($(strip $(BOARD_HAS_STRESSTEST_APP)), true)
     PRODUCT_PACKAGES += \
-    StressTest \
+    StressTest 
+
 ifneq ($(filter atv box, $(strip $(TARGET_BOARD_PLATFORM_PRODUCT))), )
 PRODUCT_PACKAGES += \
     RKDeviceTest

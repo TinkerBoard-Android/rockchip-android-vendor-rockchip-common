@@ -24,7 +24,6 @@ PRODUCT_COPY_FILES += \
     vendor/rockchip/common/gpu/gpu_performance/etc/packages-compat.xml:$(TARGET_COPY_OUT_VENDOR)/etc/packages-compat.xml \
     vendor/rockchip/common/gpu/gpu_performance/etc/packages-composer.xml:$(TARGET_COPY_OUT_VENDOR)/etc/packages-composer.xml \
     vendor/rockchip/common/gpu/gpu_performance/bin/$(TARGET_ARCH)/performance:$(TARGET_COPY_OUT_VENDOR)/bin/performance \
-    vendor/rockchip/common/gpu/gpu_performance/lib/$(TARGET_ARCH)/libperformance_runtime.so:$(TARGET_COPY_OUT_VENDOR)/lib/libperformance_runtime.so \
     vendor/rockchip/common/gpu/gpu_performance/lib/$(TARGET_ARCH)/gpu.$(TARGET_BOARD_HARDWARE).so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/gpu.$(TARGET_BOARD_HARDWARE).so
 
 endif

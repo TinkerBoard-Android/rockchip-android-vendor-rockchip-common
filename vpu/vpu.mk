@@ -46,8 +46,6 @@ endif
 
 ifneq ($(filter rk3228 rk3229 rk322x rk3128h rk3328, $(strip $(TARGET_BOARD_PLATFORM))), )
 PRODUCT_COPY_FILES += \
-        vendor/rockchip/common/vpu/lib/arm/rk322x/libffmpeg_omx.so:$(TARGET_COPY_OUT_VENDOR)/lib/libffmpeg_omx.so \
-        vendor/rockchip/common/vpu/lib/arm/rk322x/libffmpeg_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib/libffmpeg_utils.so \
         vendor/rockchip/common/vpu/etc/media_codecs_ffmpeg_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_ffmpeg_video.xml \
         vendor/rockchip/common/vpu/etc/media_codecs_ffmpeg_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_ffmpeg_audio.xml
 endif

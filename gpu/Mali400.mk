@@ -15,8 +15,8 @@ PRODUCT_COPY_FILES += \
 endif
 
 ifneq ($(filter rk3036 rk3188, $(strip $(TARGET_BOARD_PLATFORM))), )
-PRODUCT_COPY_FILES += \
-    vendor/rockchip/common/gpu/Mali400/modules/$(TARGET_ARCH)/$(strip $(TARGET_BOARD_PLATFORM))/mali.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/mali.ko
+BOARD_VENDOR_KERNEL_MODULES += \
+	vendor/rockchip/common/gpu/Mali400/modules/$(TARGET_ARCH)/$(strip $(TARGET_BOARD_PLATFORM))/mali.ko
 endif
 
 PRODUCT_COPY_FILES += \

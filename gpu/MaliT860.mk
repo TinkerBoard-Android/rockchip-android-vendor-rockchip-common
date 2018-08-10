@@ -4,9 +4,8 @@
 
 ifeq ($(strip $(TARGET_BOARD_PLATFORM_GPU)), mali-t860)
 # Move to Android.mk
-
-PRODUCT_COPY_FILES += \
-	vendor/rockchip/common/gpu/MaliT860/lib/modules/mali_kbase.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/mali_kbase.ko
+BOARD_VENDOR_KERNEL_MODULES += \
+	vendor/rockchip/common/gpu/MaliT860/lib/modules/mali_kbase.ko
 endif
 
 PRODUCT_PACKAGES += \

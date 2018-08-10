@@ -5,8 +5,10 @@ PRODUCT_COPY_FILES += \
 
 # lib
 PRODUCT_COPY_FILES += \
-    vendor/rockchip/common/gpu/libG6110/G6110_64/lib/egl/egl.cfg:$(TARGET_COPY_OUT_VENDOR)/lib/egl/egl.cfg \
-    vendor/rockchip/common/gpu/libG6110/G6110_64/lib/modules/pvrsrvkm.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/pvrsrvkm.ko
+    vendor/rockchip/common/gpu/libG6110/G6110_64/lib/egl/egl.cfg:$(TARGET_COPY_OUT_VENDOR)/lib/egl/egl.cfg
+
+BOARD_VENDOR_KERNEL_MODULES += \
+	vendor/rockchip/common/gpu/libG6110/G6110_64/lib/modules/pvrsrvkm.ko
 
 # vendor/firmware
 PRODUCT_COPY_FILES += \
@@ -62,8 +64,10 @@ PRODUCT_COPY_FILES += \
 
 else
 PRODUCT_COPY_FILES += \
-    vendor/rockchip/common/gpu/libG6110/G6110_32/lib/egl/egl.cfg:$(TARGET_COPY_OUT_VENDOR)/lib/egl/egl.cfg \
-    vendor/rockchip/common/gpu/libG6110/G6110_32/lib/modules/pvrsrvkm.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/pvrsrvkm.ko
+    vendor/rockchip/common/gpu/libG6110/G6110_32/lib/egl/egl.cfg:$(TARGET_COPY_OUT_VENDOR)/lib/egl/egl.cfg
+
+BOARD_VENDOR_KERNEL_MODULES += \
+	vendor/rockchip/common/gpu/libG6110/G6110_32/lib/modules/pvrsrvkm.ko
 
 # vendor/bin
 PRODUCT_COPY_FILES += \

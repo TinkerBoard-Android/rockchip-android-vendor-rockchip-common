@@ -38,8 +38,8 @@ PRODUCT_PACKAGES += \
 endif
 
 ifneq ($(filter rk3228 rk3229 rk322x rk3128h rk3328, $(strip $(TARGET_BOARD_PLATFORM))), )
-PRODUCT_COPY_FILES += \
-	vendor/rockchip/common/vpu/lib/arm/rk322x/modules/vcodec_service.ko:$(TARGET_COPY_OUT_VENDOR)/lib/modules/vcodec_service.ko
+BOARD_VENDOR_KERNEL_MODULES += \
+	vendor/rockchip/common/vpu/lib/arm/rk322x/modules/vcodec_service.ko
 PRODUCT_PACKAGES += \
 	libiep 
 endif

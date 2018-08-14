@@ -44,12 +44,6 @@ PRODUCT_PACKAGES += \
 	libiep 
 endif
 
-ifneq ($(filter rk3228 rk3229 rk322x rk3128h rk3328, $(strip $(TARGET_BOARD_PLATFORM))), )
-PRODUCT_COPY_FILES += \
-        vendor/rockchip/common/vpu/etc/media_codecs_ffmpeg_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_ffmpeg_video.xml \
-        vendor/rockchip/common/vpu/etc/media_codecs_ffmpeg_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_ffmpeg_audio.xml
-endif
-
 ifneq ($(filter rk3399 rk3326, $(strip $(TARGET_BOARD_PLATFORM))), )
 PRODUCT_COPY_FILES += \
 	vendor/rockchip/common/vpu/lib/arm/rk3399/libjpeghwenc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libjpeghwenc.so \
@@ -169,7 +163,9 @@ PRODUCT_COPY_FILES += \
     vendor/rockchip/common/vpu/etc/media_codecs_rk3328.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml
 else ifneq ($(filter rk3128h, $(TARGET_BOARD_PLATFORM)), )
 PRODUCT_COPY_FILES += \
-    vendor/rockchip/common/vpu/etc/media_codecs_rk3128h.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml
+    vendor/rockchip/common/vpu/etc/media_codecs_rk3128h.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
+    vendor/rockchip/common/vpu/etc/media_codecs_ffmpeg.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_ffmpeg.xml \
+    vendor/rockchip/common/vpu/lib/arm/rk322x/libffmpeg.so:$(TARGET_COPY_OUT_VENDOR)/lib/libffmpeg.so
 else ifneq ($(filter rk%, $(TARGET_BOARD_PLATFORM)), )
 PRODUCT_COPY_FILES += \
     vendor/rockchip/common/vpu/etc/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml

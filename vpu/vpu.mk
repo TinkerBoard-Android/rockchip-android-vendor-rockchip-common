@@ -87,7 +87,9 @@ ifneq ($(filter rk3228 rk3229 rk322x rk3128h rk3288 rk3328 rk3126c rk3366 rk3368
 PRODUCT_PACKAGES += \
     libmpp \
     libvpu \
-    libvpu_secure
+    libvpu_secure \
+    libffmpeg_omx \
+    libffmpegextractor
 endif
 
 ifneq ($(filter rk3328, $(TARGET_BOARD_PLATFORM)), )

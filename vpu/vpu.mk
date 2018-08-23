@@ -166,7 +166,11 @@ PRODUCT_COPY_FILES += \
 else ifneq ($(filter rk3128h, $(TARGET_BOARD_PLATFORM)), )
 PRODUCT_COPY_FILES += \
     vendor/rockchip/common/vpu/etc/media_codecs_rk3128h.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
-    vendor/rockchip/common/vpu/etc/media_codecs_ffmpeg.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_ffmpeg.xml \
+    vendor/rockchip/common/vpu/etc/etc2/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc2/media_codecs.xml \
+    vendor/rockchip/common/vpu/etc/etc2/media_codecs_google_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc2/media_codecs_google_video.xml \
+    vendor/rockchip/common/vpu/etc/etc2/media_codecs_google_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc2/media_codecs_google_audio.xml \
+    vendor/rockchip/common/vpu/etc/etc2/media_codecs_ffmpeg.xml:$(TARGET_COPY_OUT_VENDOR)/etc2/media_codecs_ffmpeg.xml \
+    vendor/rockchip/common/vpu/etc/etc2/media_codecs_performance.xml:$(TARGET_COPY_OUT_VENDOR)/etc2/media_codecs_performance.xml \
     vendor/rockchip/common/vpu/lib/arm/rk322x/libffmpeg.so:$(TARGET_COPY_OUT_VENDOR)/lib/libffmpeg.so
 else ifneq ($(filter rk%, $(TARGET_BOARD_PLATFORM)), )
 PRODUCT_COPY_FILES += \

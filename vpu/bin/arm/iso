@@ -36,7 +36,7 @@ getfreeloop() {
 }
 
 releaseLoop() {
-	local devicename=`$GETPROP "vendor.video.loop" ""`
+	local devicename=`$GETPROP "sys.video.loop" ""`
 	local status=`$BUSYBOX losetup $devicename`
 	if [ "$status" != "" ] ; then
 		$ECHO "releaseLoop $devicename"
@@ -128,7 +128,7 @@ elif [ $METHOD == "unmount" ]; then
 	local devicename=`$GETPROP "sys.video.loop" ""`
 	$ECHO "unmount:$devicename***********"
 	Unmount $devicenamea
-	$SETPROP "vendor.video.loop" ""
+	$SETPROP "sys.video.loop" ""
 elif [ $METHOD == "reset" ]; then
 	$BUSYBOX pkill mediaserver
 fi

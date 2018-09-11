@@ -80,7 +80,7 @@ PRODUCT_PACKAGES += \
     libcsiconv
 
 PRODUCT_COPY_FILES += \
-    vendor/rockchip/common/vpu/bin/arm/iso:$(TARGET_COPY_OUT_VENDOR)/bin/iso	
+    vendor/rockchip/common/vpu/bin/arm/iso:system/bin/iso
 endif
 
 ifneq ($(filter rk3228 rk3229 rk322x rk3128h rk3288 rk3328 rk3126c rk3366 rk3368 rk3399 rk3326, $(strip $(TARGET_BOARD_PLATFORM))), )

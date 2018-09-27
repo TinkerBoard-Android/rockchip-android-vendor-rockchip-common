@@ -106,10 +106,14 @@ endif
 PRODUCT_COPY_FILES += \
     vendor/rockchip/common/vpu/etc/media_codecs_rk_vpu.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_rk_vpu.xml
 
-ifneq ($(filter rk312x rk3126c rk3128 rk3188 rk3326, $(TARGET_BOARD_PLATFORM)), )
+ifneq ($(filter rk312x rk3126c rk3128 rk3188, $(TARGET_BOARD_PLATFORM)), )
 PRODUCT_COPY_FILES += \
     vendor/rockchip/common/vpu/etc/media_codecs_google_audio_rk312x.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_audio.xml \
     vendor/rockchip/common/vpu/etc/media_codecs_google_video_rk312x.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video.xml
+else ifneq ($(filter rk3326, $(TARGET_BOARD_PLATFORM)), )
+PRODUCT_COPY_FILES += \
+    vendor/rockchip/common/vpu/etc/media_codecs_google_audio_rk312x.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_audio.xml \
+    vendor/rockchip/common/vpu/etc/media_codecs_google_video_rk3326.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video.xml
 else
 PRODUCT_COPY_FILES += \
     vendor/rockchip/common/vpu/etc/media_codecs_google_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_audio.xml \

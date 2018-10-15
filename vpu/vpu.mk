@@ -98,7 +98,7 @@ PRODUCT_COPY_FILES += \
     vendor/rockchip/common/vpu/lib/arm/libihton.so:$(TARGET_COPY_OUT_VENDOR)/lib/libihton.so
 endif
 
-ifneq ($(filter rk3128h, $(TARGET_BOARD_PLATFORM)), )
+ifneq ($(filter rk3128h rk3328, $(TARGET_BOARD_PLATFORM)), )
 PRODUCT_COPY_FILES += \
     vendor/rockchip/common/vpu/lib/arm/rk3128h/libihton.so:$(TARGET_COPY_OUT_VENDOR)/lib/libihton.so
 endif

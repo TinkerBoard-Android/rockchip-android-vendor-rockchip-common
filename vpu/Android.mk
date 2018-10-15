@@ -155,7 +155,7 @@ LOCAL_SRC_FILES :=lib/arm/rk322x/$(LOCAL_MODULE)$(LOCAL_MODULE_SUFFIX)
 include $(BUILD_PREBUILT)
 endif
 
-ifeq ($(strip $(TARGET_BOARD_PLATFORM)), rk3128h)
+ifneq ($(filter rk3128h rk3328, $(strip $(TARGET_BOARD_PLATFORM))), )
 include $(CLEAR_VARS)
 LOCAL_MODULE := libffmpegextractor
 LOCAL_MODULE_TAGS := optional
@@ -279,6 +279,7 @@ LOCAL_SRC_FILES := lib/arm/mpp/$(LOCAL_MODULE)$(LOCAL_MODULE_SUFFIX)
 endif
 
 ifneq ($(filter rk3228 rk3229 rk3128h rk322x rk3328, $(strip $(TARGET_BOARD_PLATFORM))), )
+LOCAL_MULTILIB := 32
 LOCAL_SRC_FILES := lib/arm/rk322x/$(LOCAL_MODULE)$(LOCAL_MODULE_SUFFIX)
 endif
 include $(BUILD_PREBUILT)

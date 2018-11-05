@@ -21,5 +21,6 @@ PRODUCT_PACKAGES += \
 
 ifeq ($(strip $(ENABLE_STEREO_DEFORM)), true)
 PRODUCT_COPY_FILES += \
-	vendor/rockchip/common/gpu/libs/libGLES.so:system/lib/egl/libGLES.so
+	vendor/rockchip/common/gpu/MaliT860/lib/arm/libGLES_mali.so:system/lib/egl/libGLES_mali.so \
+	vendor/rockchip/common/gpu/MaliT860/lib/arm64/libGLES_mali.so:system/lib64/egl/libGLES_mali.so
 endif

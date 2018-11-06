@@ -44,11 +44,11 @@
             <Feature name="adaptive-playback" />
         </MediaCodec>
 	    <MediaCodec name="OMX.google.vp9.decoder" type="video/x-vnd.on2.vp9">
-	    <Limit name="size" min="2x2" max="1280x720" />
-            <Limit name="alignment" value="2x2" />
+	    <Limit name="size" min="2x2" max="720x480" />
+            <Limit name="alignment" value="8x8" />
             <Limit name="block-size" value="16x16" />
-            <Limit name="blocks-per-second" range="1-983040" />
-            <Limit name="bitrate" range="1-40000000" />
+            <Limit name="blocks-per-second" range="1-244800" />
+            <Limit name="bitrate" range="1-10000000" />
             <Feature name="adaptive-playback" />
         </MediaCodec>
     </Decoders>

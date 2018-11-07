@@ -36,7 +36,7 @@ getfreeloop() {
 }
 
 releaseLoop() {
-	local devicename=`$GETPROP "vendor.video.loop" ""`
+	local devicename=`$GETPROP "sys.video.loop" ""`
 	local status=`$BUSYBOX losetup $devicename`
 	if [ "$status" != "" ] ; then
 		$ECHO "releaseLoop $devicename"
@@ -64,15 +64,15 @@ Mount() {
 	$ECHO "Mount"
 	$ECHO "Mount(): loop:$1"
 	$ECHO "Mount(): path:$2"
-	
+
 	$BUSYBOX losetup $1 "$2"
 	if [ "$?" != 0 ] ; then
-		$ECHO "$BUSYBOX losetup $1 $2 $?"
+		$ECHO "$BUSYBOX losetup $1 $2 fail, result = $?"
 		return
 	fi
 	$BUSYBOX mount -t udf $1 /mnt/iso
 	if [ "$?" != 0 ] ; then
-		$ECHO "$BUSYBOX mount -t udf $1 /mnt/iso $?"
+		$ECHO "$BUSYBOX mount -t udf $1 /mnt/iso fail, result = $?"
 		return
 	fi
 
@@ -81,16 +81,18 @@ Mount() {
 }
 
 Unmount() {
-	$ECHO "Unmount: $1"
-	$BUSYBOX losetup -d $1
+	local devicename=`$GETPROP sys.video.loop`
+	$ECHO "unmount:$devicename"
+	$BUSYBOX losetup -d $devicename
 	if [ "$?" != 0 ] ; then
-		$ECHO "$BUSYBOX losetup -d $1, result $?"
+		$ECHO "$BUSYBOX losetup -d $devicename fail, result $?"
 		return
 	fi
+	$SETPROP "sys.video.loop" ""
 	usleep 100
 	$BUSYBOX umount -l /mnt/iso
 	if [ "$?" != 0 ] ; then
-		$ECHO "$BUSYBOX umount -l /mnt/iso, result $?"
+		$ECHO "$BUSYBOX umount -l /mnt/iso fail, result $?"
 		return
 	fi
 }
@@ -111,8 +113,12 @@ ReadCfg() {
 		elif [ $prefix == "path" ]; then
 			PATH=$tmp
 			$ECHO "PATH: $PATH"
-		fi	
+		fi
 	done < $CFGPATH
+	if [ "$?" != 0 ] ; then
+		$ECHO "ReadCfg fail , result $?"
+		return
+	fi
 }
 
 ReadCfg
@@ -125,10 +131,7 @@ if [ $METHOD == "mount" ]; then
 	Mount $loopdevice "$PATH"
 elif [ $METHOD == "unmount" ]; then
 	$ECHO "unmount"
-	local devicename=`$GETPROP "sys.video.loop" ""`
-	$ECHO "unmount:$devicename***********"
-	Unmount $devicename
-	$SETPROP "vendor.video.loop" ""
+	Unmount
 elif [ $METHOD == "reset" ]; then
 	$BUSYBOX pkill mediaserver
 fi

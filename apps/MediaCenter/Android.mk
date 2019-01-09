@@ -14,9 +14,13 @@ LOCAL_SRC_FILES := $(LOCAL_MODULE).apk
 ifeq ($(strip $(TARGET_ARCH)), arm)
 LOCAL_PREBUILT_JNI_LIBS := \
     lib/arm/libmediacenter-jni.so
+LOCAL_PREBUILT_JNI_LIBS += \
+    lib/arm/libImageUtil.so
 else ifeq ($(strip $(TARGET_ARCH)), arm64)
 LOCAL_PREBUILT_JNI_LIBS := \
     lib/arm64/libmediacenter-jni.so
+LOCAL_PREBUILT_JNI_LIBS += \
+    lib/arm64/libImageUtil.so
 endif
 include $(BUILD_PREBUILT)
 #LOCAL_REQUIRED_MODULES :=

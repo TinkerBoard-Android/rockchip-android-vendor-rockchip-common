@@ -1,4 +1,4 @@
-ifeq ($(strip $(TARGET_BOARD_PLATFORM)), rk3399)
+ifneq ($(filter rk3399 rk3399pro, $(strip $(TARGET_BOARD_PLATFORM))), )
 PRODUCT_PACKAGES += \
 	RFTestTool
 

@@ -21,6 +21,7 @@ ifeq ($(strip $(BOARD_HAVE_DONGLE)),true)
 PRODUCT_PACKAGES += \
     rild \
     libril-rk29-dataonly \
+    usb_dongle \
     usb_modeswitch \
     chat
 

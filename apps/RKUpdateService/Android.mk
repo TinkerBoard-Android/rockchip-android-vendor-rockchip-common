@@ -27,6 +27,7 @@ include $(BUILD_PREBUILT)
 else
 include $(CLEAR_VARS)
 LOCAL_MODULE := RKUpdateService
+LOCAL_DEX_PREOPT := false
 LOCAL_MODULE_CLASS := APPS
 LOCAL_MODULE_TAGS := optional
 LOCAL_BUILT_MODULE_STEM := package.apk

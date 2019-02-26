@@ -96,7 +96,7 @@
         <MediaCodec name="OMX.rk.video_decoder.vp9" type="video/x-vnd.on2.vp9" update="true">
             <Limit name="measured-frame-rate-320x180" range="500-500" />
             <Limit name="measured-frame-rate-640x360" range="387-387" />
-            <Limit name="measured-frame-rate-1280x720" range="112-112" />
+            <Limit name="measured-frame-rate-1280x720" range="310-318" />
             <Limit name="measured-frame-rate-1920x1080" range="150-200" />
         </MediaCodec>
     </Decoders>

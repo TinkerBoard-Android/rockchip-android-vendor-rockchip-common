@@ -114,6 +114,10 @@ else ifneq ($(filter rk3326, $(TARGET_BOARD_PLATFORM)), )
 PRODUCT_COPY_FILES += \
     vendor/rockchip/common/vpu/etc/media_codecs_google_audio_rk312x.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_audio.xml \
     vendor/rockchip/common/vpu/etc/media_codecs_google_video_rk3326.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video.xml
+else ifneq ($(filter rk3368, $(TARGET_BOARD_PLATFORM)), )
+PRODUCT_COPY_FILES += \
+    vendor/rockchip/common/vpu/etc/media_codecs_google_audio_rk312x.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_audio.xml \
+    vendor/rockchip/common/vpu/etc/media_codecs_google_video_rk3368.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video.xml
 else
 PRODUCT_COPY_FILES += \
     vendor/rockchip/common/vpu/etc/media_codecs_google_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_audio.xml \

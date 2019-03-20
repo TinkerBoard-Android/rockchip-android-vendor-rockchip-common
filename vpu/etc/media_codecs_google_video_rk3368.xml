@@ -46,7 +46,7 @@
         </MediaCodec>
 	    <MediaCodec name="OMX.google.vp9.decoder" type="video/x-vnd.on2.vp9">
 	    <Limit name="size" min="2x2" max="640x336" />
-            <Limit name="alignment" value="8x8" />
+            <Limit name="alignment" value="4x8" />
             <Limit name="block-size" value="16x16" />
             <Limit name="blocks-per-second" range="1-983040" />
             <Limit name="bitrate" range="1-40000000" />

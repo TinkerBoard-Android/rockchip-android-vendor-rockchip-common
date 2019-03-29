@@ -1,5 +1,6 @@
-#AP6255_NVRAM_V1.1.6_05172017.txt
-# Cloned from bcm94345wlpagb_p2xx.txt 
+#AP6255_NVRAM_V1.1.8_10182018.txt
+# Cloned from bcm94345wlpagb_p2xx.txt
+#Adaptivity limit 
 NVRAMRev=$Rev: 498373 $
 sromrev=11
 vendid=0x14e4
@@ -79,10 +80,6 @@ mcsbw805ghpo=0xd9222222
 
 
 
-
-
-
-
 swctrlmap_2g=0x00000000,0x00000000,0x00000000,0x010000,0x3ff
 swctrlmap_5g=0x00100010,0x00200020,0x00200020,0x010000,0x3fe
 swctrlmapext_5g=0x00000000,0x00000000,0x00000000,0x000000,0x3
@@ -90,14 +87,10 @@ swctrlmapext_2g=0x00000000,0x00000000,0x00000000,0x000000,0x3
 
 vcodivmode=1
 deadman_to=481500000
-#ed_thresh2g=-54
-#ed_thresh5g=-54
-#eu_edthresh2g=-54
-#eu_edthresh5g=-54
-ed_thresh2g=-69
-ed_thresh5g=-69
-eu_edthresh2g=-69
-eu_edthresh5g=-69
+ed_thresh2g=-54
+ed_thresh5g=-59
+eu_edthresh2g=-54
+eu_edthresh5g=-54
 ldo1=4
 rawtempsense=0x1ff
 cckPwrIdxCorr=3

@@ -532,6 +532,9 @@ else
 ifeq ($(strip $(TARGET_BOARD_PLATFORM)), rk3128h)
 LOCAL_SRC_FILES :=lib/$(TARGET_ARCH)/rk322x/$(LOCAL_MODULE)$(LOCAL_MODULE_SUFFIX)
 else
+ifeq ($(strip $(TARGET_BOARD_PLATFORM)), rk3288)
+LOCAL_SRC_FILES :=lib/$(TARGET_ARCH)/rk3288/$(LOCAL_MODULE)$(LOCAL_MODULE_SUFFIX)
+else
 ifneq ($(strip $(TARGET_2ND_ARCH)), )
 LOCAL_MULTILIB := both
 ifeq ($(strip $(TARGET_BOARD_PLATFORM)), rk3366)
@@ -570,8 +573,9 @@ else
 ifeq ($(strip $(TARGET_BOARD_PLATFORM)), rk3326)
 LOCAL_SRC_FILES :=lib/$(TARGET_ARCH)/rk3326/$(LOCAL_MODULE)$(LOCAL_MODULE_SUFFIX)
 else
-#rk312x rk3188 rk3368 rk3288 use older librkvpu_api
+#rk312x rk3188 rk3368 use older librkvpu_api
 LOCAL_SRC_FILES := lib/$(TARGET_ARCH)/$(LOCAL_MODULE)$(LOCAL_MODULE_SUFFIX)
+endif
 endif
 endif
 endif

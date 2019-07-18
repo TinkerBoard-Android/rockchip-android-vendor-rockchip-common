@@ -570,11 +570,15 @@ endif
 endif
 endif
 else
+ifeq ($(strip $(TARGET_BOARD_PLATFORM)), rk3328)
+LOCAL_SRC_FILES_$(TARGET_ARCH) := lib/$(TARGET_ARCH)/rk322x/$(LOCAL_MODULE)$(LOCAL_MODULE_SUFFIX)
+else
 ifeq ($(strip $(TARGET_BOARD_PLATFORM)), rk3326)
 LOCAL_SRC_FILES :=lib/$(TARGET_ARCH)/rk3326/$(LOCAL_MODULE)$(LOCAL_MODULE_SUFFIX)
 else
 #rk312x rk3188 rk3368 use older librkvpu_api
 LOCAL_SRC_FILES := lib/$(TARGET_ARCH)/$(LOCAL_MODULE)$(LOCAL_MODULE_SUFFIX)
+endif
 endif
 endif
 endif

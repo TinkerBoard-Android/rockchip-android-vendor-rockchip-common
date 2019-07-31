@@ -25,7 +25,7 @@ endif
 ifneq ($(strip $(TARGET_BOARD_PLATFORM_PRODUCT)), vr)
 PRODUCT_PACKAGES += \
     userExperienceService
-ifneq ($(strip $(TARGET_BOARD_PLATFORM_PRODUCT)), box)
+ifeq ($(filter tablet box, $(strip $(TARGET_BOARD_PLATFORM_PRODUCT))), )
 PRODUCT_PACKAGES += \
     RkApkinstaller
 endif

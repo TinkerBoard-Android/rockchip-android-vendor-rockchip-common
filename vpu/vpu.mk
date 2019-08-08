@@ -37,11 +37,25 @@ PRODUCT_PACKAGES += \
     libjpeghwenc
 endif
 
-ifneq ($(filter rk3228 rk3229 rk322x rk3128h rk3328, $(strip $(TARGET_BOARD_PLATFORM))), )
-BOARD_VENDOR_KERNEL_MODULES += \
-	vendor/rockchip/common/vpu/lib/arm/rk322x/modules/vcodec_service.ko
-PRODUCT_PACKAGES += \
-	libiep 
+USE_322x_VCODEC := false
+ifneq ($(filter rk3228 rk3229 rk322x rk3128h rk3328 rk3368, $(strip $(TARGET_BOARD_PLATFORM))), )
+    USE_322x_VCODEC := true
+ifeq ($(TARGET_BOARD_PLATFORM), rk3368)
+ifeq ($(TARGET_BOARD_PLATFORM_PRODUCT),box)
+	USE_322x_VCODEC := true
+else 
+	USE_322x_VCODEC := false
+endif
+endif
+else
+    USE_322x_VCODEC := false
+endif
+
+ifeq ($(USE_322x_VCODEC), true)
+	BOARD_VENDOR_KERNEL_MODULES += \
+		vendor/rockchip/common/vpu/lib/arm/rk322x/modules/vcodec_service.ko
+	PRODUCT_PACKAGES += \
+		libiep
 endif
 
 ifneq ($(filter rk3399 rk3399pro rk3326, $(strip $(TARGET_BOARD_PLATFORM))), )

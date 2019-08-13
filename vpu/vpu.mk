@@ -44,7 +44,7 @@ PRODUCT_PACKAGES += \
 	libiep 
 endif
 
-ifneq ($(filter rk3399 rk3399pro rk3326, $(strip $(TARGET_BOARD_PLATFORM))), )
+ifneq ($(filter rk3399 rk3399pro, $(strip $(TARGET_BOARD_PLATFORM))), )
 PRODUCT_COPY_FILES += \
 	vendor/rockchip/common/vpu/lib/arm/rk3399/libjpeghwenc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libjpeghwenc.so \
 	vendor/rockchip/common/vpu/lib/arm/rk3399/libjpeghwdec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libjpeghwdec.so \

@@ -46,14 +46,6 @@ endif
 
 ifneq ($(filter rk3399 rk3399pro, $(strip $(TARGET_BOARD_PLATFORM))), )
 PRODUCT_COPY_FILES += \
-	vendor/rockchip/common/vpu/lib/arm/rk3399/libjpeghwenc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libjpeghwenc.so \
-	vendor/rockchip/common/vpu/lib/arm/rk3399/libjpeghwdec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libjpeghwdec.so \
-	vendor/rockchip/common/vpu/lib/arm64/rk3399/libjpeghwenc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libjpeghwenc.so \
-	vendor/rockchip/common/vpu/lib/arm64/rk3399/libjpeghwdec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libjpeghwdec.so
-endif
-
-ifneq ($(filter rk3399 rk3399pro, $(strip $(TARGET_BOARD_PLATFORM))), )
-PRODUCT_COPY_FILES += \
         vendor/rockchip/common/vpu/lib/arm/rk3399/libstagefright_hdcp.so:$(TARGET_COPY_OUT_VENDOR)/lib/libstagefright_hdcp.so \
         vendor/rockchip/common/vpu/lib/arm64/rk3399/libstagefright_hdcp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libstagefright_hdcp.so
 endif

@@ -46,7 +46,7 @@ ifneq ($(strip $(TARGET_2ND_ARCH)), )
     LOCAL_SRC_FILES_$(TARGET_ARCH) := lib/$(TARGET_ARCH)/media_core/$(LOCAL_MODULE)$(LOCAL_MODULE_SUFFIX)
     LOCAL_SRC_FILES_$(TARGET_2ND_ARCH) := lib/$(TARGET_2ND_ARCH)/media_core/$(LOCAL_MODULE)$(LOCAL_MODULE_SUFFIX)
 else
-    ifneq ($(filter rk3326, $(strip $(TARGET_BOARD_PLATFORM))), )
+    ifneq ($(filter rk3126c, $(strip $(TARGET_BOARD_PLATFORM))), )
         LOCAL_SRC_FILES :=lib/$(TARGET_ARCH)/media_core/$(LOCAL_MODULE)$(LOCAL_MODULE_SUFFIX)
     endif
 endif
@@ -69,7 +69,7 @@ ifneq ($(strip $(TARGET_2ND_ARCH)), )
     LOCAL_SRC_FILES_$(TARGET_ARCH) := lib/$(TARGET_ARCH)/media_core/mpp_dev/$(LOCAL_MODULE)$(LOCAL_MODULE_SUFFIX)
     LOCAL_SRC_FILES_$(TARGET_2ND_ARCH) := lib/$(TARGET_2ND_ARCH)/media_core/mpp_dev/$(LOCAL_MODULE)$(LOCAL_MODULE_SUFFIX)
 else
-    ifneq ($(filter rk3326, $(strip $(TARGET_BOARD_PLATFORM))), )
+    ifneq ($(filter rk3126c, $(strip $(TARGET_BOARD_PLATFORM))), )
         LOCAL_SRC_FILES :=lib/$(TARGET_ARCH)/media_core/mpp_dev/$(LOCAL_MODULE)$(LOCAL_MODULE_SUFFIX)
     endif
 endif
@@ -92,7 +92,7 @@ ifneq ($(strip $(TARGET_2ND_ARCH)), )
     LOCAL_SRC_FILES_$(TARGET_ARCH) := lib/$(TARGET_ARCH)/media_core/mpp_dev/$(LOCAL_MODULE)$(LOCAL_MODULE_SUFFIX)
     LOCAL_SRC_FILES_$(TARGET_2ND_ARCH) := lib/$(TARGET_2ND_ARCH)/media_core/mpp_dev/$(LOCAL_MODULE)$(LOCAL_MODULE_SUFFIX)
 else
-    ifneq ($(filter rk3326, $(strip $(TARGET_BOARD_PLATFORM))), )
+    ifneq ($(filter rk3126c, $(strip $(TARGET_BOARD_PLATFORM))), )
         LOCAL_SRC_FILES :=lib/$(TARGET_ARCH)/media_core/mpp_dev/$(LOCAL_MODULE)$(LOCAL_MODULE_SUFFIX)
     endif
 endif
@@ -115,7 +115,7 @@ ifneq ($(strip $(TARGET_2ND_ARCH)), )
     LOCAL_SRC_FILES_$(TARGET_ARCH) := lib/$(TARGET_ARCH)/media_core/$(LOCAL_MODULE)$(LOCAL_MODULE_SUFFIX)
     LOCAL_SRC_FILES_$(TARGET_2ND_ARCH) := lib/$(TARGET_2ND_ARCH)/media_core/$(LOCAL_MODULE)$(LOCAL_MODULE_SUFFIX)
 else
-    ifneq ($(filter rk3326, $(strip $(TARGET_BOARD_PLATFORM))), )
+    ifneq ($(filter rk3126c, $(strip $(TARGET_BOARD_PLATFORM))), )
         LOCAL_SRC_FILES :=lib/$(TARGET_ARCH)/media_core/$(LOCAL_MODULE)$(LOCAL_MODULE_SUFFIX)
     endif
 endif

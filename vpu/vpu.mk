@@ -66,7 +66,7 @@ PRODUCT_COPY_FILES += \
     vendor/rockchip/common/vpu/etc/etc2/media_codecs_google_video.xml:$(TARGET_COPY_OUT_OEM)/etc/media_codecs_google_video.xml \
     vendor/rockchip/common/vpu/etc/etc2/media_codecs_google_audio.xml:$(TARGET_COPY_OUT_OEM)/etc/media_codecs_google_audio.xml \
     vendor/rockchip/common/vpu/etc/etc2/media_codecs_ffmpeg.xml:$(TARGET_COPY_OUT_OEM)/etc/media_codecs_ffmpeg.xml \
-    vendor/rockchip/common/vpu/etc/etc2/media_codecs_performance_rk3328.xml:$(TARGET_COPY_OUT_OEM)/etc/media_codecs_performance.xml \
+    vendor/rockchip/common/vpu/etc/etc2/media_codecs_performance_rk3328.xml:$(TARGET_COPY_OUT_OEM)/etc/media_codecs_performance.xml
 else ifneq ($(filter rk%, $(TARGET_BOARD_PLATFORM)), )
 PRODUCT_COPY_FILES += \
     vendor/rockchip/common/vpu/etc/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml

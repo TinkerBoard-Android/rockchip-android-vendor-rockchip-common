@@ -56,8 +56,10 @@ ifeq ($(strip $(PRODUCT_BUILD_MODULE)), px5car)
 PRODUCT_PACKAGES += \
     Rk3grExplorer
 else
+ifneq ($(strip $(TARGET_BOARD_PLATFORM_PRODUCT)), box)
 PRODUCT_PACKAGES += \
     RkExplorer
+endif
 endif
 
 

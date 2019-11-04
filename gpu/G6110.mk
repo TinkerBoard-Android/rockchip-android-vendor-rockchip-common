@@ -25,7 +25,9 @@ PRODUCT_COPY_FILES += \
     vendor/rockchip/common/gpu/libG6110/G6110_64/vendor/lib/egl/libGLESv1_CM_POWERVR_ROGUE.so:$(TARGET_COPY_OUT_VENDOR)/lib/egl/libGLESv1_CM_POWERVR_ROGUE.so \
     vendor/rockchip/common/gpu/libG6110/G6110_64/vendor/lib/egl/libGLESv2_POWERVR_ROGUE.so:$(TARGET_COPY_OUT_VENDOR)/lib/egl/libGLESv2_POWERVR_ROGUE.so \
     vendor/rockchip/common/gpu/libG6110/G6110_64/vendor/lib/hw/gralloc.rk3368.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/gralloc.rk3368.so \
+ifneq ($(strip $(BUILD_WITH_GOOGLE_MARKET)), true)
     vendor/rockchip/common/gpu/libG6110/G6110_64/vendor/lib/hw/vulkan.rk3368.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vulkan.rk3368.so \
+endif
     vendor/rockchip/common/gpu/libG6110/G6110_64/vendor/lib/hw/memtrack.rk3368.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/memtrack.rk3368.so \
     vendor/rockchip/common/gpu/libG6110/G6110_64/vendor/lib/libcreatesurface.so:$(TARGET_COPY_OUT_VENDOR)/lib/libcreatesurface.so \
     vendor/rockchip/common/gpu/libG6110/G6110_64/vendor/lib/libglslcompiler.so:$(TARGET_COPY_OUT_VENDOR)/lib/libglslcompiler.so \
@@ -46,7 +48,9 @@ PRODUCT_COPY_FILES += \
     vendor/rockchip/common/gpu/libG6110/G6110_64/vendor/lib64/egl/libGLESv1_CM_POWERVR_ROGUE.so:$(TARGET_COPY_OUT_VENDOR)/lib64/egl/libGLESv1_CM_POWERVR_ROGUE.so \
     vendor/rockchip/common/gpu/libG6110/G6110_64/vendor/lib64/egl/libGLESv2_POWERVR_ROGUE.so:$(TARGET_COPY_OUT_VENDOR)/lib64/egl/libGLESv2_POWERVR_ROGUE.so \
     vendor/rockchip/common/gpu/libG6110/G6110_64/vendor/lib64/hw/gralloc.rk3368.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/gralloc.rk3368.so \
+ifneq ($(strip $(BUILD_WITH_GOOGLE_MARKET)), true)
     vendor/rockchip/common/gpu/libG6110/G6110_64/vendor/lib64/hw/vulkan.rk3368.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vulkan.rk3368.so \
+endif
     vendor/rockchip/common/gpu/libG6110/G6110_64/vendor/lib64/libcreatesurface.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcreatesurface.so \
     vendor/rockchip/common/gpu/libG6110/G6110_64/vendor/lib64/libglslcompiler.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libglslcompiler.so \
     vendor/rockchip/common/gpu/libG6110/G6110_64/vendor/lib64/libIMGegl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libIMGegl.so \

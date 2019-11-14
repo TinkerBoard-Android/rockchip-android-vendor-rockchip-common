@@ -43,11 +43,11 @@ LOCAL_MODULE_STEM := $(LOCAL_MODULE)
 LOCAL_MODULE_SUFFIX := .so
 ifneq ($(strip $(TARGET_2ND_ARCH)), )
     LOCAL_MULTILIB := both
-    LOCAL_SRC_FILES_$(TARGET_ARCH) := lib/$(TARGET_ARCH)/media_core/mpp_svp/$(LOCAL_MODULE)$(LOCAL_MODULE_SUFFIX)
-    LOCAL_SRC_FILES_$(TARGET_2ND_ARCH) := lib/$(TARGET_2ND_ARCH)/media_core/mpp_svp/$(LOCAL_MODULE)$(LOCAL_MODULE_SUFFIX)
+    LOCAL_SRC_FILES_$(TARGET_ARCH) := lib/$(TARGET_ARCH)/media_core/mpp_dev/$(LOCAL_MODULE)$(LOCAL_MODULE_SUFFIX)
+    LOCAL_SRC_FILES_$(TARGET_2ND_ARCH) := lib/$(TARGET_2ND_ARCH)/media_core/mpp_dev/$(LOCAL_MODULE)$(LOCAL_MODULE_SUFFIX)
 else
-    ifneq ($(filter rk3326, $(strip $(TARGET_BOARD_PLATFORM))), )
-        LOCAL_SRC_FILES :=lib/$(TARGET_ARCH)/media_core/mpp_svp/$(LOCAL_MODULE)$(LOCAL_MODULE_SUFFIX)
+    ifneq ($(filter rk3328, $(strip $(TARGET_BOARD_PLATFORM))), )
+        LOCAL_SRC_FILES :=lib/$(TARGET_ARCH)/media_core/mpp_dev/$(LOCAL_MODULE)$(LOCAL_MODULE_SUFFIX)
     endif
 endif
 include $(BUILD_PREBUILT)
@@ -66,11 +66,11 @@ LOCAL_MODULE_SUFFIX := .so
 LOCAL_MULTILIB := 32
 ifneq ($(strip $(TARGET_2ND_ARCH)), )
     LOCAL_MULTILIB := both
-    LOCAL_SRC_FILES_$(TARGET_ARCH) := lib/$(TARGET_ARCH)/media_core/mpp_svp/$(LOCAL_MODULE)$(LOCAL_MODULE_SUFFIX)
-    LOCAL_SRC_FILES_$(TARGET_2ND_ARCH) := lib/$(TARGET_2ND_ARCH)/media_core/mpp_svp/$(LOCAL_MODULE)$(LOCAL_MODULE_SUFFIX)
+    LOCAL_SRC_FILES_$(TARGET_ARCH) := lib/$(TARGET_ARCH)/media_core/mpp_dev/$(LOCAL_MODULE)$(LOCAL_MODULE_SUFFIX)
+    LOCAL_SRC_FILES_$(TARGET_2ND_ARCH) := lib/$(TARGET_2ND_ARCH)/media_core/mpp_dev/$(LOCAL_MODULE)$(LOCAL_MODULE_SUFFIX)
 else
-    ifneq ($(filter rk3326, $(strip $(TARGET_BOARD_PLATFORM))), )
-        LOCAL_SRC_FILES :=lib/$(TARGET_ARCH)/media_core/mpp_svp/$(LOCAL_MODULE)$(LOCAL_MODULE_SUFFIX)
+    ifneq ($(filter rk3328, $(strip $(TARGET_BOARD_PLATFORM))), )
+        LOCAL_SRC_FILES :=lib/$(TARGET_ARCH)/media_core/mpp_dev/$(LOCAL_MODULE)$(LOCAL_MODULE_SUFFIX)
     endif
 endif
 include $(BUILD_PREBUILT)
@@ -89,11 +89,11 @@ LOCAL_MODULE_SUFFIX := .so
 LOCAL_MULTILIB := 32
 ifneq ($(strip $(TARGET_2ND_ARCH)), )
     LOCAL_MULTILIB := both
-    LOCAL_SRC_FILES_$(TARGET_ARCH) := lib/$(TARGET_ARCH)/media_core/mpp_svp/$(LOCAL_MODULE)$(LOCAL_MODULE_SUFFIX)
-    LOCAL_SRC_FILES_$(TARGET_2ND_ARCH) := lib/$(TARGET_2ND_ARCH)/media_core/mpp_svp/$(LOCAL_MODULE)$(LOCAL_MODULE_SUFFIX)
+    LOCAL_SRC_FILES_$(TARGET_ARCH) := lib/$(TARGET_ARCH)/media_core/mpp_dev/$(LOCAL_MODULE)$(LOCAL_MODULE_SUFFIX)
+    LOCAL_SRC_FILES_$(TARGET_2ND_ARCH) := lib/$(TARGET_2ND_ARCH)/media_core/mpp_dev/$(LOCAL_MODULE)$(LOCAL_MODULE_SUFFIX)
 else
-    ifneq ($(filter rk3326, $(strip $(TARGET_BOARD_PLATFORM))), )
-        LOCAL_SRC_FILES :=lib/$(TARGET_ARCH)/media_core/mpp_svp/$(LOCAL_MODULE)$(LOCAL_MODULE_SUFFIX)
+    ifneq ($(filter rk3328, $(strip $(TARGET_BOARD_PLATFORM))), )
+        LOCAL_SRC_FILES :=lib/$(TARGET_ARCH)/media_core/mpp_dev/$(LOCAL_MODULE)$(LOCAL_MODULE_SUFFIX)
     endif
 endif
 include $(BUILD_PREBUILT)
@@ -112,11 +112,11 @@ LOCAL_MODULE_SUFFIX := .so
 LOCAL_MULTILIB := 32
 ifneq ($(strip $(TARGET_2ND_ARCH)), )
     LOCAL_MULTILIB := both
-    LOCAL_SRC_FILES_$(TARGET_ARCH) := lib/$(TARGET_ARCH)/media_core/mpp_svp/$(LOCAL_MODULE)$(LOCAL_MODULE_SUFFIX)
-    LOCAL_SRC_FILES_$(TARGET_2ND_ARCH) := lib/$(TARGET_2ND_ARCH)/media_core/mpp_svp/$(LOCAL_MODULE)$(LOCAL_MODULE_SUFFIX)
+    LOCAL_SRC_FILES_$(TARGET_ARCH) := lib/$(TARGET_ARCH)/media_core/mpp_dev/$(LOCAL_MODULE)$(LOCAL_MODULE_SUFFIX)
+    LOCAL_SRC_FILES_$(TARGET_2ND_ARCH) := lib/$(TARGET_2ND_ARCH)/media_core/mpp_dev/$(LOCAL_MODULE)$(LOCAL_MODULE_SUFFIX)
 else
-    ifneq ($(filter rk3326, $(strip $(TARGET_BOARD_PLATFORM))), )
-        LOCAL_SRC_FILES :=lib/$(TARGET_ARCH)/media_core/mpp_svp/$(LOCAL_MODULE)$(LOCAL_MODULE_SUFFIX)
+    ifneq ($(filter rk3328, $(strip $(TARGET_BOARD_PLATFORM))), )
+        LOCAL_SRC_FILES :=lib/$(TARGET_ARCH)/media_core/mpp_dev/$(LOCAL_MODULE)$(LOCAL_MODULE_SUFFIX)
     endif
 endif
 include $(BUILD_PREBUILT)

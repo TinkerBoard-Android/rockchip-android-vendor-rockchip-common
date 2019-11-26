@@ -23,3 +23,7 @@ endif
 ifneq ($(filter rk3368, $(TARGET_BOARD_PLATFORM)), )
         include $(LOCAL_PATH)/media_rk3368.mk
 endif
+
+ifneq ($(filter rk322x, $(TARGET_BOARD_PLATFORM)), )
+        include $(LOCAL_PATH)/media_rk322x.mk
+endif

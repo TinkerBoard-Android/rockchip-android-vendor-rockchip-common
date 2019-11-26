@@ -12,6 +12,10 @@ ifneq ($(filter rk3328, $(TARGET_BOARD_PLATFORM)), )
 PRODUCT_COPY_FILES += \
     vendor/rockchip/common/vpu/firmware/monet.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/monet.bin 
 endif
+ifneq ($(filter rk322x, $(TARGET_BOARD_PLATFORM)), )
+PRODUCT_COPY_FILES += \
+    vendor/rockchip/common/vpu/firmware/monet.bin:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/monet.bin
+endif
 
 ifneq ($(filter rk3126c, $(TARGET_BOARD_PLATFORM)), )
 PRODUCT_COPY_FILES += \

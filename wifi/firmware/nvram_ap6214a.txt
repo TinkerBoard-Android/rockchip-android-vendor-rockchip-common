@@ -1,4 +1,4 @@
-#AP6212A_NVRAM_V1.0.2_20191121
+#AP6214_AP6214A_NVRAM_V1.2.2_20191121
 # 2.4 GHz, 20 MHz BW mode
 
 # The following parameter values are just placeholders, need to be updated.
@@ -29,13 +29,12 @@ cckpwroffset0=5
 # PPR params
 maxp2ga0=80
 txpwrbckof=6
-cckbw202gpo=0x6666
-legofdmbw202gpo=0xaaaaaaaa
-mcsbw202gpo=0xbbbbbbbb
+cckbw202gpo=0x5555
+legofdmbw202gpo=0x88888888
+mcsbw202gpo=0xaaaaaaaa
 
 # OFDM IIR :
-ofdmdigfilttype=18
-ofdmdigfilttypebe=18
+ofdmdigfilttype=7
 # PAPD mode:
 papdmode=2
 
@@ -54,3 +53,4 @@ muxenab=0x10
 #cldo_pwm=0x4
 glitch_based_crsmin=1
 noccpwrlmt=1
+

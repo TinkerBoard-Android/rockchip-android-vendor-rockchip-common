@@ -1,4 +1,4 @@
-#AP6181_NVRAM_V1.1_01152013
+#AP6181_NVRAM_V1.2_05242017
 #adjuest PA parameter for g/n mode
 manfid=0x2d0
 prodid=0x492
@@ -49,3 +49,10 @@ noise_cal_po_2g=0
 swctrlmap_2g=0x04040404,0x02020202,0x02020202,0x010101,0x1ff
 temp_add=29767
 temp_mult=425
+temp_q=10
+initxidx2g=45
+tssitime=1
+rfreg033=0x19
+rfreg033_cck=0x1f
+cckPwrIdxCorr=-8
+spuravoid_enable2g=1

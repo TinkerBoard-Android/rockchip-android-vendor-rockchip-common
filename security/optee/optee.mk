@@ -3,11 +3,23 @@ OPTEE_DIR := vendor/rockchip/common/security/optee/v2
 PRODUCT_COPY_FILES += \
 	$(OPTEE_DIR)/ta/258be795-f9ca-40e6-a869-9ce6886c5d5d.ta:vendor/lib/optee_armtz/258be795-f9ca-40e6-a869-9ce6886c5d5d.ta	\
 	$(OPTEE_DIR)/ta/0b82bae5-0cd0-49a5-9521-516dba9c43ba.ta:vendor/lib/optee_armtz/0b82bae5-0cd0-49a5-9521-516dba9c43ba.ta
+
+ifeq ($(strip $(BOARD_SUPER_PARTITION_GROUPS)),rockchip_dynamic_partitions)
+PRODUCT_COPY_FILES += \
+	$(OPTEE_DIR)/ta/481a57df-aec8-47ad-92f5-eb9fc24f64a6.ta:vendor/lib/optee_armtz/481a57df-aec8-47ad-92f5-eb9fc24f64a6.ta
+endif
+
 else
 OPTEE_DIR := vendor/rockchip/common/security/optee/v1
 PRODUCT_COPY_FILES += \
 	$(OPTEE_DIR)/ta/258be795-f9ca-40e6-a8699ce6886c5d5d.ta:vendor/lib/optee_armtz/258be795-f9ca-40e6-a8699ce6886c5d5d.ta	\
 	$(OPTEE_DIR)/ta/0b82bae5-0cd0-49a5-9521516dba9c43ba.ta:vendor/lib/optee_armtz/0b82bae5-0cd0-49a5-9521516dba9c43ba.ta
+
+ifeq ($(strip $(BOARD_SUPER_PARTITION_GROUPS)),rockchip_dynamic_partitions)
+PRODUCT_COPY_FILES += \
+	$(OPTEE_DIR)/ta/481a57df-aec8-47ad-92f5eb9fc24f64a6.ta:vendor/lib/optee_armtz/481a57df-aec8-47ad-92f5eb9fc24f64a6.ta
+endif
+
 endif
 
 PRODUCT_COPY_FILES += \
@@ -17,7 +29,7 @@ PRODUCT_COPY_FILES += \
 	$(OPTEE_DIR)/lib/arm/keystore.rk30board.so:vendor/lib/hw/keystore.rk30board.so	\
 	$(OPTEE_DIR)/lib/arm/libRkTeeGatekeeper.so:vendor/lib/libRkTeeGatekeeper.so	\
 	$(OPTEE_DIR)/lib/arm/librkgatekeeper.so:vendor/lib/librkgatekeeper.so	\
-	$(OPTEE_DIR)/lib/arm/gatekeeper.rk30board.so:vendor/lib/hw/gatekeeper.rk30board.so	
+	$(OPTEE_DIR)/lib/arm/gatekeeper.rk30board.so:vendor/lib/hw/gatekeeper.rk30board.so
 
 ifeq ($(strip $(TARGET_ARCH)), arm64)
 PRODUCT_COPY_FILES += \

@@ -35,8 +35,8 @@
 
         <!-- c2_encoder performance list -->
         <MediaCodec name="c2.android.avc.encoder" type="video/avc" update="true">
-            <Limit name="measured-frame-rate-320x240" range="72-78" />
-            <Limit name="measured-frame-rate-720x480" range="41-43" />
+            <Limit name="measured-frame-rate-320x240" range="15-30" />
+            <Limit name="measured-frame-rate-720x480" range="11-13" />
         </MediaCodec>
         <MediaCodec name="c2.android.h263.encoder" type="video/3gpp" update="true">
             <Limit name="measured-frame-rate-176x144" range="190-200" />
@@ -98,7 +98,7 @@
             <Limit name="measured-frame-rate-352x288" range="116-116" />
             <Limit name="measured-frame-rate-640x360" range="65-65" />
             <Limit name="measured-frame-rate-720x480" range="58-58" />
-            <Limit name="measured-frame-rate-1280x720" range="10-10" />
+            <Limit name="measured-frame-rate-1280x720" range="21-28" />
         </MediaCodec>
         <MediaCodec name="c2.android.h263.decoder" type="video/3gpp" update="true">
             <Limit name="measured-frame-rate-176x144" range="175-188" />

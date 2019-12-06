@@ -179,6 +179,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="bitrate" range="1-40000000" />
             <Feature name="bitrate-modes" value="VBR,CBR" />
             <Limit name="concurrent-instances" max="3" />
+            <Limit name="performance-point-1280x720" value="30" />
         </MediaCodec>
     </Encoders>
     <Include href="media_codecs_google_video.xml" />

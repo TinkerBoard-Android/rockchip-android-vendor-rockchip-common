@@ -1,0 +1,25 @@
+bootstrap_go_package {
+    name: "soong-libjpeghwenc",
+    pkgPath: "android/soong/libjpeghwenc",
+    deps: [
+        "blueprint",
+        "blueprint-pathtools",
+        "soong",
+        "soong-android",
+        "soong-cc",
+        "soong-genrule",
+    ],
+    srcs: [
+          "Android.go",
+    ],
+    pluginFor: ["soong_build"],
+}
+
+cc_libjpeghwenc_prebuilt_library_shared {
+    name: "libjpeghwenc",
+    strip: {
+      none: true,
+    },
+    vendor: true,
+    
+}

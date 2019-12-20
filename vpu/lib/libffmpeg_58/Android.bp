@@ -1,0 +1,8 @@
+cc_prebuilt_library_shared {
+    name: "libffmpeg_58",
+    vendor: true,
+    compile_multilib: "32",
+
+    srcs: ["libffmpeg_58.so"],
+
+}

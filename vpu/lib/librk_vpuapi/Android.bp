@@ -1,0 +1,25 @@
+bootstrap_go_package {
+    name: "soong-librk_vpuapi",
+    pkgPath: "android/soong/librk_vpuapi",
+    deps: [
+        "blueprint",
+        "blueprint-pathtools",
+        "soong",
+        "soong-android",
+        "soong-cc",
+        "soong-genrule",
+    ],
+    srcs: [
+          "Android.go",
+    ],
+    pluginFor: ["soong_build"],
+}
+
+cc_librk_vpuapi_prebuilt_library_shared {
+    name: "librk_vpuapi",
+    strip: {
+      none: true,
+    },
+    vendor: true,
+    
+}

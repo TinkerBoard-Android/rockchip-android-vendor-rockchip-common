@@ -1,0 +1,24 @@
+bootstrap_go_package {
+    name: "soong-libmpp",
+    pkgPath: "android/soong/libmpp",
+    deps: [
+        "blueprint",
+        "blueprint-pathtools",
+        "soong",
+        "soong-android",
+        "soong-cc",
+        "soong-genrule",
+    ],
+    srcs: [
+          "Android.go",
+    ],
+    pluginFor: ["soong_build"],
+}
+
+cc_libmpp_prebuilt_library_shared {
+    name: "libmpp",
+    strip: {
+      none: true,
+    },
+    vendor: true,
+}

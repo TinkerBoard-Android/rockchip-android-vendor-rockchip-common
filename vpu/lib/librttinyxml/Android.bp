@@ -1,0 +1,7 @@
+cc_prebuilt_library_shared {
+    name: "librttinyxml",   
+    compile_multilib: "32",
+
+    srcs: ["librttinyxml.so"],
+
+}

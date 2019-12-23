@@ -1,6 +1,5 @@
 cc_prebuilt_library_shared {
     name: "librockit",
-    vendor: true,
     compile_multilib: "32",
 
     srcs: ["librockit.so"],

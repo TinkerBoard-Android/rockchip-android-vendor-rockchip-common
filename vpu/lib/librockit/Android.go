@@ -23,16 +23,21 @@ func DefaultsFactory() (android.Module) {
 func Defaults(ctx android.LoadHookContext) {
     type props struct {
         Srcs []string
+        Vendor  *bool
     }
     var srcs []string
+    var vendor bool
     if (strings.Contains(ctx.AConfig().Getenv("TARGET_PRODUCT"),"box")) {
         srcs = append(srcs,"box/librockit.so")
+        vendor = true
 //        fmt.Println("is box!!!!")
     } else {
         srcs = append(srcs,"librockit.so")
+        vendor = false
     }
 
     p := &props{}
     p.Srcs = srcs
+    p.Vendor = &vendor
     ctx.AppendProperties(p)
 }

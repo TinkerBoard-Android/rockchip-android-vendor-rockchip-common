@@ -1,7 +1,25 @@
-cc_prebuilt_library_shared {
+bootstrap_go_package {
+    name: "soong-libffmpeg_58",
+    pkgPath: "android/soong/libffmpeg_58",
+    deps: [
+        "blueprint",
+        "blueprint-pathtools",
+        "soong",
+        "soong-android",
+        "soong-cc",
+        "soong-genrule",
+    ],
+    srcs: [
+          "Android.go",
+    ],
+    pluginFor: ["soong_build"],
+}
+
+cc_libffmpeg_58_prebuilt_library_shared {
     name: "libffmpeg_58",
     compile_multilib: "32",
-
-    srcs: ["libffmpeg_58.so"],
+    strip: {
+      none: true,
+    },
 
 }

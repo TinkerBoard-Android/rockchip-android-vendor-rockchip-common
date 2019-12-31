@@ -18,5 +18,8 @@ bootstrap_go_package {
 cc_librockit_prebuilt_library_shared {
     name: "librockit",
     compile_multilib: "32",
+    strip: {
+      none: true,
+    },
 
 }

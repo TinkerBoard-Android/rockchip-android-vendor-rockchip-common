@@ -95,9 +95,14 @@ PRODUCT_PACKAGES += \
     RKTvLauncher \
     MediaCenter \
     PinyinIME \
-    ChangeLedStatus \
     WifiDisplay \
     DLNA
+
+    ifeq ($(BOARD_TV_LOW_MEMOPT), false)
+	    PRODUCT_PACKAGES += \
+            ChangeLedStatus
+	endif
+
   ifeq ($(strip $(BOARD_USE_LOW_MEM256)), true)
 #        PRODUCT_PACKAGES += \
 #              SimpleLauncher

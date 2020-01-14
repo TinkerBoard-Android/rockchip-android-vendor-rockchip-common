@@ -12,7 +12,8 @@ BOARD_VENDOR_KERNEL_MODULES += \
 
 # vendor/firmware
 PRODUCT_COPY_FILES += \
-   vendor/rockchip/common/gpu/libG6110/G6110_64/vendor/firmware/rgx.fw.signed.5.9.1.46:$(TARGET_COPY_OUT_VENDOR)/firmware/rgx.fw.signed.5.9.1.46
+   vendor/rockchip/common/gpu/libG6110/G6110_64/vendor/firmware/rgx.fw.signed.5.9.1.46:$(TARGET_COPY_OUT_VENDOR)/firmware/rgx.fw.signed.5.9.1.46 \
+   vendor/rockchip/common/gpu/libG6110/G6110_64/vendor/firmware/rgx.fw.signed.5.9.1.46:$(TARGET_COPY_OUT_VENDOR)/etc/firmware/rgx.fw.signed.5.9.1.46
 
 # vendor/bin
 PRODUCT_COPY_FILES += \

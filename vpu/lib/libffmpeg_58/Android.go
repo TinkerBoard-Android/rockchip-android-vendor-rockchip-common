@@ -4,7 +4,6 @@ import (
         "android/soong/android"
         "android/soong/cc"
         "fmt"
-        "strings"
 )
 
 func init() {
@@ -23,21 +22,10 @@ func DefaultsFactory() (android.Module) {
 func Defaults(ctx android.LoadHookContext) {
     type props struct {
         Srcs []string
-        Vendor  *bool
     }
     var srcs []string
-    var vendor bool
-    if (strings.Contains(ctx.AConfig().Getenv("TARGET_PRODUCT"),"box")) {
-        srcs = append(srcs,"libffmpeg_58.so")
-        vendor = true
-//        fmt.Println("is box!!!!")
-    } else {
-        srcs = append(srcs,"libffmpeg_58.so")
-        vendor = false
-    }
-
+    srcs = append(srcs,"libffmpeg_58.so")
     p := &props{}
     p.Srcs = srcs
-    p.Vendor = &vendor
     ctx.AppendProperties(p)
 }

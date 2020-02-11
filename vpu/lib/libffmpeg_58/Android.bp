@@ -21,5 +21,8 @@ cc_libffmpeg_58_prebuilt_library_shared {
     strip: {
       none: true,
     },
-
+    shared_libs: [
+        "libcrypto",
+        "libssl",
+    ],
 }

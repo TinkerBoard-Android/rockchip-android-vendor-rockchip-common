@@ -86,6 +86,12 @@ func globalCompileDefaults(ctx android.LoadHookContext) (*string) {
         } else {
                 compile_multilib = "32"
         }
+ } else if (strings.EqualFold(ctx.AConfig().Getenv("TARGET_BOARD_PLATFORM"),"rk3399pro")) {
+        if (strings.EqualFold(target_arch,"arm64")) {
+                compile_multilib = "both"
+        } else {
+                compile_multilib = "32"
+        }
  }else {
        compile_multilib = "32"
  }

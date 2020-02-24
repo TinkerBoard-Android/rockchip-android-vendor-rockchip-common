@@ -17,10 +17,10 @@
 <MediaCodecs>
     <Encoders>
         <MediaCodec name="OMX.rk.video_encoder.avc" type="video/avc" update="true">
-            <Limit name="measured-frame-rate-320x240" range="376-376" />
+            <Limit name="measured-frame-rate-320x240" range="165-165" />
             <Limit name="measured-frame-rate-720x480" range="149-149" />
             <Limit name="measured-frame-rate-1280x720" range="73-73" />
-            <Limit name="measured-frame-rate-1920x1080" range="34-34" />
+            <Limit name="measured-frame-rate-1920x1080" range="18-18" />
         </MediaCodec>
         <MediaCodec name="OMX.google.h264.encoder" type="video/avc" update="true">
             <Limit name="measured-frame-rate-320x240" range="306-306" />
@@ -34,7 +34,7 @@
             <Limit name="measured-frame-rate-176x144" range="619-619" />
         </MediaCodec>
         <MediaCodec name="OMX.google.vp8.encoder" type="video/x-vnd.on2.vp8" update="true">
-            <Limit name="measured-frame-rate-320x180" range="129-129" />
+            <Limit name="measured-frame-rate-320x180" range="55-55" />
             <Limit name="measured-frame-rate-640x360" range="35-35" />
             <Limit name="measured-frame-rate-1280x720" range="28-28" />
             <Limit name="measured-frame-rate-1920x1080" range="32-32" />
@@ -48,13 +48,13 @@
             <Limit name="measured-frame-rate-1920x1080" range="34-34" />
         </MediaCodec>
         <MediaCodec name="c2.android.h263.encoder" type="video/3gpp" update="true">
-            <Limit name="measured-frame-rate-176x144" range="600-630" />
+            <Limit name="measured-frame-rate-176x144" range="203-240" />
         </MediaCodec>
         <MediaCodec name="c2.android.mpeg4.encoder" type="video/mp4v-es" update="true">
-            <Limit name="measured-frame-rate-176x144" range="600-630" />
+            <Limit name="measured-frame-rate-176x144" range="199-207" />
         </MediaCodec>
         <MediaCodec name="c2.android.vp8.encoder" type="video/x-vnd.on2.vp8" update="true">
-            <Limit name="measured-frame-rate-320x180" range="129-129" />
+            <Limit name="measured-frame-rate-320x180" range="45-45" />
             <Limit name="measured-frame-rate-640x360" range="35-35" />
             <Limit name="measured-frame-rate-1280x720" range="28-28" />
             <Limit name="measured-frame-rate-1920x1080" range="32-32" />

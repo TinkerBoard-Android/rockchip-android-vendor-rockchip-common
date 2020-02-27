@@ -3,9 +3,13 @@ LOCAL_PATH := $(call my-dir)
 PRODUCT_PACKAGES += \
     librk_vpuapi \
     libffmpeg_58 \
-    librockit \
+    libiconv     \
+    librttinyxml \
+    librtopus    \
+    librtmem     \
+    librockit    \
     libjpeghwenc \
-    libmpp \
+    libmpp       \
     libvpu 
 
 ifneq ($(filter rk3328, $(TARGET_BOARD_PLATFORM)), )

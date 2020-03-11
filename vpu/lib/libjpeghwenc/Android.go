@@ -60,6 +60,8 @@ func globalCompileDefaults(ctx android.LoadHookContext) (*string) {
   target_arch := ctx.AConfig().DevicePrimaryArchType().String()
   if (strings.EqualFold(ctx.AConfig().Getenv("TARGET_BOARD_PLATFORM"),"rk3126c")) {
         compile_multilib = "32"
+  } else if (strings.EqualFold(ctx.AConfig().Getenv("TARGET_BOARD_PLATFORM"),"rk3288")) {
+        compile_multilib = "32"
   } else if (strings.EqualFold(ctx.AConfig().Getenv("TARGET_BOARD_PLATFORM"),"rk322x")) {
         compile_multilib = "32"
   } else if (strings.EqualFold(ctx.AConfig().Getenv("TARGET_BOARD_PLATFORM"),"rk3326")) {
@@ -131,6 +133,8 @@ func globalArmDefaults(ctx android.LoadHookContext) ([]string) {
  //该打印输出为: TARGET_PRODUCT:rk3328 
  //fmt.Println("TARGET_PRODUCT:",ctx.AConfig().Getenv("TARGET_BOARD_PLATFORM")) 
  if (strings.EqualFold(ctx.AConfig().Getenv("TARGET_BOARD_PLATFORM"),"rk3126c")) {
+        srcs = append(srcs,"arm/libjpeghwenc.so")
+ } else if (strings.EqualFold(ctx.AConfig().Getenv("TARGET_BOARD_PLATFORM"),"rk3288")) {
         srcs = append(srcs,"arm/libjpeghwenc.so")
  } else if (strings.EqualFold(ctx.AConfig().Getenv("TARGET_BOARD_PLATFORM"),"rk322x")) {
         srcs = append(srcs,"arm/mpp_dev/libjpeghwenc.so")

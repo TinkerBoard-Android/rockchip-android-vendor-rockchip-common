@@ -24,7 +24,7 @@
             <Limit name="block-size" value="16x16" />
             <Limit name="blocks-per-second" range="1-983040" />
             <Limit name="bitrate" range="1-40000000" />
-            <Limit name="concurrent-instances" max="16" />
+            <Limit name="concurrent-instances" max="32" />
             <Feature name="adaptive-playback" />
         </MediaCodec>
          <MediaCodec name="OMX.google.hevc.decoder" type="video/hevc">
@@ -33,7 +33,7 @@
                 <Limit name="block-size" value="16x16"/>
                 <Limit name="blocks-per-second" max="244800" min="1"/>
                 <Limit name="bitrate" range="1-10000000"/>
-                <Limit name="concurrent-instances" max="16" />
+                <Limit name="concurrent-instances" max="32" />
                 <Feature name="adaptive-playback"/>
         </MediaCodec>
         <MediaCodec name="OMX.google.vp8.decoder" type="video/x-vnd.on2.vp8">
@@ -42,7 +42,7 @@
                 <Limit name="block-size" value="16x16"/>
                 <Limit name="blocks-per-second" max="244800" min="1"/>
                 <Limit name="bitrate" range="1-10000000"/>
-                <Limit name="concurrent-instances" max="16" />
+                <Limit name="concurrent-instances" max="32" />
                 <Feature name="adaptive-playback"/>
         </MediaCodec>
 	    <MediaCodec name="OMX.google.vp9.decoder" type="video/x-vnd.on2.vp9">
@@ -51,7 +51,7 @@
             <Limit name="block-size" value="16x16" />
             <Limit name="blocks-per-second" range="1-983040" />
             <Limit name="bitrate" range="1-40000000" />
-            <Limit name="concurrent-instances" max="16" />
+            <Limit name="concurrent-instances" max="32" />
             <Feature name="adaptive-playback" />
         </MediaCodec>
     </Decoders>
@@ -62,7 +62,7 @@
             <Limit name="size" min="176x144" max="176x144" />
             <Limit name="alignment" value="16x16" />
             <Limit name="bitrate" range="1-128000" />
-            <Limit name="concurrent-instances" max="16" />
+            <Limit name="concurrent-instances" max="32" />
         </MediaCodec>
 
         <MediaCodec name="OMX.google.mpeg4.encoder" type="video/mp4v-es">
@@ -72,14 +72,14 @@
             <Limit name="block-size" value="16x16" />
             <Limit name="blocks-per-second" range="12-1485" />
             <Limit name="bitrate" range="1-64000" />
-            <Limit name="concurrent-instances" max="16" />
+            <Limit name="concurrent-instances" max="32" />
         </MediaCodec>
         <MediaCodec name="OMX.google.vp8.encoder" type="video/x-vnd.on2.vp8">
             <!-- profiles and levels:  ProfileMain : Level_Version0-3 -->
             <Limit name="size" min ="176x144" max="1280x720" />
             <Limit name="alignment" value="2x2" />
             <Limit name="bitrate" range="1-40000000" />
-            <Limit name="concurrent-instances" max="16" />
+            <Limit name="concurrent-instances" max="32" />
             <Feature name="bitrate-modes" value="VBR,CBR" />
         </MediaCodec>
         <MediaCodec name="OMX.google.h264.encoder" type="video/avc">
@@ -87,7 +87,7 @@
             <Limit name="size" min ="176x144" max="1280x720" />
             <Limit name="alignment" value="2x2" />
             <Limit name="bitrate" range="1-40000000" />
-            <Limit name="concurrent-instances" max="16" />
+            <Limit name="concurrent-instances" max="32" />
             <Feature name="bitrate-modes" value="VBR,CBR" />
         </MediaCodec>
     </Encoders>

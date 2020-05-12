@@ -148,7 +148,7 @@
             <Limit name="bitrate" range="1-5000000" />
             <Feature name="adaptive-playback" />
         </MediaCodec>
-        <MediaCodec name="c2.android.av1.decoder" type="video/av01" update="true">
+        <MediaCodec name="c2.android.av1.decoder" type="video/av01" update="true" enabled="false">
             <Limit name="size" min="2x2" max="320x240" />
             <Limit name="alignment" value="2x2" />
             <Limit name="block-size" value="16x16" />

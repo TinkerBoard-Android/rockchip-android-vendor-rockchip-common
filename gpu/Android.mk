@@ -18,8 +18,8 @@ LOCAL_MODULE_PATH_64 := $(TARGET_OUT_VENDOR)/lib64/egl
 LOCAL_POST_INSTALL_CMD := \
 	if [ -f $(LOCAL_MODULE_PATH_32)/libGLES_mali.so ];then cd $(TARGET_OUT_VENDOR)/lib; ln -sf egl/libGLES_mali.so libGLES_mali.so; cd -; fi; \
 	if [ -f $(LOCAL_MODULE_PATH_64)/libGLES_mali.so ];then cd $(TARGET_OUT_VENDOR)/lib64; ln -sf egl/libGLES_mali.so libGLES_mali.so; cd -; fi; \
-	if [ $(BUILD_WITH_GOOGLE_MARKET) != true ];then mkdir -p $(TARGET_OUT_VENDOR)/lib/hw; cd $(TARGET_OUT_VENDOR)/lib/hw; ln -sf ../libGLES_mali.so vulkan.rk3399.so; cd -; fi; \
-	if [ $(BUILD_WITH_GOOGLE_MARKET) != true ];then mkdir -p $(TARGET_OUT_VENDOR)/lib64/hw; cd $(TARGET_OUT_VENDOR)/lib64/hw; ln -sf ../libGLES_mali.so vulkan.rk3399.so; cd -; fi; \
+	if [ $(BUILD_WITH_GOOGLE_MARKET) != true ];then mkdir -p $(TARGET_OUT_VENDOR)/lib/hw; cd $(TARGET_OUT_VENDOR)/lib/hw; ln -sf ../libGLES_mali.so vulkan.$(TARGET_BOARD_PLATFORM).so; cd -; fi; \
+	if [ $(BUILD_WITH_GOOGLE_MARKET) != true ];then mkdir -p $(TARGET_OUT_VENDOR)/lib64/hw; cd $(TARGET_OUT_VENDOR)/lib64/hw; ln -sf ../libGLES_mali.so vulkan.$(TARGET_BOARD_PLATFORM).so; cd -; fi; \
 	cd $(TARGET_OUT_VENDOR)/lib64; \
 	ln -sf egl/libGLES_mali.so libOpenCL.so.1.1; \
 	ln -sf libOpenCL.so.1.1 libOpenCL.so.1; \

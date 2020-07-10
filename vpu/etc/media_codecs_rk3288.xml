@@ -99,7 +99,7 @@ Only the three quirks included above are recognized at this point:
         <MediaCodec name="OMX.rk.video_decoder.m2v" type="video/mpeg2">
             <Quirk name="requires-allocate-on-input-ports" />
             <Quirk name="requires-allocate-on-output-ports" />
-            <Limit name="size" max="1920x1088" min="176x144"/>
+            <Limit name="size" max="1920x1088" min="182x144"/>
             <Limit name="alignment" value="8x8"/>
             <Limit name="block-size" value="16x8"/>
             <Limit name="blocks-per-second" max="244800" min="1"/>
@@ -171,7 +171,7 @@ Only the three quirks included above are recognized at this point:
         <MediaCodec name="OMX.rk.video_decoder.hevc" type="video/hevc">
             <Quirk name="requires-allocate-on-input-ports" />
             <Quirk name="requires-allocate-on-output-ports" />
-            <Limit name="size" max="4096x2160" min="176x144"/>
+            <Limit name="size" max="4096x2160" min="400x400"/>
             <Limit name="alignment" value="2x2"/>
             <Limit name="block-size" value="16x16"/>
             <Limit name="blocks-per-second" max="244800" min="1"/>

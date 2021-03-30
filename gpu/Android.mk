@@ -98,3 +98,23 @@ LOCAL_MODULE_PATH_64 := $(TARGET_OUT_VENDOR)/lib64/hw
 include $(BUILD_PREBUILT)
 
 endif
+
+ifeq ($(strip $(TARGET_BOARD_PLATFORM_GPU)), mali400)
+include $(CLEAR_VARS)
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE := libGLES_mali
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_CHECK_ELF_FILES := false
+LOCAL_SRC_FILES := Mali400/lib/arm/libGLES_mali.so
+LOCAL_MODULE_PATH := $(TARGET_OUT_VENDOR)/lib/egl
+
+# Create symlinks.
+LOCAL_POST_INSTALL_CMD := \
+	cd $(TARGET_OUT_VENDOR)/lib; \
+	ln -sf egl/libGLES_mali.so libOpenCL.so.1.1; \
+	ln -sf libOpenCL.so.1.1 libOpenCL.so.1; \
+	ln -sf libOpenCL.so.1 libOpenCL.so; \
+	cd -;
+
+include $(BUILD_PREBUILT)
+endif

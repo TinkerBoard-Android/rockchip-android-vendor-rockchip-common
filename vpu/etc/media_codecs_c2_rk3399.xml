@@ -212,15 +212,15 @@
             <Limit name="alignment" value="16x16" />
             <Limit name="bitrate" range="1-128000" />
         </MediaCodec>
+        <!-- profiles and levels:  ProfileCore : Level2
         <MediaCodec name="c2.android.mpeg4.encoder" type="video/mp4v-es">
             <Alias name="OMX.google.mpeg4.encoder" />
-            <!-- profiles and levels:  ProfileCore : Level2 -->
             <Limit name="size" min="16x16" max="176x144" />
             <Limit name="alignment" value="16x16" />
             <Limit name="block-size" value="16x16" />
             <Limit name="blocks-per-second" range="12-1485" />
             <Limit name="bitrate" range="1-64000" />
-        </MediaCodec>
+        </MediaCodec -->
         <MediaCodec name="c2.android.avc.encoder" type="video/avc" update="true">
             <Alias name="OMX.google.h264.encoder" />
             <Limit name="alignment" value="2x2" />

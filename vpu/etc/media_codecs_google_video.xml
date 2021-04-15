@@ -55,12 +55,12 @@
     </Decoders>
 
     <Encoders>
+        <!-- profiles and levels:  ProfileBaseline : Level45
         <MediaCodec name="OMX.google.h263.encoder" type="video/3gpp">
-            <!-- profiles and levels:  ProfileBaseline : Level45 -->
             <Limit name="size" min="176x144" max="176x144" />
             <Limit name="alignment" value="16x16" />
             <Limit name="bitrate" range="1-128000" />
-        </MediaCodec>
+        </MediaCodec -->
         <!-- profiles and levels:  ProfileCore : Level2
         <MediaCodec name="OMX.google.mpeg4.encoder" type="video/mp4v-es">
             <Limit name="size" min="16x16" max="176x144" />

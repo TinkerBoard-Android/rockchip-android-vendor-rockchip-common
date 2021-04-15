@@ -205,13 +205,13 @@
             <Limit name="complexity" range="0-10"  default="5" />
             <Feature name="bitrate-modes" value="CBR" />
         </MediaCodec>
+        <!-- profiles and levels:  ProfileBaseline : Level45
         <MediaCodec name="c2.android.h263.encoder" type="video/3gpp">
             <Alias name="OMX.google.h263.encoder" />
-            <!-- profiles and levels:  ProfileBaseline : Level45 -->
             <Limit name="size" min="176x144" max="176x144" />
             <Limit name="alignment" value="16x16" />
             <Limit name="bitrate" range="1-128000" />
-        </MediaCodec>
+        </MediaCodec -->
         <!-- profiles and levels:  ProfileCore : Level2
         <MediaCodec name="c2.android.mpeg4.encoder" type="video/mp4v-es">
             <Alias name="OMX.google.mpeg4.encoder" />

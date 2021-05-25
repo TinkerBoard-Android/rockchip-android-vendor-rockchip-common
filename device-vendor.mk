@@ -111,6 +111,14 @@ ifeq ($(PRODUCT_HAVE_HDMIHDCP2), true)
 $(call inherit-product-if-exists, vendor/rockchip/common/hdcp2/hdcp2.mk)
 endif
 
+ifeq ($(PRODUCT_HAVE_EPTZ),true)
+$(call inherit-product-if-exists, vendor/rockchip/common/eptz/eptz.mk)
+endif
+
+ifeq ($(PRODUCT_HAVE_FEC),true)
+$(call inherit-product-if-exists, vendor/rockchip/common/fec/fec.mk)
+endif
+
 ifeq ($(PRODUCT_HAVE_PLUGINSVC),true)
 $(call inherit-product-if-exists, vendor/rockchip/common/pluginsvc/pluginsvc.mk)
 endif

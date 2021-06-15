@@ -3,6 +3,6 @@
 --1:灵敏模式
 --2:稳定模式
 
-2.eptz和rockxface功能支持开机试用,长稳使用需要lic授权。
---eptz lic      默认读取路径/vendor/etc/eptz.lic
---rockxface lic 默认读取路劲/sdcard/key.lic
+2.eptz和rockxface功能支持开机试用,长稳使用需要lic授权,两个模块使用同一个license文件。
+--eptz lic      默认读取路径/vendor/etc/key.lic
+--rockxface lic 默认读取路劲/vendor/etc/key.lic

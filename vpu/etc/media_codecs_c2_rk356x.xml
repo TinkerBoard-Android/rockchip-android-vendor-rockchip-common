@@ -21,6 +21,7 @@
         <Domain name="tv" enabled="false" />
     </Settings>
     <Decoders>
+        <!-- Software Decoders-->
         <MediaCodec name="c2.android.mp3.decoder" type="audio/mpeg" update="true">
             <Alias name="OMX.google.mp3.decoder" />
             <Limit name="channel-count" max="2" />
@@ -186,8 +187,106 @@
             <Limit name="concurrent-instances" max="32" />
             <Feature name="adaptive-playback" />
         </MediaCodec>
+        <!-- Hardware Decoders-->
+        <MediaCodec name="c2.rk.avc.decoder" type="video/avc">
+            <Alias name="OMX.rk.video_decoder.avc" />
+            <!-- profiles and levels:  ProfileMain : MainTierLevel51 -->
+            <Limit name="size" min="2x2" max="4096x2160" />
+            <Limit name="alignment" value="2x2" />
+            <Limit name="block-size" value="8x8" />
+            <Limit name="block-count" range="1-4096" /> <!-- max 512x512 -->
+            <Limit name="blocks-per-second" range="1-122880" />
+            <Limit name="frame-rate" range="1-120" />
+            <Limit name="bitrate" range="1-20000000" />
+            <Limit name="complexity" range="0-10"  default="0" />
+            <Limit name="quality" range="0-100"  default="80" />
+            <Feature name="bitrate-modes" value="VBR,CBR,CQ" />
+        </MediaCodec>
+        <MediaCodec name="c2.rk.vp9.decoder" type="video/x-vnd.on2.vp9">
+            <Alias name="OMX.rk.video_decoder.vp9" />
+            <!-- profiles and levels:  ProfileMain : MainTierLevel51 -->
+            <Limit name="size" min="2x2" max="4096x2160" />
+            <Limit name="alignment" value="2x2" />
+            <Limit name="block-size" value="8x8" />
+            <Limit name="block-count" range="1-4096" /> <!-- max 512x512 -->
+            <Limit name="blocks-per-second" range="1-122880" />
+            <Limit name="frame-rate" range="1-120" />
+            <Limit name="bitrate" range="1-20000000" />
+            <Limit name="complexity" range="0-10"  default="0" />
+            <Limit name="quality" range="0-100"  default="80" />
+            <Feature name="bitrate-modes" value="VBR,CBR,CQ" />
+        </MediaCodec>
+        <MediaCodec name="c2.rk.vp8.decoder" type="video/x-vnd.on2.vp8">
+            <Alias name="OMX.rk.video_decoder.vp8" />
+            <!-- profiles and levels:  ProfileMain : MainTierLevel51 -->
+            <Limit name="size" min="2x2" max="1920x1080" />
+            <Limit name="alignment" value="2x2" />
+            <Limit name="block-size" value="8x8" />
+            <Limit name="block-count" range="1-4096" /> <!-- max 512x512 -->
+            <Limit name="blocks-per-second" range="1-122880" />
+            <Limit name="frame-rate" range="1-120" />
+            <Limit name="bitrate" range="1-20000000" />
+            <Limit name="complexity" range="0-10"  default="0" />
+            <Limit name="quality" range="0-100"  default="80" />
+            <Feature name="bitrate-modes" value="VBR,CBR,CQ" />
+        </MediaCodec>
+        <MediaCodec name="c2.rk.mpeg2.decoder" type="video/mpeg2">
+            <!-- profiles and levels:  ProfileMain : MainTierLevel51 -->
+            <Limit name="size" min="2x2" max="1920x1080" />
+            <Limit name="alignment" value="2x2" />
+            <Limit name="block-size" value="8x8" />
+            <Limit name="block-count" range="1-4096" /> <!-- max 512x512 -->
+            <Limit name="blocks-per-second" range="1-122880" />
+            <Limit name="frame-rate" range="1-120" />
+            <Limit name="bitrate" range="1-20000000" />
+            <Limit name="complexity" range="0-10"  default="0" />
+            <Limit name="quality" range="0-100"  default="80" />
+        </MediaCodec>
+        <MediaCodec name="c2.rk.m4v.decoder" type="video/mp4v-es">
+            <Alias name="OMX.rk.video_decoder.m4v" />
+            <!-- profiles and levels:  ProfileMain : MainTierLevel51 -->
+            <Limit name="size" min="2x2" max="4096x2160" />
+            <Limit name="alignment" value="2x2" />
+            <Limit name="block-size" value="8x8" />
+            <Limit name="block-count" range="1-4096" /> <!-- max 512x512 -->
+            <Limit name="blocks-per-second" range="1-122880" />
+            <Limit name="frame-rate" range="1-120" />
+            <Limit name="bitrate" range="1-20000000" />
+            <Limit name="complexity" range="0-10"  default="0" />
+            <Limit name="quality" range="0-100"  default="80" />
+            <Feature name="bitrate-modes" value="VBR,CBR,CQ" />
+        </MediaCodec>
+        <MediaCodec name="c2.rk.h263.decoder" type="video/3gpp">
+            <Alias name="OMX.rk.video_decoder.h263" />
+            <!-- profiles and levels:  ProfileMain : MainTierLevel51 -->
+            <Limit name="size" min="2x2" max="1920x1080" />
+            <Limit name="alignment" value="2x2" />
+            <Limit name="block-size" value="8x8" />
+            <Limit name="block-count" range="1-4096" /> <!-- max 512x512 -->
+            <Limit name="blocks-per-second" range="1-122880" />
+            <Limit name="frame-rate" range="1-120" />
+            <Limit name="bitrate" range="1-20000000" />
+            <Limit name="complexity" range="0-10"  default="0" />
+            <Limit name="quality" range="0-100"  default="80" />
+            <Feature name="bitrate-modes" value="VBR,CBR,CQ" />
+        </MediaCodec>
+        <MediaCodec name="c2.rk.hevc.decoder" type="video/hevc">
+            <Alias name="OMX.rk.video_decoder.hevc" />
+            <!-- profiles and levels:  ProfileMain : MainTierLevel51 -->
+            <Limit name="size" min="2x2" max="4096x2160" />
+            <Limit name="alignment" value="2x2" />
+            <Limit name="block-size" value="8x8" />
+            <Limit name="block-count" range="1-4096" /> <!-- max 512x512 -->
+            <Limit name="blocks-per-second" range="1-122880" />
+            <Limit name="frame-rate" range="1-120" />
+            <Limit name="bitrate" range="1-20000000" />
+            <Limit name="complexity" range="0-10"  default="0" />
+            <Limit name="quality" range="0-100"  default="80" />
+            <Feature name="bitrate-modes" value="VBR,CBR,CQ" />
+        </MediaCodec>
     </Decoders>
     <Encoders>
+        <!-- Software Encoders -->
         <MediaCodec name="c2.android.aac.encoder" type="audio/mp4a-latm" update="true">
             <Alias name="OMX.google.aac.encoder" />
             <Limit name="channel-count" max="2" />
@@ -296,6 +395,18 @@
             <Limit name="bitrate" range="1-40000000" />
             <Limit name="concurrent-instances" max="32" />
             <Feature name="bitrate-modes" value="VBR,CBR" />
+        </MediaCodec>
+        <!-- Hardware Encoders -->
+        <MediaCodec name="c2.rk.avc.encoder" type="video/avc">
+            <Alias name="OMX.rk.video_encoder.avc" />
+            <Limit name="alignment" value="2x2" />
+            <Limit name="block-size" value="16x16" />
+            <Limit name="size" min="16x16" max="1920x1080" />
+            <!-- profiles and levels:  ProfileBaseline : Level3 -->
+            <Limit name="block-count" range="1-1620" />
+            <Limit name="blocks-per-second" range="1-40500" />
+            <Limit name="bitrate" range="1-2000000" />
+            <Feature name="intra-refresh" />
         </MediaCodec>
     </Encoders>
 </MediaCodecs>

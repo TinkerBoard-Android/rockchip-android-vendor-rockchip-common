@@ -99,6 +99,8 @@ include $(BUILD_PREBUILT)
 
 endif
 
+# ---------------------------- #
+
 ifeq ($(strip $(TARGET_BOARD_PLATFORM_GPU)), mali400)
 include $(CLEAR_VARS)
 LOCAL_MODULE_SUFFIX := .so
@@ -119,6 +121,8 @@ LOCAL_POST_INSTALL_CMD := \
 include $(BUILD_PREBUILT)
 endif
 
+# ---------------------------- #
+
 ifeq ($(strip $(TARGET_BOARD_PLATFORM_GPU)), mali-tDVx)
 include $(CLEAR_VARS)
 LOCAL_MODULE_SUFFIX := .so
@@ -132,3 +136,44 @@ LOCAL_MODULE_PATH_32 := $(TARGET_OUT_VENDOR)/lib/egl
 LOCAL_MODULE_PATH_64 := $(TARGET_OUT_VENDOR)/lib64/egl
 include $(BUILD_PREBUILT)
 endif
+
+# ---------------------------- #
+
+ifeq ($(strip $(TARGET_BOARD_PLATFORM_GPU)), mali-G610)
+# install libs of mali_so
+include $(CLEAR_VARS)
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE := libGLES_mali
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MULTILIB := both
+LOCAL_SRC_FILES_$(TARGET_ARCH) := MaliG610/lib/$(TARGET_ARCH)/libGLES_mali.so
+LOCAL_SRC_FILES_$(TARGET_2ND_ARCH) := MaliG610/lib/$(TARGET_2ND_ARCH)/libGLES_mali.so
+LOCAL_CHECK_ELF_FILES := false
+LOCAL_MODULE_PATH_32 := $(TARGET_OUT_VENDOR)/lib/egl
+LOCAL_MODULE_PATH_64 := $(TARGET_OUT_VENDOR)/lib64/egl
+# Create symlinks.
+LOCAL_POST_INSTALL_CMD := \
+	cd $(TARGET_OUT_VENDOR)/lib64; \
+	ln -sf egl/libGLES_mali.so libOpenCL.so; \
+	cd -; \
+	cd $(TARGET_OUT_VENDOR)/lib; \
+	ln -sf egl/libGLES_mali.so libOpenCL.so; \
+	cd -;
+include $(BUILD_PREBUILT)
+
+# install libs of vulkan_so
+include $(CLEAR_VARS)
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE := vulkan.$(TARGET_BOARD_PLATFORM)
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MULTILIB := both
+LOCAL_SRC_FILES_$(TARGET_ARCH) := MaliG610/lib/$(TARGET_ARCH)/vulkan.mali.so
+LOCAL_SRC_FILES_$(TARGET_2ND_ARCH) := MaliG610/lib/$(TARGET_2ND_ARCH)/vulkan.mali.so
+LOCAL_CHECK_ELF_FILES := false
+LOCAL_MODULE_PATH_32 := $(TARGET_OUT_VENDOR)/lib/hw
+LOCAL_MODULE_PATH_64 := $(TARGET_OUT_VENDOR)/lib64/hw
+include $(BUILD_PREBUILT)
+
+endif
+
+# ---------------------------- #

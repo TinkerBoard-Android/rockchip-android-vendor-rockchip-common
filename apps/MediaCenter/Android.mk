@@ -11,6 +11,7 @@ LOCAL_PRIVILEGED_MODULE :=true
 LOCAL_CERTIFICATE := platform
 LOCAL_OVERRIDES_PACKAGES := Launcher3 
 LOCAL_SRC_FILES := $(LOCAL_MODULE).apk
+LOCAL_ENFORCE_USES_LIBRARIES := org.apache.http.legacy
 ifeq ($(strip $(TARGET_ARCH)), arm)
 LOCAL_PREBUILT_JNI_LIBS := \
     lib/arm/libmediacenter-jni.so

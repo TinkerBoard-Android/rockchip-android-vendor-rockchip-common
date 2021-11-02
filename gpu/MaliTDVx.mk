@@ -2,8 +2,8 @@ ifeq ($(strip $(TARGET_BOARD_PLATFORM_GPU)), mali-tDVx)
 
 # libs of libGLES_mali.so are installed in ./Android.mk
 PRODUCT_PACKAGES += \
-    libGLES_mali
-
+    libGLES_mali \
+    vulkan.$(TARGET_BOARD_PLATFORM)
 DRIVER_PATH := kernel/drivers/gpu/arm/bifrost/bifrost_kbase.ko
 HAS_BUILD_KERNEL := $(shell test -e $(DRIVER_PATH) && echo true)
 

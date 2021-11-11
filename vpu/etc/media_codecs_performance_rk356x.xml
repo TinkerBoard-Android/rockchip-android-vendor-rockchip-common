@@ -33,6 +33,33 @@
             <Limit name="measured-frame-rate-1280x720" range="28-28" />
             <Limit name="measured-frame-rate-1920x1080" range="32-32" />
         </MediaCodec>
+        <MediaCodec name="c2.android.h263.encoder" type="video/3gpp" update="true">
+            <Limit name="measured-frame-rate-176x144" range="619-619" />
+        </MediaCodec>
+        <MediaCodec name="c2.android.mpeg4.encoder" type="video/mp4v-es" update="true">
+            <Limit name="measured-frame-rate-176x144" range="692-695" /> <!-- N=64 v97%=1.5 -->
+        </MediaCodec>
+        <MediaCodec name="c2.android.avc.encoder" type="video/avc" update="true">
+            <Limit name="measured-frame-rate-320x240" range="331-331" /> <!-- N=64 v97%=1.1 -->
+            <Limit name="measured-frame-rate-720x480" range="123-123" /> <!-- N=64 v97%=1.1 -->
+        </MediaCodec>
+        <MediaCodec name="c2.android.vp8.encoder" type="video/x-vnd.on2.vp8" update="true">
+            <Limit name="measured-frame-rate-320x180" range="593-593" /> <!-- N=64 v97%=1.2 -->
+            <Limit name="measured-frame-rate-640x360" range="200-200" /> <!-- N=64 v97%=1.2 -->
+            <Limit name="measured-frame-rate-1280x720" range="58-58" /> <!-- N=64 v97%=1.2 -->
+        </MediaCodec>
+        <MediaCodec name="c2.rk.avc.encoder" type="video/avc" update="true">
+            <Limit name="measured-frame-rate-320x240" range="497-499" /> <!-- N=64 v97%=1.1 -->
+            <Limit name="measured-frame-rate-720x480" range="296-296" /> <!-- N=64 v97%=1.4 -->
+            <Limit name="measured-frame-rate-1280x720" range="163-163" /> <!-- N=62 v97%=1.6 -->
+            <Limit name="measured-frame-rate-1920x1080" range="82-84" /> <!-- N=62 v97%=1.7 -->
+        </MediaCodec>
+        <MediaCodec name="c2.rk.hevc.encoder" type="video/hevc" update="true">
+            <Limit name="measured-frame-rate-320x240" range="466-466" /> <!-- N=64 v97%=1.2 -->
+            <Limit name="measured-frame-rate-720x480" range="285-285" /> <!-- N=64 v97%=1.4 -->
+            <Limit name="measured-frame-rate-1280x720" range="164-164" /> <!-- N=64 v97%=1.6 -->
+            <Limit name="measured-frame-rate-1920x1080" range="83-83" /> <!-- N=64 v97%=1.6 -->
+        </MediaCodec>
     </Encoders>
     <Decoders>
         <MediaCodec name="OMX.google.h264.decoder" type="video/avc" update="true">

@@ -162,14 +162,14 @@
             <Limit name="concurrent-instances" max="1" />
             <Feature name="adaptive-playback" />
         </MediaCodec>
-        <MediaCodec name="c2.android.av1.decoder" type="video/av01" update="true" enabled="false">
-            <Limit name="size" min="2x2" max="320x240" />
+        <MediaCodec name="c2.android.av1.decoder" type="video/av01" update="true">
+            <Limit name="size" min="2x2" max="1280x720" />
             <Limit name="alignment" value="2x2" />
             <Limit name="block-size" value="16x16" />
-            <Limit name="block-count" range="1-16384" />
+            <Limit name="block-count" range="1-3600" />
             <Limit name="blocks-per-second" range="1-2073600" />
             <Limit name="bitrate" range="1-120000000" />
-            <Limit name="concurrent-instances" max="32" />
+            <Limit name="concurrent-instances" max="1" />
             <Feature name="adaptive-playback" />
         </MediaCodec>
         <MediaCodec name="c2.android.mpeg2.decoder" type="video/mpeg2" domain="tv" update="true">

@@ -87,6 +87,11 @@ PRODUCT_COPY_FILES += \
     vendor/rockchip/common/vpu/etc/media_codecs_rk356x.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
     vendor/rockchip/common/vpu/etc/media_codecs_google_c2_rk356x.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_c2.xml \
     vendor/rockchip/common/vpu/etc/media_codecs_c2_rk356x.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2.xml
+else ifneq ($(filter rk3588, $(TARGET_BOARD_PLATFORM)), )
+PRODUCT_COPY_FILES += \
+    vendor/rockchip/common/vpu/etc/media_codecs_rk3588.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
+    vendor/rockchip/common/vpu/etc/media_codecs_google_c2_rk3588.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_c2.xml \
+    vendor/rockchip/common/vpu/etc/media_codecs_c2_rk3588.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2.xml
 else ifneq ($(filter rk3328 rk322x, $(TARGET_BOARD_PLATFORM)), )
 PRODUCT_COPY_FILES += \
     vendor/rockchip/common/vpu/etc/media_codecs_rk3328.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \

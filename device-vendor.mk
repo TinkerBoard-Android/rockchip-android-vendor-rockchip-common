@@ -67,6 +67,10 @@ ifeq ($(PRODUCT_HAVE_RKWIFI), true)
 $(call inherit-product-if-exists, vendor/rockchip/common/wifi/wifi.mk)
 endif
 
+ifeq ($(PRODUCT_HAVE_PCIE_ETHERNET), true)
+$(call inherit-product-if-exists, vendor/rockchip/common/ethernet/ethernet.mk)
+endif
+
 ifeq ($(PRODUCT_HAVE_RFTESTTOOL), true)
 $(call inherit-product-if-exists, vendor/rockchip/common/rftesttool/rftesttool.mk)
 endif

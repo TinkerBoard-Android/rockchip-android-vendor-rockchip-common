@@ -12,7 +12,7 @@ PRODUCT_PACKAGES += \
 
 endif
 
-ifneq (,$(filter user userdebug eng,$(TARGET_BUILD_VARIANT)))
+ifneq (,$(filter userdebug eng,$(TARGET_BUILD_VARIANT)))
 PRODUCT_PACKAGES += \
 	busybox
 endif

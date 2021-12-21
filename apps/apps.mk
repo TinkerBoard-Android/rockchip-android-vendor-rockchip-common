@@ -92,7 +92,6 @@ PRODUCT_PACKAGES += \
     RKTvLauncher \
     MediaCenter \
     PinyinIME \
-    WifiDisplay \
     DLNA
 
     ifeq ($(BOARD_TV_LOW_MEMOPT), false)

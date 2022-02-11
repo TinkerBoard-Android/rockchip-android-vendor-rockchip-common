@@ -68,6 +68,7 @@ PRODUCT_COPY_FILES += \
 else ifneq ($(filter rk3399 rk3399pro, $(TARGET_BOARD_PLATFORM)), )
 PRODUCT_COPY_FILES += \
     vendor/rockchip/common/vpu/etc/media_codecs_rk3399.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml\
+    vendor/rockchip/common/vpu/etc/media_codecs_google_c2_rk3399.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_c2.xml \
     vendor/rockchip/common/vpu/etc/media_codecs_c2_rk3399.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2.xml
 else ifneq ($(filter rk3326, $(TARGET_BOARD_PLATFORM)), )
 PRODUCT_COPY_FILES += \
@@ -81,6 +82,7 @@ PRODUCT_COPY_FILES += \
 else ifneq ($(filter rk3288, $(TARGET_BOARD_PLATFORM)), )
 PRODUCT_COPY_FILES += \
     vendor/rockchip/common/vpu/etc/media_codecs_rk3288.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
+    vendor/rockchip/common/vpu/etc/media_codecs_google_c2_rk3288.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_c2.xml \
     vendor/rockchip/common/vpu/etc/media_codecs_c2_rk3288.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2.xml
 else ifneq ($(filter rk356x, $(TARGET_BOARD_PLATFORM)), )
 PRODUCT_COPY_FILES += \

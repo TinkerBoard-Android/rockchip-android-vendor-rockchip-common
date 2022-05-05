@@ -4,11 +4,14 @@ CUR_PATH := vendor/rockchip/common
 #########################################################
 #   3G Dongle SUPPORT
 #########################################################
+
+ifneq ($(BOARD_HAS_4G_MODEM),true)
 PRODUCT_COPY_FILES += \
     $(CUR_PATH)/phone/etc/ppp/ip-down:system/etc/ppp/ip-down \
     $(CUR_PATH)/phone/etc/ppp/ip-up:system/etc/ppp/ip-up \
     $(CUR_PATH)/phone/etc/ppp/call-pppd:system/etc/ppp/call-pppd \
     $(CUR_PATH)/phone/etc/operator_table:system/etc/operator_table
+endif
 
 ifeq ($(strip $(PRODUCT_MODEM)), DTS4108C)
 PRODUCT_COPY_FILES += \

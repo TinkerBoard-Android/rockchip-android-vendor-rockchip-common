@@ -3,6 +3,7 @@ ifeq ($(strip $(TARGET_BOARD_PLATFORM_GPU)), mali-G52)
 # libs of libGLES_mali.so are installed in ./Android.mk
 PRODUCT_PACKAGES += \
         libGLES_mali \
+        libgpudataproducer \
         vulkan.$(TARGET_BOARD_PLATFORM)
 
 DRIVER_PATH := kernel/drivers/gpu/arm/bifrost/bifrost_kbase.ko

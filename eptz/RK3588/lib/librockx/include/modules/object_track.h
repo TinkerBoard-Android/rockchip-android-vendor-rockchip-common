@@ -1,6 +1,6 @@
 /****************************************************************************
  *
- *    Copyright (c) 2018 - 2021 by Rockchip Corp.  All rights reserved.
+ *    Copyright (c) 2018 - 2022 by Rockchip Corp.  All rights reserved.
  *
  *    The material in this file is confidential and contains trade secrets
  *    of Rockchip Corporation. This is proprietary information owned by
@@ -13,9 +13,8 @@
 #ifndef _ROCKX_OBJECT_TRACK_H
 #define _ROCKX_OBJECT_TRACK_H
 
-#include "../rockx_type.h"
 #include "object_detection.h"
-#include <stddef.h>
+#include "rockx_type.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -33,14 +32,10 @@ extern rockx_module_t ROCKX_MODULE_OBJECT_TRACK;  ///< Object Track
  * @param out_track_objects [out] tracked object array
  * @return @ref rockx_ret_t
  */
-rockx_ret_t rockx_object_track(rockx_handle_t handle,
-                               int width,
-                               int height,
-                               int max_track_time,
-                               rockx_object_array_t* in_track_objects,
-                               rockx_object_array_t* out_track_objects);
+rockx_ret_t rockx_object_track(rockx_handle_t handle, int width, int height, int max_track_time,
+                               rockx_object_array_t* in_track_objects, rockx_object_array_t* out_track_objects);
 #ifdef __cplusplus
 }  // extern "C"
 #endif
 
-#endif  // _ROCKX_FACE_H
+#endif  // _ROCKX_OBJECT_TRACK_H

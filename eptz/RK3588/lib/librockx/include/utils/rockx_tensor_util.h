@@ -1,17 +1,17 @@
 /****************************************************************************
-*
-*    Copyright (c) 2017 - 2019 by Rockchip Corp.  All rights reserved.
-*
-*    The material in this file is confidential and contains trade secrets
-*    of Rockchip Corporation. This is proprietary information owned by
-*    Rockchip Corporation. No part of this work may be disclosed,
-*    reproduced, copied, transmitted, or used in any way for any purpose,
-*    without the express written permission of Rockchip Corporation.
-*
-*****************************************************************************/
+ *
+ *    Copyright (c) 2018 - 2022 by Rockchip Corp.  All rights reserved.
+ *
+ *    The material in this file is confidential and contains trade secrets
+ *    of Rockchip Corporation. This is proprietary information owned by
+ *    Rockchip Corporation. No part of this work may be disclosed,
+ *    reproduced, copied, transmitted, or used in any way for any purpose,
+ *    without the express written permission of Rockchip Corporation.
+ *
+ *****************************************************************************/
 
-#ifndef _TENSOR_UTIL_H
-#define _TENSOR_UTIL_H
+#ifndef _ROCKX_TENSOR_UTIL_H
+#define _ROCKX_TENSOR_UTIL_H
 
 #include "../rockx_type.h"
 
@@ -31,27 +31,27 @@ int rockx_tensor_dtype_size(rockx_data_type type);
  * @param tensor [in] Input tensor
  * @return Number of tensor elements
  */
-int rockx_tensor_elems_num(rockx_tensor_t *tensor);
+int rockx_tensor_elems_num(rockx_tensor_t* tensor);
 
 /**
  * Get Tensor Data Buffer Size
  * @param tensor [in] Input tensor
  * @return Size of tensor data buffer
  */
-int rockx_tensor_size(rockx_tensor_t *tensor);
+int rockx_tensor_size(rockx_tensor_t* tensor);
 
 /**
  * Dump Tensor Info
  * @param tensor [in] Input tensor
  */
-void rockx_tensor_dump(rockx_tensor_t *tensor);
+void rockx_tensor_dump(rockx_tensor_t* tensor);
 
 /**
  * Write Tensor to File
  * @param path [in] File path to Write
  * @param tensor [in] Tensor to Write
  */
-void rockx_tensor_write(const char *path, rockx_tensor_t *tensor);
+void rockx_tensor_write(const char* path, rockx_tensor_t* tensor);
 
 /**
  * Initial a Tensor Attribute From Image without malloc memory
@@ -60,7 +60,7 @@ void rockx_tensor_write(const char *path, rockx_tensor_t *tensor);
  * @return @ref rockx_ret_t
  */
 
-rockx_ret_t rockx_set_tensor_attr_from_image(rockx_image_t *img,rockx_tensor_t *tensor);
+rockx_ret_t rockx_set_tensor_attr_from_image(rockx_image_t* img, rockx_tensor_t* tensor);
 
 /**
  * Initial a Tensor From Image
@@ -69,7 +69,7 @@ rockx_ret_t rockx_set_tensor_attr_from_image(rockx_image_t *img,rockx_tensor_t *
  * @return @ref rockx_ret_t
  */
 
-rockx_ret_t rockx_tensor_init_from_image(rockx_image_t *img, rockx_tensor_t *tensor);
+rockx_ret_t rockx_tensor_init_from_image(rockx_image_t* img, rockx_tensor_t* tensor);
 
 /**
  * Clone a Tensor
@@ -77,23 +77,23 @@ rockx_ret_t rockx_tensor_init_from_image(rockx_image_t *img, rockx_tensor_t *ten
  * @param dst_tensor [out] Cloned Tensor
  * @return @ref rockx_ret_t
  */
-rockx_ret_t rockx_tensor_clone(rockx_tensor_t *tensor, rockx_tensor_t *dst_tensor);
+rockx_ret_t rockx_tensor_clone(rockx_tensor_t* tensor, rockx_tensor_t* dst_tensor);
 
 /**
  * Release Data Buffer of Tensor
  * @param tensor [in] Tensor to release
  * @return @ref rockx_ret_t
  */
-rockx_ret_t rockx_tensor_release(rockx_tensor_t *tensor);
+rockx_ret_t rockx_tensor_release(rockx_tensor_t* tensor);
 
 /**
  * Reshape Tensor
  * @param tensor [in] Tensor to reshape
  * @param dst_dims [in] New shape
- * @param n_dims [in] Number of new tensor dimention 
+ * @param n_dims [in] Number of new tensor dimention
  * @return @ref rockx_ret_t
  */
-rockx_ret_t rockx_tensor_reshape(rockx_tensor_t *tensor, uint32_t dst_dims[4], uint32_t n_dims);
+rockx_ret_t rockx_tensor_reshape(rockx_tensor_t* tensor, uint32_t dst_dims[4], uint32_t n_dims);
 
 /**
  * Save Tensor as string format
@@ -101,7 +101,7 @@ rockx_ret_t rockx_tensor_reshape(rockx_tensor_t *tensor, uint32_t dst_dims[4], u
  * @param tensor [in] Tensor
  * @return @ref rockx_ret_t
  */
-rockx_ret_t rockx_tensor_write_txt(const char *path, rockx_tensor_t *tensor);
+rockx_ret_t rockx_tensor_write_txt(const char* path, rockx_tensor_t* tensor);
 
 /**
  * Save Raw float buffer as string format
@@ -110,7 +110,7 @@ rockx_ret_t rockx_tensor_write_txt(const char *path, rockx_tensor_t *tensor);
  * @param n_elements [in] Number of elements
  * @return @ref rockx_ret_t
  */
-rockx_ret_t rockx_tensor_write_txt_float32(const char *path, float *data, unsigned int n_elements);
+rockx_ret_t rockx_tensor_write_txt_float32(const char* path, float* data, unsigned int n_elements);
 
 /**
  * Save Raw uint8 buffer as string format
@@ -119,7 +119,7 @@ rockx_ret_t rockx_tensor_write_txt_float32(const char *path, float *data, unsign
  * @param n_elements [in] Number of elements
  * @return @ref rockx_ret_t
  */
-rockx_ret_t rockx_tensor_write_txt_uint8(const char *path, uint8_t *data, unsigned int n_elements);
+rockx_ret_t rockx_tensor_write_txt_uint8(const char* path, uint8_t* data, unsigned int n_elements);
 
 /**
  * Read tensor from a data file
@@ -128,7 +128,7 @@ rockx_ret_t rockx_tensor_write_txt_uint8(const char *path, uint8_t *data, unsign
  * @param out_tensor [out] Read Tensor
  * @return @ref rockx_ret_t
  */
-rockx_ret_t rockx_tensor_read_from_file(const char *path, rockx_data_type dtype, rockx_tensor_t *out_tensor);
+rockx_ret_t rockx_tensor_read_from_file(const char* path, rockx_data_type dtype, rockx_tensor_t* out_tensor);
 
 /**
  * Caculate "(image - mean_value) / std_value" for each channel
@@ -138,10 +138,11 @@ rockx_ret_t rockx_tensor_read_from_file(const char *path, rockx_data_type dtype,
  * @param std_value [in] Std value for each channel (for example: float std_value[3] = {255.0, 255.0, 255.0})
  * @return @ref rockx_ret_t
  */
-rockx_ret_t rockx_tensor_mean_std(rockx_image_t *in_image, rockx_tensor_t *out_tensor, float *mean_value, float *std_value);
+rockx_ret_t rockx_tensor_mean_std(rockx_image_t* in_image, rockx_tensor_t* out_tensor, float* mean_value,
+                                  float* std_value);
 
 #ifdef __cplusplus
-} //extern "C"
+}  // extern "C"
 #endif
 
-#endif //_TENSOR_UTIL_H
+#endif  //_ROCKX_TENSOR_UTIL_H

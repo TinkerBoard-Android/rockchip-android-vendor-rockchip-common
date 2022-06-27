@@ -206,6 +206,19 @@ LOCAL_MODULE_PATH_32 := $(TARGET_OUT_VENDOR)/lib/hw
 LOCAL_MODULE_PATH_64 := $(TARGET_OUT_VENDOR)/lib64/hw
 include $(BUILD_PREBUILT)
 
+# install libs of libgpudataproducer
+include $(CLEAR_VARS)
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE := libgpudataproducer
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MULTILIB := both
+LOCAL_SRC_FILES_$(TARGET_ARCH) := MaliG610/lib/$(TARGET_ARCH)/libgpudataproducer.so
+LOCAL_SRC_FILES_$(TARGET_2ND_ARCH) := MaliG610/lib/$(TARGET_2ND_ARCH)/libgpudataproducer.so
+LOCAL_CHECK_ELF_FILES := false
+LOCAL_MODULE_PATH_32 := $(TARGET_OUT_VENDOR)/lib
+LOCAL_MODULE_PATH_64 := $(TARGET_OUT_VENDOR)/lib64
+include $(BUILD_PREBUILT)
+
 endif
 
 # ---------------------------- #

@@ -74,7 +74,16 @@ else ifneq ($(filter rk%, $(TARGET_BOARD_PLATFORM)), )
 PRODUCT_COPY_FILES += \
     vendor/rockchip/common/vpu/etc/media_codecs_$(TARGET_BOARD_PLATFORM).xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
     vendor/rockchip/common/vpu/etc/media_codecs_google_c2_$(TARGET_BOARD_PLATFORM).xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_c2.xml \
-    vendor/rockchip/common/vpu/etc/media_codecs_c2_$(TARGET_BOARD_PLATFORM).xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2.xml
+    vendor/rockchip/common/vpu/etc/media_codecs_c2_$(TARGET_BOARD_PLATFORM).xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2_base.xml
+    # For widevine L1
+    ifeq ($(BOARD_WIDEVINE_OEMCRYPTO_LEVEL), 1)
+        PRODUCT_COPY_FILES += \
+            vendor/rockchip/common/vpu/etc/media_codecs_c2_secure.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2.xml \
+            vendor/rockchip/common/vpu/etc/media_codecs_secure_$(TARGET_BOARD_PLATFORM).xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_secure_video.xml
+    else
+        PRODUCT_COPY_FILES += \
+            vendor/rockchip/common/vpu/etc/media_codecs_c2_regular.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_c2.xml
+    endif
 else
 PRODUCT_COPY_FILES += \
     vendor/rockchip/common/vpu/etc/media_codecs_sofia.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml

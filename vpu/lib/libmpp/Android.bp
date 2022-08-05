@@ -13,5 +13,5 @@ cc_prebuilt_library {
         none: true,
     },
     check_elf_files: false,
-    vendor: true,
+    vendor_available: true,
 }

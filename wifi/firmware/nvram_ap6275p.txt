@@ -1,9 +1,9 @@
-# AP6275S_NVRAM_V1.8_20210824
-# AP6275S v00 WLBGA reference board, iPA version.
-
+# AP6275P_NVRAM_V1.2_20210918A
+# AP6271P_V00 board, iPA version.
+# nvram copied and edited from AP6271P_EVB_V02 EVB board //
 # SSID generated using Alberto's boardssid.py script:
 # ********************SUMMARY********************
-# Board Name: AP6275S_V00
+# Board Name: AP6271P_V00
 #SSID: 0x086d
 #macmid: 0x02df
 # Successfully made SSID entry in sromdefs.tcl.
@@ -14,7 +14,7 @@
 #
 #
 # <<Broadcom-WL-IPTag/Proprietary:>>
-NVRAMRev=$Rev: 844050 $
+NVRAMRev=$Rev: 874188 $
 sromrev=11
 boardrev=0x1213
 boardtype=0x08ed
@@ -84,17 +84,8 @@ tworangetssi5g=0
 lowpowerrange2g=0
 lowpowerrange5g=0
 low_adc_rate_en=1
-# NOTE :================================================================================
-# To run TPC with Two Range TSSI ,set  tworangetssi2g = 1 and lowpowerrange2g = 0
-# To run TPC with Single Range TSSI, set tworangetssi2g = 0
-# To run TPC please READ instructions near pa2ga0 and pa2ga1 as well
-# To generate PA params for Low Range set  tworangetssi2g = 0 and lowpowerrange2g to 1
-# To generate PA params for High Range set  tworangetssi2g = 1 and lowpowerrange2g to 1
-# ======================================================================================
 
-#Related to FW Download. Host may use this
 nocrc=1
-
 otpimagesize=502
 
 xtalfreq=37400
@@ -118,7 +109,7 @@ rpcal5gb3=0
 #FDSS Related
 fdss_level_2g=4,4
 fdss_interp_en=1
-fdss_level_5g=4,4
+fdss_level_5g=3,3
 fdss_level_11ax_2g=3,3
 fdss_level_11ax_2g_ch1=3,3
 fdss_level_11ax_2g_ch11=3,3
@@ -133,58 +124,61 @@ temps_period=15
 temps_hysteresis=15
 
 #------------- TSSI Related -------------
-
 tssipos2g=1
 tssipos5g=1
 AvVmid_c0=2,127,4,92,4,91,4,91,4,94
 AvVmid_c1=2,127,4,93,4,93,4,95,3,110
+
 # CCK in case of multi mode 2
-pa2gccka0=-107,8241,-929
-pa2gccka1=-86,8682,-961
+pa2gccka0=-51,9141,-1039
+pa2gccka1=-106,8172,-949
 # OFDM in case of multi_mode 2
-pa2ga0=-92,7647,-831
-pa2ga1=-115,7023,-766
-pa5ga0=-175,5735,-699,-194,5574,-689,-160,6066,-727,-176,5834,-714
-pa5ga1=-163,5928,-712,-193,5622,-695,-188,5523,-688,-170,6097,-749
+
+pa2ga0=-31,8047,-863
+pa2ga1=-3,8006,-803
+
+pa5ga0=-184,5375,-671,-174,5517,-677,-193,5122,-649,-177,5303,-666
+pa5ga1=-207,5022,-635,-168,5741,-695,-169,5544,-687,-182,5435,-687
+
 
 # Max power and offsets
-maxp2ga0=86
-maxp2ga1=86
-maxp5ga0=69,68,68,69
-maxp5ga1=69,68,68,69
+maxp2ga0=88
+maxp2ga1=88
+maxp5ga0=68,68,68,68
+maxp5ga1=69,69,66,66
 subband5gver=0x4
 paparambwver=3
 cckpwroffset0=0
 cckpwroffset1=0
-pdoffset40ma0=0x0000
-pdoffset80ma0=0x0100
-pdoffset40ma1=0x1111
-pdoffset80ma1=0x1010
-cckbw202gpo=0x1111
-cckbw20ul2gpo=0x0000
-mcsbw202gpo=0x77544331
-mcsbw402gpo=0x00000000
-dot11agofdmhrbw202gpo=0x4433
-ofdmlrbw202gpo=0x1111
-mcsbw205glpo=0x66200000
-mcsbw405glpo=0x94100000
-mcsbw805glpo=0x99221111
+pdoffset40ma0=0x4444
+pdoffset80ma0=0x4444
+pdoffset40ma1=0x4444
+pdoffset80ma1=0x4444
+cckbw202gpo=0x4444
+cckbw20ul2gpo=0
+mcsbw202gpo=0xBB977665
+mcsbw402gpo=0xBB977665
+dot11agofdmhrbw202gpo=0x7766
+ofdmlrbw202gpo=0x0055
+mcsbw205glpo=0x88331100
+mcsbw405glpo=0xC8332200
+mcsbw805glpo=0xCC443320
 mcsbw1605glpo=0
-mcsbw205gmpo=0x66200000
-mcsbw405gmpo=0x94100000
-mcsbw805gmpo=0x99221111
+mcsbw205gmpo=0x88331100
+mcsbw405gmpo=0xC8332200
+mcsbw805gmpo=0xCC443320
 mcsbw1605gmpo=0
-mcsbw205ghpo=0x66200000
-mcsbw405ghpo=0xA5211111
-mcsbw805ghpo=0xBB221111
+mcsbw205ghpo=0x88331100
+mcsbw405ghpo=0xC8333300
+mcsbw805ghpo=0xCC443320
 powoffs2gtna0=0,0,0,0,0,0,0,0,0,0,0,0,0,0
-powoffs2gtna1=-1,-1,-1,0,0,0,0,0,0,0,0,0,0,0
-mcs1024qam2gpo=0xCCAA
-mcs1024qam5glpo=0xDDDDAA
-mcs1024qam5gmpo=0xDDDDAA
-mcs1024qam5ghpo=0xDDFFCC
-mcs1024qam5gx1po=0xEECCCC
-mcs1024qam5gx2po=0xEECCCC
+powoffs2gtna1=0,0,0,0,0,0,0,0,0,0,0,0,0,0
+mcs1024qam2gpo=0xEEEE
+mcs1024qam5glpo=0xFFFFDD
+mcs1024qam5gmpo=0xFFFFDD
+mcs1024qam5ghpo=0xFFFFDD
+mcs1024qam5gx1po=0xFFFFDD
+mcs1024qam5gx2po=0xFFFFDD
 mcs8poexp=0
 mcs9poexp=0
 mcs10poexp=0
@@ -224,7 +218,7 @@ clb5gslice1core1=0x000
 btc_prisel_ant_mask=0x2
 clb_swctrl_smask_ant0=0x27f
 clb_swctrl_smask_ant1=0x2f7
-
+muxenab=1
 
 #BT Coex 1:TDM
 btc_mode=1
@@ -238,12 +232,12 @@ nb_papdcalidx=6,6
 nb_txattn=2,2
 nb_rxattn=1,1
 nb_eps_stopidx=63
-epsilonoff_5g20_c0=2,2,2,0
-epsilonoff_5g40_c0=2,2,2,0
-epsilonoff_5g80_c0=2,2,2,0
-epsilonoff_5g20_c1=0,0,-2,-2
-epsilonoff_5g40_c1=0,0,0,-2
-epsilonoff_5g80_c1=0,0,-2,-2
+epsilonoff_5g20_c0=0,0,0,0
+epsilonoff_5g40_c0=0,0,0,0
+epsilonoff_5g80_c0=0,0,0,0
+epsilonoff_5g20_c1=0,0,-2,-3
+epsilonoff_5g40_c1=0,0,-2,-3
+epsilonoff_5g80_c1=0,0,-2,-3
 epsilonoff_2g20_c0=0
 epsilonoff_2g20_c1=0
 
@@ -260,7 +254,7 @@ rpcal5gb1=228
 rpcal5gb2=222
 rpcal5gb3=229
 rpcal2g=15
-ocl=0
+ocl=1
 bt_coex_chdep_div=1
 
 # OLPC Related
@@ -289,66 +283,55 @@ paprrmcsgain5g80=0,0,0,0,0,0,0,0,0,0,0,0
 cckpapd_pwrthresh=64
 
 ## ULOFDMA Board limit PPRs for 2G20 ##
-ruppr2g20bpska0=0x8421
-ruppr2g20bpska1=0x8421
-ruppr2g20qpska0=0x8421
-ruppr2g20qpska1=0x8421
-ruppr2g20qam16a0=0x10842
-ruppr2g20qam16a1=0x10842
-ruppr2g20qam64a0=0x18C63
-ruppr2g20qam64a1=0x18C63
-ruppr2g20qam256a0=0x21084
-ruppr2g20qam256a1=0x21084
-ruppr2g20qam1024a0=0x5294A
-ruppr2g20qam1024a1=0x5294A
+ruppr2g20bpska0=0x00021084
+ruppr2g20bpska1=0x00021084
+ruppr2g20qpska0=0x00021084
+ruppr2g20qpska1=0x00021084
+ruppr2g20qam16a0=0x000294A5
+ruppr2g20qam16a1=0x000294A5
+ruppr2g20qam64a0=0x00039CE7
+ruppr2g20qam64a1=0x00039CE7
+ruppr2g20qam256a0=0x0005AD6B
+ruppr2g20qam256a1=0x0005AD6B
+ruppr2g20qam1024a0=0x0005AD6B
+ruppr2g20qam1024a1=0x0005AD6B
 ## ULOFDMA Board limit PPRs for 5G20 ##
-ruppr5g20bpska0=0x18000
-ruppr5g20bpska1=0x18000
-ruppr5g20qpska0=0x18000
-ruppr5g20qpska1=0x18000
-ruppr5g20qam16a0=0x18000
-ruppr5g20qam16a1=0x18000
-ruppr5g20qam64a0=0x18842
-ruppr5g20qam64a1=0x18842
-ruppr5g20qam256a0=0x318C6
-ruppr5g20qam256a1=0x318C6
-ruppr5g20qam1024a0=0x6318C
-ruppr5g20qam1024a1=0x6318C
+ruppr5g20bpska0=0x00008421
+ruppr5g20bpska1=0x00008421
+ruppr5g20qpska0=0x00008421
+ruppr5g20qpska1=0x00008421
+ruppr5g20qam16a0=0x00010842
+ruppr5g20qam16a1=0x00010842
+ruppr5g20qam64a0=0x00021084
+ruppr5g20qam64a1=0x00021084
+ruppr5g20qam256a0=0x00042108
+ruppr5g20qam256a1=0x00042108
+ruppr5g20qam1024a0=0x0006318C
+ruppr5g20qam1024a1=0x0006318C
 ## ULOFDMA Board limit PPRs for 5G40 ##
-ruppr5g40bpska0=0x308421
-ruppr5g40bpska1=0x308421
-ruppr5g40qpska0=0x308421
-ruppr5g40qpska1=0x308421
-ruppr5g40qam16a0=0x308421
-ruppr5g40qam16a1=0x308421
-ruppr5g40qam64a0=0x308421
-ruppr5g40qam64a1=0x308421
-ruppr5g40qam256a0=0x739CE7
-ruppr5g40qam256a1=0x739CE7
-ruppr5g40qam1024a0=0xD6B5AD
-ruppr5g40qam1024a1=0xD6B5AD
+ruppr5g40bpska0=0x00108421
+ruppr5g40bpska1=0x00108421
+ruppr5g40qpska0=0x00108421
+ruppr5g40qpska1=0x00108421
+ruppr5g40qam16a0=0x00210842
+ruppr5g40qam16a1=0x00210842
+ruppr5g40qam64a0=0x00421084
+ruppr5g40qam64a1=0x00421084
+ruppr5g40qam256a0=0x00C6318C
+ruppr5g40qam256a1=0x00C6318C
+ruppr5g40qam1024a0=0x01084210
+ruppr5g40qam1024a1=0x01084210
 ## ULOFDMA Board limit PPRs for 5G80 ##
-ruppr5g80bpska0=0x4108421
-ruppr5g80bpska1=0x4108421
-ruppr5g80qpska0=0x4108421
-ruppr5g80qpska1=0x4108421
-ruppr5g80qam16a0=0x4108421
-ruppr5g80qam16a1=0x4108421
-ruppr5g80qam64a0=0x8108421
-ruppr5g80qam64a1=0x8108421
-ruppr5g80qam256a0=0x1C7398C6
-ruppr5g80qam256a1=0x1C7398C6
-ruppr5g80qam1024a0=0x38C6318C
-ruppr5g80qam1024a1=0x38C6318C
+ruppr5g80bpska0=0x04108421
+ruppr5g80bpska1=0x04108421
+ruppr5g80qpska0=0x04108421
+ruppr5g80qpska1=0x04108421
+ruppr5g80qam16a0=0x0C318C63
+ruppr5g80qam16a1=0x0C318C63
+ruppr5g80qam64a0=0x10421084
+ruppr5g80qam64a1=0x10421084
+ruppr5g80qam256a0=0x30C6318C
+ruppr5g80qam256a1=0x30C6318C
+ruppr5g80qam1024a0=0x41084210
+ruppr5g80qam1024a1=0x41084210
 
-muxenab=0x10
-
-# ###########  BTC Dynctl profile params  ############
-# flags:bit0 - dynctl enabled, bit1 dynamic desense, bit2 dynamic mode, bit 3 TX power control
-#btcdyn_flags=1
-
-#btcdyn_default_btc_mode=5
-#btcdyn_msw_rows=0
-#btcdyn_dsns_rows=0
-#btc_params1007=100
-#btc_params1017=4

@@ -1,9 +1,9 @@
-# AP6275S_NVRAM_V1.8_20210824
-# AP6275S v00 WLBGA reference board, iPA version.
+# AP6275SR3_NVRAM_V1.7_20210826
+# AP6275SR3 v00 WLBGA reference board, iPA version.
 
 # SSID generated using Alberto's boardssid.py script:
 # ********************SUMMARY********************
-# Board Name: AP6275S_V00
+# Board Name: AP6275SR3_V00
 #SSID: 0x086d
 #macmid: 0x02df
 # Successfully made SSID entry in sromdefs.tcl.
@@ -14,12 +14,12 @@
 #
 #
 # <<Broadcom-WL-IPTag/Proprietary:>>
-NVRAMRev=$Rev: 844050 $
+NVRAMRev=$Rev: 874188 $
 sromrev=11
 boardrev=0x1213
 boardtype=0x08ed
-boardflags=0x00400201
-boardflags2=0xc0800000
+boardflags=0x00000201
+boardflags2=0xc0000000
 boardflags3=0x40002180
 #boardnum=57410
 macaddr=00:90:4c:12:d0:01
@@ -84,17 +84,8 @@ tworangetssi5g=0
 lowpowerrange2g=0
 lowpowerrange5g=0
 low_adc_rate_en=1
-# NOTE :================================================================================
-# To run TPC with Two Range TSSI ,set  tworangetssi2g = 1 and lowpowerrange2g = 0
-# To run TPC with Single Range TSSI, set tworangetssi2g = 0
-# To run TPC please READ instructions near pa2ga0 and pa2ga1 as well
-# To generate PA params for Low Range set  tworangetssi2g = 0 and lowpowerrange2g to 1
-# To generate PA params for High Range set  tworangetssi2g = 1 and lowpowerrange2g to 1
-# ======================================================================================
 
-#Related to FW Download. Host may use this
 nocrc=1
-
 otpimagesize=502
 
 xtalfreq=37400
@@ -133,11 +124,11 @@ temps_period=15
 temps_hysteresis=15
 
 #------------- TSSI Related -------------
-
 tssipos2g=1
 tssipos5g=1
 AvVmid_c0=2,127,4,92,4,91,4,91,4,94
 AvVmid_c1=2,127,4,93,4,93,4,95,3,110
+
 # CCK in case of multi mode 2
 pa2gccka0=-107,8241,-929
 pa2gccka1=-86,8682,-961
@@ -340,6 +331,8 @@ ruppr5g80qam256a0=0x1C7398C6
 ruppr5g80qam256a1=0x1C7398C6
 ruppr5g80qam1024a0=0x38C6318C
 ruppr5g80qam1024a1=0x38C6318C
+
+
 
 muxenab=0x10
 

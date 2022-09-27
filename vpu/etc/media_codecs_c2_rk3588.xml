@@ -20,7 +20,7 @@
             <Limit name="size" min="2x2" max="7680x4320" />
             <Limit name="alignment" value="2x2" />
             <Limit name="block-size" value="16x16" />
-            <Limit name="block-count" range="1-129600" /> <!-- max 7680x4320 -->
+            <Limit name="block-count" range="1-129600" />
             <Limit name="blocks-per-second" range="1-4000000" />
             <Limit name="frame-rate" range="1-60" />
             <Limit name="bitrate" range="1-80000000" />
@@ -91,6 +91,17 @@
             <Limit name="bitrate" range="1-20000000" />
             <Feature name="adaptive-playback" />
             <Limit name="performance-point-1920x1088" value="60" />
+        </MediaCodec>
+        <MediaCodec name="c2.rk.av1.decoder" type="video/av01">
+            <Limit name="size" min="2x2" max="7680x4320" />
+            <Limit name="alignment" value="2x2" />
+            <Limit name="block-size" value="16x16" />
+            <Limit name="block-count" range="1-129600" />
+            <Limit name="blocks-per-second" range="1-4000000" />
+            <Limit name="frame-rate" range="1-60" />
+            <Limit name="bitrate" range="1-80000000" />
+            <Feature name="adaptive-playback" />
+            <Limit name="performance-point-7680x4320" value="30" />
         </MediaCodec>
     </Decoders>
 

@@ -228,24 +228,24 @@
             <Feature name="bitrate-modes" value="CBR" />
         </MediaCodec>
         <!-- Software Video Encoders -->
+        <!-- profiles and levels:  ProfileBaseline : Level45
         <MediaCodec name="c2.android.h263.encoder" type="video/3gpp" update="true">
             <Alias name="OMX.google.h263.encoder" />
-            <!-- profiles and levels:  ProfileBaseline : Level45 -->
             <Limit name="size" min="176x144" max="176x144" />
             <Limit name="alignment" value="16x16" />
             <Limit name="bitrate" range="1-128000" />
             <Limit name="concurrent-instances" max="1" />
-        </MediaCodec>
+        </MediaCodec-->
+        <!-- profiles and levels:  ProfileCore : Level2
         <MediaCodec name="c2.android.mpeg4.encoder" type="video/mp4v-es" update="true">
             <Alias name="OMX.google.mpeg4.encoder" />
-            <!-- profiles and levels:  ProfileCore : Level2 -->
             <Limit name="size" min="16x16" max="176x144" />
             <Limit name="alignment" value="16x16" />
             <Limit name="block-size" value="16x16" />
             <Limit name="blocks-per-second" range="12-1485" />
             <Limit name="bitrate" range="1-64000" />
             <Limit name="concurrent-instances" max="1" />
-        </MediaCodec>
+        </MediaCodec-->
         <MediaCodec name="c2.android.avc.encoder" type="video/avc" update="true">
             <Alias name="OMX.google.h264.encoder" />
             <Limit name="size" min="176x144" max="1280x720" />
@@ -270,12 +270,12 @@
             <Limit name="concurrent-instances" max="32" />
             <Feature name="bitrate-modes" value="VBR,CBR" />
         </MediaCodec>
+        <!-- profiles and levels:  ProfileMain : MainTierLevel51
         <MediaCodec name="c2.android.hevc.encoder" type="video/hevc" update="true" enabled="false">
-            <!-- profiles and levels:  ProfileMain : MainTierLevel51 -->
             <Limit name="size" min="2x2" max="512x512" />
             <Limit name="alignment" value="2x2" />
             <Limit name="block-size" value="8x8" />
-            <Limit name="block-count" range="1-4096" /> <!-- max 512x512 -->
+            <Limit name="block-count" range="1-4096" />
             <Limit name="blocks-per-second" range="1-122880" />
             <Limit name="frame-rate" range="1-120" />
             <Limit name="bitrate" range="1-10000000" />
@@ -283,18 +283,17 @@
             <Limit name="quality" range="0-100"  default="80" />
             <Limit name="concurrent-instances" max="32" />
             <Feature name="bitrate-modes" value="VBR,CBR,CQ" />
-        </MediaCodec>
+        </MediaCodec-->
+        <!-- profiles and levels:  ProfileMain : Level_Version0-3
         <MediaCodec name="c2.android.vp9.encoder" type="video/x-vnd.on2.vp9" update="true" enabled="false">
             <Alias name="OMX.google.vp9.encoder" />
-            <!-- profiles and levels:  ProfileMain : Level_Version0-3 -->
             <Limit name="size" min="2x2" max="2048x2048" />
             <Limit name="alignment" value="2x2" />
             <Limit name="block-size" value="16x16" />
-            <!-- 2016 devices can encode at about 8fps at this block count -->
-            <Limit name="block-count" range="1-3600" /> <!-- max 1280x720 -->
+            <Limit name="block-count" range="1-3600" />
             <Limit name="bitrate" range="1-40000000" />
             <Limit name="concurrent-instances" max="32" />
             <Feature name="bitrate-modes" value="VBR,CBR" />
-        </MediaCodec>
+        </MediaCodec-->
     </Encoders>
 </Included>

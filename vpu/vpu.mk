@@ -1,16 +1,13 @@
 LOCAL_PATH := $(call my-dir)
 
 PRODUCT_PACKAGES += \
-    librk_vpuapi \
     libffmpeg_58 \
     libiconv     \
     librttinyxml \
     librtopus    \
     librtmem     \
     librockit    \
-    libjpeghwenc \
-    libmpp       \
-    libvpu 
+    libmpp
 
 ifneq ($(filter rk3328, $(TARGET_BOARD_PLATFORM)), )
 PRODUCT_COPY_FILES += \

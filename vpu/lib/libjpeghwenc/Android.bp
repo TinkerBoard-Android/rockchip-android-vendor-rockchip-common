@@ -1,9 +1,0 @@
-cc_rockchip_prebuilt_library_shared {
-    name: "libjpeghwenc",
-    strip: {
-        none: true,
-    },
-    vendor: true,
-    vpu: true,
-    check_elf_files: false,
-}

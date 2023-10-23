@@ -1,0 +1,55 @@
+install_symlink {
+    name: "rk30board_libGLES_mali_vulkan_symlink32",
+    vendor: true,
+    installed_location: "lib/hw/vulkan.rk30board.so",
+    symlink_target: "../egl/libGLES_mali.so",
+}
+
+install_symlink {
+    name: "rk30board_libGLES_mali_vulkan_symlink64",
+    vendor: true,
+    installed_location: "lib64/hw/vulkan.rk30board.so",
+    symlink_target: "../egl/libGLES_mali.so",
+}
+
+install_symlink {
+    name: "rockchip_libGLES_mali_libOpenCL_symlink32",
+    vendor: true,
+    installed_location: "lib/libOpenCL.so",
+    symlink_target: "libOpenCL.so.1.1",
+}
+
+install_symlink {
+    name: "rockchip_libGLES_mali_libOpenCL.1_symlink32",
+    vendor: true,
+    installed_location: "lib/libOpenCL.so.1",
+    symlink_target: "libOpenCL.so.1.1",
+}
+
+install_symlink {
+    name: "rockchip_libGLES_mali_libOpenCL.1.1_symlink32",
+    vendor: true,
+    installed_location: "lib/libOpenCL.so.1.1",
+    symlink_target: "egl/libGLES_mali.so",
+}
+
+install_symlink {
+    name: "rockchip_libGLES_mali_libOpenCL_symlink64",
+    vendor: true,
+    installed_location: "lib64/libOpenCL.so",
+    symlink_target: "libOpenCL.so.1.1",
+}
+
+install_symlink {
+    name: "rockchip_libGLES_mali_libOpenCL.1_symlink64",
+    vendor: true,
+    installed_location: "lib64/libOpenCL.so.1",
+    symlink_target: "libOpenCL.so.1.1",
+}
+
+install_symlink {
+    name: "rockchip_libGLES_mali_libOpenCL.1.1_symlink64",
+    vendor: true,
+    installed_location: "lib64/libOpenCL.so.1.1",
+    symlink_target: "egl/libGLES_mali.so",
+}

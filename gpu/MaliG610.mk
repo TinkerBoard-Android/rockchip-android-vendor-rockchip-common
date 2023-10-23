@@ -12,4 +12,14 @@ ifeq ($(strip $(BOARD_BUILD_GKI)), true)
 BOARD_VENDOR_KERNEL_MODULES += \
         vendor/rockchip/common/gpu/MaliG610/lib/modules/bifrost_kbase.ko
 endif
+ifneq ($(DEVICE_IS_64BIT_ONLY), true)
+PRODUCT_PACKAGES += \
+    rockchip_libGLES_mali_libOpenCL_symlink32 \
+    rockchip_libGLES_mali_libOpenCL.1_symlink32 \
+    rockchip_libGLES_mali_libOpenCL.1.1_symlink32
+endif
+PRODUCT_PACKAGES += \
+    rockchip_libGLES_mali_libOpenCL_symlink64 \
+    rockchip_libGLES_mali_libOpenCL.1_symlink64 \
+    rockchip_libGLES_mali_libOpenCL.1.1_symlink64
 endif

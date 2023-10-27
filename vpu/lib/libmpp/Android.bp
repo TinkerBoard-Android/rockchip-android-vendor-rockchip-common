@@ -3,10 +3,10 @@ cc_prebuilt_library {
     compile_multilib: "both",
     multilib: {
         lib64: {
-            srcs: ["arm64/mpp_dev/libmpp.so"],
+            srcs: ["arm64/libmpp.so"],
         },
         lib32: {
-            srcs: ["arm/mpp_dev/libmpp.so"],
+            srcs: ["arm/libmpp.so"],
         },
     },
     strip: {

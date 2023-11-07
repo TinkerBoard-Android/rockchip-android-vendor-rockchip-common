@@ -20,7 +20,7 @@
     </Settings>
     <Decoders>
         <MediaCodec name="c2.rk.avc.decoder" type="video/avc">
-            <Limit name="size" min="2x2" max="8192x4320" />
+            <Limit name="size" min="64x64" max="8192x4320" />
             <Limit name="alignment" value="2x2" />
             <Limit name="block-size" value="16x16" />
             <Limit name="block-count" range="1-129600" /> <!-- max 7680x4320 -->
@@ -44,7 +44,7 @@
             <Limit name="performance-point-3840x2160" value="240" />
         </MediaCodec>
         <MediaCodec name="c2.rk.vp9.decoder" type="video/x-vnd.on2.vp9">
-            <Limit name="size" min="320x182" max="8192x4320" />
+            <Limit name="size" min="176x144" max="8192x4320" />
             <Limit name="alignment" value="2x2" />
             <Limit name="block-size" value="16x16" />
             <Limit name="block-count" range="1-129600" /> <!-- max 7680x4320 -->

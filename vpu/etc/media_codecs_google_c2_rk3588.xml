@@ -57,8 +57,8 @@
         <MediaCodec name="c2.android.av1.decoder" type="video/av01" update="true">
             <Limit name="alignment" value="1x1" />
             <Limit name="block-size" value="16x16" />
-            <Limit name="size" min="2x2" max="1280x1280" />
-            <Limit name="block-count" range="1-3600" /> <!-- max 1280x720 -->
+            <Limit name="size" min="2x2" max="1920x1080" />
+            <Limit name="block-count" range="1-8100" /> <!-- max 1920x1080 -->
             <Limit name="blocks-per-second" range="1-108000" />
             <Limit name="bitrate" range="1-5000000" />
             <Feature name="adaptive-playback" />

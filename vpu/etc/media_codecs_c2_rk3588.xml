@@ -25,10 +25,12 @@
             <Limit name="block-size" value="16x16" />
             <Limit name="block-count" range="1-129600" /> <!-- max 7680x4320 -->
             <Limit name="blocks-per-second" range="1-4000000" />
-            <Limit name="frame-rate" range="1-60" />
+            <Limit name="frame-rate" range="1-300" />
             <Limit name="bitrate" range="1-80000000" />
             <Feature name="adaptive-playback" />
+            <Feature name="can-swap-width-height" />
             <Limit name="concurrent-instances" max="32" />
+            <Limit name="performance-point-1280x720" value="300" />
             <Limit name="performance-point-3840x2160" value="120" />
         </MediaCodec>
         <MediaCodec name="c2.rk.hevc.decoder" type="video/hevc">
@@ -36,11 +38,13 @@
             <Limit name="alignment" value="2x2" />
             <Limit name="block-size" value="16x16" />
             <Limit name="block-count" range="1-129600" /> <!-- max 7680x4320 -->
-            <Limit name="blocks-per-second" range="1-4000000" />
-            <Limit name="frame-rate" range="1-60" />
+            <Limit name="blocks-per-second" range="1-8000000" />
+            <Limit name="frame-rate" range="1-600" />
             <Limit name="bitrate" range="1-80000000" />
             <Feature name="adaptive-playback" />
+            <Feature name="can-swap-width-height" />
             <Limit name="concurrent-instances" max="32" />
+            <Limit name="performance-point-1280x720" value="600" />
             <Limit name="performance-point-3840x2160" value="240" />
         </MediaCodec>
         <MediaCodec name="c2.rk.vp9.decoder" type="video/x-vnd.on2.vp9">

@@ -17,6 +17,7 @@
 <Included>
     <Decoders>
         <MediaCodec name="c2.rk.avc.decoder" type="video/avc">
+            <Alias name="OMX.rk.video_decoder.avc" />
             <Limit name="size" min="64x64" max="4096x2160" />
             <Limit name="alignment" value="2x2" />
             <Limit name="block-size" value="16x16" />
@@ -29,6 +30,7 @@
             <Limit name="performance-point-3840x2160" value="60" />
         </MediaCodec>
         <MediaCodec name="c2.rk.hevc.decoder" type="video/hevc">
+            <Alias name="OMX.rk.video_decoder.hevc" />
             <Limit name="size" min="64x64" max="4096x2160" />
             <Limit name="alignment" value="2x2" />
             <Limit name="block-size" value="16x16" />
@@ -41,6 +43,7 @@
             <Limit name="performance-point-3840x2160" value="60" />
         </MediaCodec>
         <MediaCodec name="c2.rk.vp9.decoder" type="video/x-vnd.on2.vp9">
+            <Alias name="OMX.rk.video_decoder.vp9" />
             <Limit name="size" min="176x144" max="4096x2160" />
             <Limit name="alignment" value="2x2" />
             <Limit name="block-size" value="16x16" />
@@ -53,6 +56,7 @@
             <Limit name="performance-point-3840x2160" value="60" />
         </MediaCodec>
         <MediaCodec name="c2.rk.vp8.decoder" type="video/x-vnd.on2.vp8">
+            <Alias name="OMX.rk.video_decoder.vp8" />
             <Limit name="size" min="2x2" max="1920x1088" />
             <Limit name="alignment" value="2x2" />
             <Limit name="block-size" value="16x16" />
@@ -65,6 +69,7 @@
             <Limit name="performance-point-1920x1088" value="60" />
         </MediaCodec>
         <MediaCodec name="c2.rk.mpeg2.decoder" type="video/mpeg2">
+            <Alias name="OMX.rk.video_decoder.m2v" />
             <Limit name="size" min="2x2" max="1920x1088" />
             <Limit name="alignment" value="2x2" />
             <Limit name="block-size" value="16x16" />
@@ -76,6 +81,7 @@
             <Limit name="performance-point-1920x1088" value="60" />
         </MediaCodec>
         <MediaCodec name="c2.rk.m4v.decoder" type="video/mp4v-es">
+            <Alias name="OMX.rk.video_decoder.m4v" />
             <Limit name="size" min="2x2" max="1920x1088" />
             <Limit name="alignment" value="2x2" />
             <Limit name="block-size" value="16x16" />
@@ -88,6 +94,7 @@
             <Limit name="performance-point-1920x1088" value="60" />
         </MediaCodec>
         <MediaCodec name="c2.rk.h263.decoder" type="video/3gpp">
+            <Alias name="OMX.rk.video_decoder.h263" />
             <Limit name="size" min="2x2" max="1920x1088" />
             <Limit name="alignment" value="2x2" />
             <Limit name="block-size" value="16x16" />
@@ -103,6 +110,7 @@
 
     <Encoders>
         <MediaCodec name="c2.rk.avc.encoder" type="video/avc">
+            <Alias name="OMX.rk.video_encoder.avc" />
             <Limit name="size" min="176x144" max="1920x1088" />
             <Limit name="alignment" value="2x2" />
             <Limit name="block-size" value="16x16" />
@@ -114,6 +122,7 @@
             <Limit name="performance-point-1920x1088" value="60" />
         </MediaCodec>
         <MediaCodec name="c2.rk.hevc.encoder" type="video/hevc">
+            <Alias name="OMX.rk.video_encoder.hevc" />
             <Limit name="size" min="176x144" max="1920x1088" />
             <Limit name="alignment" value="4x4" />
             <Limit name="block-size" value="16x16" />
@@ -124,6 +133,7 @@
             <Limit name="performance-point-1920x1088" value="60" />
         </MediaCodec>
         <MediaCodec name="c2.rk.vp8.encoder" type="video/x-vnd.on2.vp8">
+            <Alias name="OMX.rk.video_encoder.vp8" />
             <Limit name="size" min="176x144" max="1920x1088" />
             <Limit name="alignment" value="2x2" />
             <Limit name="block-size" value="16x16" />

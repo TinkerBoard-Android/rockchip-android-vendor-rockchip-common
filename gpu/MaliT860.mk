@@ -9,7 +9,7 @@ HAS_BUILD_KERNEL := $(shell test -e $(DRIVER_PATH) && echo true)
 ifneq ($(strip $(HAS_BUILD_KERNEL)), true)
 # Move to Android.mk
 BOARD_VENDOR_KERNEL_MODULES += \
-	vendor/rockchip/common/gpu/MaliT860/lib/modules/mali_kbase.ko
+	vendor/rockchip/common/gpu/MaliT860/lib/modules/midgard_kbase.ko
 else
 BOARD_VENDOR_KERNEL_MODULES += \
 	$(DRIVER_PATH)

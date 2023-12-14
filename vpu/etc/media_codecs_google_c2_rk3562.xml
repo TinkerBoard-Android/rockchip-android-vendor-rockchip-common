@@ -38,7 +38,7 @@
             <Alias name="OMX.google.vp8.decoder" />
             <Limit name="alignment" value="2x2" />
             <Limit name="block-size" value="16x16" />
-            <Limit name="size" min="2x2" max="1280x720" />
+            <Limit name="size" min="2x2" max="1280x1280" />
             <Limit name="block-count" range="1-3600" /> <!-- max 1280x720 -->
             <Limit name="blocks-per-second" range="1-244800" />
             <Limit name="bitrate" range="1-10000000" />
@@ -75,6 +75,17 @@
             <Limit name="quality" range="0-100"  default="80" />
             <Limit name="complexity" range="0-5"  default="0" />
             <Feature name="bitrate-modes" value="VBR,CBR,CQ" />
+            <Attribute name="software-codec" />
+        </MediaCodec>
+        <MediaCodec name="c2.android.vp8.encoder" type="video/x-vnd.on2.vp8" update="true">
+            <Alias name="OMX.google.vp8.encoder" />
+            <Limit name="alignment" value="2x2" />
+            <Limit name="block-size" value="16x16" />
+            <Limit name="size" min="2x2" max="1280x1280" />
+            <!-- profiles and levels:  ProfileMain : Level_Version0-3 -->
+            <Limit name="block-count" range="1-3600" /> <!-- max 1280x720 -->
+            <Limit name="bitrate" range="1-20000000" />
+            <Feature name="bitrate-modes" value="VBR,CBR" />
             <Attribute name="software-codec" />
         </MediaCodec>
     </Encoders>

@@ -126,6 +126,12 @@ ifeq ($(PRODUCT_HAVE_PLUGINSVC),true)
 $(call inherit-product-if-exists, vendor/rockchip/common/pluginsvc/pluginsvc.mk)
 endif
 
+ifneq (,$(filter vehicle car,$(TARGET_BOARD_PLATFORM_PRODUCT)))
+$(call inherit-product-if-exists, vendor/rockchip/common/vehicle/ohci/ohci.mk)
+$(call inherit-product-if-exists, vendor/rockchip/common/vehicle/touchscreen/touchscreen.mk)
+$(call inherit-product-if-exists, vendor/rockchip/common/vehicle/sata/sata.mk)
+endif
+
 $(call inherit-product-if-exists, vendor/rockchip/common/pppoe/pppoe.mk)
 
 $(call inherit-product-if-exists, vendor/rockchip/common/gpu/gpu_performance/face_detection.mk)

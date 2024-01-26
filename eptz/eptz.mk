@@ -3,6 +3,7 @@ LOCAL_PATH := $(call my-dir)
 ifneq ($(filter rk356x rk3588, $(TARGET_BOARD_PLATFORM)), )
 PRODUCT_PACKAGES += \
 	libeptz         \
+	librknnrt       \
 	librockx
 
 ifneq ($(filter rk356x, $(TARGET_BOARD_PLATFORM)), )

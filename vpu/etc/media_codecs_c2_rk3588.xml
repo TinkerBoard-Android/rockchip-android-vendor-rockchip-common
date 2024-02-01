@@ -31,7 +31,7 @@
             <Feature name="adaptive-playback" />
             <Feature name="can-swap-width-height" />
             <Limit name="concurrent-instances" max="32" />
-            <Limit name="performance-point-1280x720" value="300" />
+            <Limit name="performance-point-1280x720" value="240" />
             <Limit name="performance-point-3840x2160" value="120" />
         </MediaCodec>
         <MediaCodec name="c2.rk.hevc.decoder" type="video/hevc">
@@ -153,7 +153,7 @@
             <Limit name="bitrate" range="1-40000000" />
             <Feature name="can-swap-width-height" />
             <Limit name="concurrent-instances" max="32" />
-            <Limit name="performance-point-3840x2160" value="120" />
+            <Limit name="performance-point-3840x2160" value="50" />
         </MediaCodec>
         <MediaCodec name="c2.rk.vp8.encoder" type="video/x-vnd.on2.vp8">
             <Alias name="OMX.rk.video_encoder.vp8" />

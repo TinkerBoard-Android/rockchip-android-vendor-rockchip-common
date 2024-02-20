@@ -54,6 +54,20 @@
             <Limit name="concurrent-instances" max="32" />
             <Limit name="performance-point-3840x2160" value="60" />
         </MediaCodec>
+        <MediaCodec name="c2.rk.av1.decoder" type="video/av01">
+            <Alias name="OMX.rk.video_decoder.av1" />
+            <Limit name="size" min="64x64" max="4096x2160" />
+            <Limit name="alignment" value="2x2" />
+            <Limit name="block-size" value="16x16" />
+            <Limit name="block-count" range="1-32768" /> <!-- max 4096x2160 -->
+            <Limit name="blocks-per-second" range="1-1966080" />
+            <Limit name="frame-rate" range="1-240" />
+            <Limit name="bitrate" range="1-20000000" />
+            <Feature name="adaptive-playback" />
+            <Feature name="can-swap-width-height" />
+            <Limit name="concurrent-instances" max="32" />
+            <Limit name="performance-point-3840x2160" value="60" />
+        </MediaCodec>
     </Decoders>
 
     <Encoders>

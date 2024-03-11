@@ -19,3 +19,6 @@ BOARD_VENDOR_KERNEL_MODULES += \
 WifiFirmwareFile := $(shell ls $(CUR_PATH)/wifi/firmware)
 PRODUCT_COPY_FILES += \
         $(foreach file, $(WifiFirmwareFile), $(CUR_PATH)/wifi/firmware/$(file):$(TARGET_COPY_OUT_VENDOR)/etc/firmware/$(file))
+
+PRODUCT_PACKAGES += \
+    lspci

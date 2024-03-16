@@ -3,11 +3,6 @@ PRODUCT_PACKAGES += \
     libGLES_mali \
     vulkan.$(TARGET_BOARD_PLATFORM)
 
-ifeq ($(strip $(BOARD_BUILD_GKI)), true)
-BOARD_VENDOR_KERNEL_MODULES += \
-	vendor/rockchip/common/gpu/MaliTDVx/lib/modules/bifrost_kbase.ko
-endif
-
 ifneq ($(DEVICE_IS_64BIT_ONLY), true)
 PRODUCT_PACKAGES += \
     rockchip_libGLES_mali_libOpenCL_symlink32 \

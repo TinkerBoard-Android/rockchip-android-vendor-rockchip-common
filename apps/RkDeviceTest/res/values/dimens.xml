@@ -1,0 +1,20 @@
+<resources>
+    <dimen name="pub_horizontal_margin">30dip</dimen>
+    <dimen name="pub_vertical_margin">10dip</dimen>
+    <dimen name="pub_title_size">30sp</dimen>
+    <dimen name="pub_title_padleft">12dip</dimen>
+    
+    
+    <dimen name="main_list_padtop">16dip</dimen>
+    <dimen name="main_listtitle_size">22sp</dimen>
+    <dimen name="main_listitem_size">24sp</dimen>
+    <dimen name="main_listitem_size_s">20sp</dimen>
+    <dimen name="main_listitem_size_ss">18sp</dimen>
+    <dimen name="main_listitem_pad">0dip</dimen>
+    <dimen name="main_listitem_height">44dip</dimen>
+    
+    <dimen name="cpu_info_padleft">40dip</dimen>
+    
+    <dimen name="aging_item_size">19sp</dimen>
+    <dimen name="aging_vertical_margin">30dip</dimen>
+</resources>

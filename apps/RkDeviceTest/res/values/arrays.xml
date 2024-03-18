@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="test_audio">
+    	<item>播放左声道测试音(男音)</item>
+    	<item>播放右声道测试音(女音)</item>
+    	<item>左右声道播放不同测试音</item>
+    </string-array>
+    
+    <string-array name="test_led">
+    	<item>亮灯</item>
+    	<item>灭灯</item>
+    	<item>间断亮灭</item>
+    </string-array>
+
+</resources>

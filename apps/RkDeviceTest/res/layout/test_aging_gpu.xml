@@ -1,0 +1,25 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rl_gpu_test_content"
+    tools:context=".AgingTestActivity">
+	
+    <TextView
+        android:id="@+id/tv_gpu_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gpu_title"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/aging_item_size"
+        android:contentDescription="@null"/>
+    <TextView
+        android:id="@+id/tv_gpu_usage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/aging_item_size"
+        android:contentDescription="@null"
+        android:layout_toRightOf="@id/tv_gpu_title"
+        android:layout_alignTop="@id/tv_gpu_title"/>
+</RelativeLayout>

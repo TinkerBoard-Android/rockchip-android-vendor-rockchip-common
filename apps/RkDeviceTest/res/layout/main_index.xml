@@ -1,0 +1,92 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/pub_horizontal_margin"
+    android:paddingRight="@dimen/pub_horizontal_margin"
+    android:paddingTop="@dimen/pub_vertical_margin"
+    android:paddingBottom="@dimen/pub_vertical_margin"
+    android:orientation="vertical"
+    tools:context=".IndexActivity">
+	
+   	<!-- Header -->
+   	<RelativeLayout
+       	android:layout_width="wrap_content"
+       	android:layout_height="wrap_content">
+	   	<TextView 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:drawableLeft="@drawable/main_icon"
+	        android:text="@string/main_title"
+	        android:textSize="@dimen/pub_title_size"
+	        android:drawablePadding="@dimen/pub_title_padleft"
+	        android:gravity="bottom"
+	        android:textColor="@android:color/white"
+	        android:layout_alignParentLeft="true"/>
+	   	<TextView 
+	   	    android:id="@+id/tv_soft_ver"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:textSize="18sp"
+	        android:gravity="top"
+	        android:textColor="@android:color/white"
+	        android:layout_alignParentRight="true"/>
+	</RelativeLayout>
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/main_head_line"/>
+    
+    <!-- Content -->
+    <FrameLayout 
+        android:layout_width="match_parent"
+	    android:layout_height="match_parent">
+	    <LinearLayout
+	        android:id="@+id/main_content"
+	       	android:layout_width="match_parent"
+	       	android:layout_height="match_parent"
+	       	android:orientation="vertical">
+	       	<TextView 
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/main_version_info"
+	        	android:textColor="@android:color/white"
+	        	android:textSize="@dimen/main_listtitle_size"/>
+	       	<include layout="@layout/main_version"/>
+	       	<!-- ListView
+		        android:id="@+id/main_version_list_view"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:cacheColorHint="@android:color/transparent"
+		        android:listSelector="@android:color/transparent"
+		        android:divider="@android:color/transparent"/-->
+	       	<TextView 
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/main_test_info"
+	        	android:textColor="@android:color/white"
+	        	android:textSize="@dimen/main_listtitle_size"
+	        	android:paddingTop="@dimen/main_list_padtop"/>
+	       	<com.rockchip.devicetest.testcase.TestCaseListView
+		        android:id="@+id/main_list_view"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:cacheColorHint="@android:color/transparent"
+		        android:listSelector="@drawable/testcase_list_selector"
+		        android:divider="@android:color/transparent"/>
+	 	</LinearLayout>
+	 	<TextView
+	 	    android:id="@+id/tv_main_result"
+	 	    android:layout_width="600dip"
+	        android:layout_height="480dip"
+	 	    android:layout_gravity="center"
+	 	    android:gravity="center"
+	 	    android:textSize="100sp"
+	 	    android:padding="100dip"
+	 	    android:text="@string/pub_pass"
+	 	    android:textColor="@color/holo_green_light"
+	 	    android:background="@android:color/white"
+	 	    android:visibility="gone"/>
+	 </FrameLayout>
+</LinearLayout>
+

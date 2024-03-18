@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="app_name">DeviceTest</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <!-- Command -->
+    <string name="cmd_wifi">WIFI</string>
+    <string name="cmd_lan">LAN</string>
+    <string name="cmd_sd">SD</string>
+    <string name="cmd_hdmi">HDMI</string>
+    <string name="cmd_cvbs">CVBS</string>
+    <string name="cmd_chnl">左右声道</string>
+    <string name="cmd_led">LED</string>
+    <string name="cmd_cntl">遥控器</string>
+    <string name="cmd_rest">RESET</string>
+    <string name="cmd_usb">USB</string>
+    <string name="cmd_cksn">验号</string>
+    <string name="cmd_mic">麦克风</string>
+    <string name="cmd_bt">蓝牙</string>
+    
+    <!-- Main -->
+    <string name="main_title">生产测试工具</string>
+    <string name="main_version_info">设备信息:</string>
+    <string name="main_version_model">型号</string>
+    <string name="main_version_android">软件版本</string>
+    <string name="main_version_sn">序列号</string>
+    <string name="main_version_mac">Mac地址</string>
+    <string name="main_version_kernel">Kernel版本</string>
+    <string name="main_version_ram">内存</string>
+    <string name="main_version_flash">Flash</string>
+    <string name="main_test_info">测试信息:</string>
+    <string name="main_list_head_title">测试项目</string>
+    <string name="main_list_head_status">测试状态</string>
+    <string name="main_list_head_result">测试结果</string>
+    <string name="main_list_head_send">发送结果</string>
+    <string name="main_list_head_detail">描述</string>
+    
+    <!-- Test -->
+    <string name="test_status_wait">等待测试</string>
+    <string name="test_status_doing">正在测试</string>
+    <string name="test_status_finish">测试完成</string>
+    
+    <!-- Public -->
+    <string name="pub_prompt">提示</string>
+    <string name="pub_pass">PASS</string>
+    <string name="pub_success">成功</string>
+    <string name="pub_fail">失败</string>
+    <string name="pub_exception">未知异常</string>
+    <string name="pub_time_out">测试超时</string>
+    <string name="pub_sure">确定</string>
+    <string name="pub_cancel">取消</string>
+    <string name="pub_unsend">未发送</string>
+    <string name="pub_retest">按[&#160;&#160;<xliff:g id="key">%s</xliff:g>&#160;&#160;]重测</string>
+    
+    <!-- Wifi -->
+    <string name="wifi_connecting_ap">正在连接至<xliff:g>%s</xliff:g>...</string>
+    <string name="wifi_err_scan_fail">扫描失败</string>
+    <string name="wifi_err_ap_not_specified">未指定AP</string>
+    <string name="wifi_err_attach_params">附加参数错误,请配置Factory_Test</string>
+    <string name="wifi_err_cmd_params">命令参数错误</string>
+    <string name="wifi_err_signal_outrange">信号强度不在范围, dBm: <xliff:g>%s</xliff:g></string>
+    <string name="wifi_err_pwd_unspecified">密码未指定</string>
+    <string name="wifi_err_pwd_unsupport">不支持EAP加密方式</string>
+    <string name="wifi_err_connect" formatted="false">Wifi:<xliff:g>%s</xliff:g>,密码:<xliff:g>%s</xliff:g>, 连接失败</string>
+   
+    <!-- sdcard -->
+    <string name="sd_err_unmount">未检测到SD卡设备</string>
+    <string name="sd_err_mkdir">测试目录创建失败</string>
+    <string name="sd_err_mkfile">测试文件创建失败</string>
+    <string name="sd_err_write">写入测试数据失败</string>
+    <string name="sd_err_read">读取测试数据失败</string>
+    <string name="sd_err_match">读取写入不匹配</string>
+    
+    <!-- lan -->
+    <string name="lan_err_enable">以太网开启失败</string>
+    <string name="lan_err_disconnect">以太网未连接</string>
+    <string name="lan_err_ip">无法获取到IP地址</string>
+    <string name="lan_ip_address">IP地址为<xliff:g id="cnt">%s</xliff:g></string>
+    <string name="lan_title">LAN:</string>
+    
+    <!-- hdmi -->
+    <string name="hdmi_title">HDMI测试</string>
+    <string name="hdmi_msg">请确认是否已通过HDMI正确输出显示</string>
+    
+    <!-- cvbs -->
+    <string name="cvbs_title">CVBS测试</string>
+    <string name="cvbs_msg">请确认是否已通过CVBS正确输出显示</string>
+    
+    <!-- reset -->
+    <string name="reset_title">Reset按键测试</string>
+    <string name="reset_msg">请手动按下测试设备的Reset按键</string>
+    
+    <!-- key -->
+    <string name="key_title">按键测试</string>
+    <string name="key_volume_up">Vol+</string>
+    <string name="key_volume_down">Vol-</string>
+    <string name="key_back">Back</string>
+    <string name="key_menu">Menu</string>
+    <string name="key_home">Home</string>
+    <string name="key_up">Up</string>
+    <string name="key_down">Down</string>
+    <string name="key_left">Left</string>
+    <string name="key_right">Right</string>
+    <string name="key_enter">Enter</string>
+    
+    <!-- audio channel -->
+    <string name="audio_title">左右声道测试</string>
+    
+    <!-- LED -->
+    <string name="led_title">LED测试</string>
+    <string name="led_test_msg">请确认灯是否间断亮灭?</string>
+    
+    <!-- usb -->
+    <string name="usb_err_unmount">未检测到USB设备</string>
+    <string name="usb_err_noexist">未找到Usb设备目录</string>
+    <string name="usbhost_title">USBHOST:</string>
+    <string name="usbhost_test_count">[<xliff:g id="cnt">%s</xliff:g>]</string>
+    
+    <!-- Microphone -->
+    <string name="mic_title">麦克风测试</string>
+    <string name="mic_msg">请对着麦克风说话</string>
+    
+    <!-- Bluetooth -->
+    <string name="bt_title">蓝牙测试</string>
+    <string name="bt_start_open">正在打开设备&#8230;</string>
+    <string name="bt_start_discovery">正在发现设备&#8230;</string>
+    <string name="bt_err_noexist">获取蓝牙失败</string>
+    <string name="bt_err_open">打开蓝牙失败</string>
+    <string name="bt_fail_discovery">未发现蓝牙设备</string>
+    <string name="bt_err_discovery">发现蓝牙设备异常</string>
+    <string name="bt_found">BT: <xliff:g id="btname">%s</xliff:g></string>
+    
+    <!-- 老化测试 -->
+    <string name="aging_test_title">Aging Test</string>
+    <string name="cpu_title">CPU:</string>
+    <string name="cpu_model">CPU型号:</string>
+    <string name="cpu_core_num">CPU Cores:</string>
+    <string name="cpu_freq">频率范围:</string>
+    <string name="cpu_curr_freq">Current Freq:</string>
+    <string name="cpu_usage">CPU Loading:</string>
+    <string name="mem_title">Memory:</string>
+    <string name="mem_err_bin">启动测试程序出错</string>
+    <string name="mem_test_count">[<xliff:g id="cnt">%s</xliff:g>]</string>
+    <string name="gpu_title">GPU:</string>
+    <string name="vpu_title">VPU:</string>
+    <string name="vpu_err_video">Test Video not found</string>
+    <string name="vpu_err_play">视频无法播放</string>
+    <string name="aging_test_check">老化测试前, 请先进行功能测试.</string>
+    <string name="aging_test_back">再按<xliff:g>%s</xliff:g>次退出.</string>
+
+    <!-- Result -->
+    <string name="faillists_title">Fail lists:</string>
+    <string name="passlists_title">Pass lists:</string>
+
+    <!-- Result -->
+    <string name="testprocess_title">Test Process:</string>
+
+    
+</resources>

@@ -1,0 +1,36 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AgingTestActivity"
+    android:id="@+id/rl_mem_content">
+	
+    <TextView
+        android:id="@+id/tv_mem_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mem_title"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/aging_item_size"
+        android:contentDescription="@null"/>
+    <TextView
+        android:id="@+id/tv_mem_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/aging_item_size"
+        android:layout_alignParentRight="true"
+        android:contentDescription="@null"/>
+    <TextView
+        android:id="@+id/tv_mem_detail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/aging_item_size"
+        android:layout_below="@id/tv_mem_title"
+        android:layout_alignLeft="@id/tv_mem_title"
+        android:singleLine="false"
+        android:padding="10dip"
+        android:scrollbars="vertical"
+        android:contentDescription="@null"/>
+</RelativeLayout>

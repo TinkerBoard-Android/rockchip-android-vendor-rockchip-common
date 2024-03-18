@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical"
+	android:minHeight="200dip"
+	android:gravity="center">
+	<LinearLayout 
+		android:orientation="horizontal"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center">
+		<Button android:id="@+id/btn_volumeup"
+		    style="@style/TestKeyButtonStyle"
+			android:text="@string/key_volume_up"/>
+		<Button android:id="@+id/btn_volumedown"
+		    style="@style/TestKeyButtonStyle"
+			android:text="@string/key_volume_down"/>
+		<Button android:id="@+id/btn_back"
+			android:text="@string/key_back"
+		    style="@style/TestKeyButtonStyle"/>
+		<Button android:id="@+id/btn_menu"
+			android:text="@string/key_menu"
+		    style="@style/TestKeyButtonStyle"/>
+		<Button android:id="@+id/btn_home"
+			android:text="@string/key_home"
+		    style="@style/TestKeyButtonStyle"/>
+	</LinearLayout>
+	
+	<LinearLayout
+		android:orientation="horizontal" android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:gravity="center_horizontal"
+		android:layout_marginTop="15dip">
+		<Button android:id="@+id/btn_dpadup"
+		    style="@style/TestKeyButtonStyle"
+			android:text="@string/key_up"/>
+		<Button android:id="@+id/btn_dpaddown"
+		    style="@style/TestKeyButtonStyle"
+			android:text="@string/key_down"/>
+		<Button android:id="@+id/btn_dpadleft"
+			android:text="@string/key_left"
+		    style="@style/TestKeyButtonStyle"/>
+		<Button android:id="@+id/btn_dpadright"
+			android:text="@string/key_right"
+		    style="@style/TestKeyButtonStyle"/>
+		<Button android:id="@+id/btn_dpadcenter"
+			android:text="@string/key_enter"
+		    style="@style/TestKeyButtonStyle"/>
+	</LinearLayout>
+</LinearLayout>

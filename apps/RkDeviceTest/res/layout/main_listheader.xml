@@ -1,0 +1,75 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".IndexActivity"
+    android:minHeight="@dimen/main_listitem_height">
+	
+    <TextView
+        android:id="@+id/tv_test_title"
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="0.15"
+        android:text="@string/main_list_head_title"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/main_listitem_size"
+        android:contentDescription="@null"
+        android:gravity="center"
+        android:layout_margin="@dimen/main_listitem_pad"
+        android:background="@drawable/main_list_head_bg"/>
+    
+    <TextView
+        android:id="@+id/tv_test_status"
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="0.15"
+        android:text="@string/main_list_head_status"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/main_listitem_size"
+        android:contentDescription="@null"
+        android:gravity="center"
+        android:layout_margin="@dimen/main_listitem_pad"
+        android:background="@drawable/main_list_head_bg"/>
+    
+    <TextView
+        android:id="@+id/tv_test_result"
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="0.20"
+        android:text="@string/main_list_head_result"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/main_listitem_size"
+        android:contentDescription="@null"
+        android:gravity="center"
+        android:layout_margin="@dimen/main_listitem_pad"
+        android:background="@drawable/main_list_head_bg"/>
+    
+    <TextView
+        android:id="@+id/tv_test_send"
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="0.15"
+        android:text="@string/main_list_head_send"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/main_listitem_size"
+        android:contentDescription="@null"
+        android:gravity="center"
+        android:layout_margin="@dimen/main_listitem_pad"
+        android:background="@drawable/main_list_head_bg"
+        android:visibility="gone"/>
+    
+    
+    <TextView
+        android:id="@+id/tv_test_detail"
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="0.35"
+        android:text="@string/main_list_head_detail"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/main_listitem_size"
+        android:contentDescription="@null"
+        android:gravity="center"
+        android:layout_margin="@dimen/main_listitem_pad"
+        android:background="@drawable/main_list_head_bg"/>
+</LinearLayout>

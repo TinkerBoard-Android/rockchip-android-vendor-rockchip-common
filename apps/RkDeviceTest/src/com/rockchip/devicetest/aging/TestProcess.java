@@ -77,7 +77,6 @@ public class TestProcess extends BaseAgingTest {
 	@Override
 	public void onCreate(Activity activity) {
 
-		LogUtil.d(this, "+++++++++++++++++TTTTTTTTTTTTTTTTTTTTT==================================== Usbhost test cmd: ");
 		mActivity = activity;
 		mParent = (ViewGroup) mActivity.findViewById(R.id.rl_testprocess_content);
 		mTestProcessDetailText = (TextView)mActivity.findViewById(R.id.tv_testprocess_detail);

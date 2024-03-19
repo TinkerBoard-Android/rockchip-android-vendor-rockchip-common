@@ -72,10 +72,10 @@ public class ThermalTest extends BaseAgingTest {
 				if (temp1.equals(10)) {
 					ThermalTestfailcounter.set(0, ThermalTestfailcounter.get(0)+1);
 					onTestProcessFail(functions, "Thermal Sensor1 fail times: "+ ThermalTestfailcounter.get(0));
+					LogUtil.d(this, "Thermal Sensor1 fail times: "+ ThermalTestfailcounter.get(0));
 				} else {
 					ThermalTestfailcounter.set(0, 0);
 					onTestProcessSuccess(functions, "Thermal Sensor1 value: "+(temp1/1000) );
-					ThermalTestfailreport.set(0, 0);
 				}
 			} else {
 				onTestProcessFail(functions, "Thermal Sensor1 keep fail! times: "+ ThermalTestfailcounter.get(0));
@@ -92,11 +92,10 @@ public class ThermalTest extends BaseAgingTest {
                                 if (temp2.equals(10)) {
                                         ThermalTestfailcounter.set(1, ThermalTestfailcounter.get(1)+1);
                                         onTestProcessFail(functions, "Thermal Sensor2 fail times: "+ ThermalTestfailcounter.get(1));
-
+					LogUtil.d(this, "Thermal Sensor2 fail times: "+ ThermalTestfailcounter.get(1));
                                 } else {
 					ThermalTestfailcounter.set(1, 0);
                                         onTestProcessSuccess(functions, "Thermal Sensor2 value: "+(temp2/1000) );
-					ThermalTestfailreport.set(1, 0);
                                 }
                         } else {
                                 onTestProcessFail(functions, "Thermal Sensor2 keep fail! times: "+ ThermalTestfailcounter.get(1));

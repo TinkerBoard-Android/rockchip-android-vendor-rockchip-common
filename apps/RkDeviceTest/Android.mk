@@ -10,5 +10,6 @@ LOCAL_PACKAGE_NAME := RKDeviceTest
 LOCAL_CERTIFICATE := platform
 
 LOCAL_PROGUARD_ENABLED := disabled
+LOCAL_REQUIRED_MODULES := libstlport
 
 include $(BUILD_PACKAGE)

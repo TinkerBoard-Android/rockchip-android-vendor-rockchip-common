@@ -73,7 +73,7 @@
     <Encoders>
         <MediaCodec name="c2.rk.avc.encoder" type="video/avc">
             <Alias name="OMX.rk.video_encoder.avc" />
-            <Limit name="size" min="64x64" max="4096x2160" />
+            <Limit name="size" min="176x144" max="4096x2160" />
             <Limit name="alignment" value="2x2" />
             <Limit name="block-size" value="16x16" />
             <Limit name="block-count" range="1-32768" /> <!-- max 4096x2160 -->
@@ -85,14 +85,14 @@
         </MediaCodec>
         <MediaCodec name="c2.rk.hevc.encoder" type="video/hevc">
             <Alias name="OMX.rk.video_encoder.hevc" />
-            <Limit name="size" min="64x64" max="4096x2160" />
+            <Limit name="size" min="176x144" max="4096x2160" />
             <Limit name="alignment" value="2x2" />
             <Limit name="block-size" value="16x16" />
             <Limit name="block-count" range="1-32768" /> <!-- max 4096x2160 -->
             <Limit name="blocks-per-second" range="1-1966080" />
             <Limit name="bitrate" range="1-20000000" />
             <Limit name="concurrent-instances" max="32" />
-            <Limit name="performance-point-3840x2160" value="60" />
+            <Limit name="performance-point-3840x2160" value="25" />
         </MediaCodec>
     </Encoders>
 </Included>

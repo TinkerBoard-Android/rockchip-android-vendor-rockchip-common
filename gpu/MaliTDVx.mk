@@ -1,6 +1,7 @@
 ifeq ($(strip $(TARGET_BOARD_PLATFORM_GPU)), mali-tDVx)
 PRODUCT_PACKAGES += \
     libGLES_mali \
+    libgpudataproducer \
     vulkan.$(TARGET_BOARD_PLATFORM)
 
 ifneq ($(DEVICE_IS_64BIT_ONLY), true)

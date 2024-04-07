@@ -160,6 +160,18 @@ LOCAL_CHECK_ELF_FILES := false
 LOCAL_MODULE_RELATIVE_PATH := hw
 include $(BUILD_PREBUILT)
 
+# install libs of libgpudataproducer
+include $(CLEAR_VARS)
+LOCAL_MODULE_SUFFIX := .so
+LOCAL_MODULE := libgpudataproducer
+LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+LOCAL_MULTILIB := both
+LOCAL_VENDOR_MODULE := true
+LOCAL_SRC_FILES_$(TARGET_ARCH) := MaliTDVx/lib/$(TARGET_ARCH)/libgpudataproducer.so
+LOCAL_SRC_FILES_$(TARGET_2ND_ARCH) := MaliTDVx/lib/$(TARGET_2ND_ARCH)/libgpudataproducer.so
+LOCAL_CHECK_ELF_FILES := false
+include $(BUILD_PREBUILT)
+
 endif
 
 # ---------------------------- #

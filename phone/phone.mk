@@ -26,12 +26,12 @@ PRODUCT_PACKAGES += \
     chat
 
 PRODUCT_PROPERTY_OVERRIDES +=ro.boot.noril=false
-else
-PRODUCT_PROPERTY_OVERRIDES +=ro.boot.noril=true
+#else
+#PRODUCT_PROPERTY_OVERRIDES +=ro.boot.noril=true
 endif
 
 
 PRODUCT_PROPERTY_OVERRIDES += \
     keyguard.no_require_sim=true \
-    ro.com.android.dataroaming=true \
-	ril.function.dataonly=1
+    ro.com.android.dataroaming=false \
+    ril.function.dataonly=1

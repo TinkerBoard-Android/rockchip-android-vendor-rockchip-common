@@ -12,8 +12,10 @@ PRODUCT_PACKAGES += \
     rockchip_libGLES_mali_libOpenCL.1_symlink32 \
     rockchip_libGLES_mali_libOpenCL.1.1_symlink32
 endif
+ifeq ($(TARGET_ARCH), arm64)
 PRODUCT_PACKAGES += \
     rockchip_libGLES_mali_libOpenCL_symlink64 \
     rockchip_libGLES_mali_libOpenCL.1_symlink64 \
     rockchip_libGLES_mali_libOpenCL.1.1_symlink64
+endif
 endif

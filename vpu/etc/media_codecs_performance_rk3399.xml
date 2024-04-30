@@ -17,12 +17,12 @@
 <MediaCodecs>
     <Encoders>
         <!-- Software Video Encoders-->
-        <MediaCodec name="c2.android.h263.encoder" type="video/3gpp" update="true">
+        <!--MediaCodec name="c2.android.h263.encoder" type="video/3gpp" update="true">
             <Limit name="measured-frame-rate-176x144" range="650-700" />
-        </MediaCodec>
-        <MediaCodec name="c2.android.mpeg4.encoder" type="video/mp4v-es" update="true">
+        </MediaCodec-->
+        <!--MediaCodec name="c2.android.mpeg4.encoder" type="video/mp4v-es" update="true">
             <Limit name="measured-frame-rate-176x144" range="600-650" />
-        </MediaCodec>
+        </MediaCodec-->
         <MediaCodec name="c2.android.avc.encoder" type="video/avc" update="true">
             <Limit name="measured-frame-rate-320x240" range="376-380" />
             <Limit name="measured-frame-rate-720x480" range="149-150" />

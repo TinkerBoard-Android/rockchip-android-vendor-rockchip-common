@@ -19,4 +19,7 @@
     <!-- Cell broacast receiver package name -->
     <string name="config_cell_broadcast_receiver_package" translatable="false">com.google.android.cellbroadcastreceiver</string>
 
+     <!-- Whether Wi-Fi hotspot speed should be shown or not. -->
+     <bool name="config_show_wifi_hotspot_speed">false</bool>
+
 </resources>

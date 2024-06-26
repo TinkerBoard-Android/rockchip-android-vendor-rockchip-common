@@ -1,0 +1,43 @@
+diff --git a/vpu/etc/media_codecs_c2_rk3576.xml b/vpu/etc/media_codecs_c2_rk3576.xml
+index b699f8d7..acd0e3a5 100644
+--- a/vpu/etc/media_codecs_c2_rk3576.xml
++++ b/vpu/etc/media_codecs_c2_rk3576.xml
+@@ -17,10 +17,10 @@
+     <Decoders>
+         <MediaCodec name="c2.rk.avc.decoder" type="video/avc">
+             <Alias name="OMX.rk.video_decoder.avc" />
+-            <Limit name="size" min="64x64" max="4096x2160" />
++            <Limit name="size" min="64x64" max="7680x4320" />
+             <Limit name="alignment" value="2x2" />
+             <Limit name="block-size" value="16x16" />
+-            <Limit name="block-count" range="1-32768" /> <!-- max 4096x2160 -->
++            <Limit name="block-count" range="1-129600" /> <!-- max 4096x2160 -->
+             <Limit name="blocks-per-second" range="1-1966080" />
+             <Limit name="frame-rate" range="1-60" />
+             <Limit name="bitrate" range="1-20000000" />
+@@ -30,10 +30,10 @@
+         </MediaCodec>
+         <MediaCodec name="c2.rk.hevc.decoder" type="video/hevc">
+             <Alias name="OMX.rk.video_decoder.hevc" />
+-            <Limit name="size" min="64x64" max="4096x2160" />
++            <Limit name="size" min="64x64" max="7680x4320" />
+             <Limit name="alignment" value="2x2" />
+             <Limit name="block-size" value="16x16" />
+-            <Limit name="block-count" range="1-32768" /> <!-- max 4096x2160 -->
++            <Limit name="block-count" range="1-129600" /> <!-- max 4096x2160 -->
+             <Limit name="blocks-per-second" range="1-1966080" />
+             <Limit name="frame-rate" range="1-60" />
+             <Limit name="bitrate" range="1-20000000" />
+@@ -43,10 +43,10 @@
+         </MediaCodec>
+         <MediaCodec name="c2.rk.vp9.decoder" type="video/x-vnd.on2.vp9">
+             <Alias name="OMX.rk.video_decoder.vp9" />
+-            <Limit name="size" min="176x144" max="4096x2160" />
++            <Limit name="size" min="176x144" max="7680x4320" />
+             <Limit name="alignment" value="2x2" />
+             <Limit name="block-size" value="16x16" />
+-            <Limit name="block-count" range="1-32768" /> <!-- max 4096x2160 -->
++            <Limit name="block-count" range="1-129600" /> <!-- max 4096x2160 -->
+             <Limit name="blocks-per-second" range="1-1966080" />
+             <Limit name="frame-rate" range="1-60" />
+             <Limit name="bitrate" range="1-20000000" />

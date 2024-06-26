@@ -19,3 +19,21 @@ cc_prebuilt_binary {
     },
     check_elf_files: false,
 }
+
+cc_prebuilt_binary {
+    name: "lspci",
+    vendor_available: true,
+    recovery_available: true,
+    arch: {
+        arm64: {
+            srcs: ["bin/arm64/lspci"],
+        },
+        arm: {
+            srcs: ["bin/arm/lspci"],
+        },
+    },
+    strip: {
+        none: true,
+    },
+    check_elf_files: false,
+}

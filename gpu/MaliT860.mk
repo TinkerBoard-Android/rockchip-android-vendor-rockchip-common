@@ -4,12 +4,6 @@
 
 ifeq ($(strip $(TARGET_BOARD_PLATFORM_GPU)), mali-t860)
 
-ifeq ($(strip $(BOARD_BUILD_GKI)), true)
-# Move to Android.mk
-BOARD_VENDOR_KERNEL_MODULES += \
-	vendor/rockchip/common/gpu/MaliT860/lib/modules/midgard_kbase.ko
-endif
-
 PRODUCT_PACKAGES += \
 	libGLES_mali
 
@@ -33,8 +27,10 @@ PRODUCT_PACKAGES += \
     rockchip_libGLES_mali_libOpenCL.1_symlink32 \
     rockchip_libGLES_mali_libOpenCL.1.1_symlink32
 endif
+ifeq ($(TARGET_ARCH), arm64)
 PRODUCT_PACKAGES += \
     rockchip_libGLES_mali_libOpenCL_symlink64 \
     rockchip_libGLES_mali_libOpenCL.1_symlink64 \
     rockchip_libGLES_mali_libOpenCL.1.1_symlink64
+endif
 endif

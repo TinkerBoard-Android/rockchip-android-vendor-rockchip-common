@@ -34,16 +34,6 @@
             <Limit name="bitrate" range="1-5000000" />
             <Feature name="adaptive-playback" />
         </MediaCodec>
-        <MediaCodec name="c2.android.vp8.decoder" type="video/x-vnd.on2.vp8" update="true">
-            <Alias name="OMX.google.vp8.decoder" />
-            <Limit name="alignment" value="2x2" />
-            <Limit name="block-size" value="16x16" />
-            <Limit name="size" min="2x2" max="1280x720" />
-            <Limit name="block-count" range="1-3600" /> <!-- max 1280x720 -->
-            <Limit name="blocks-per-second" range="1-244800" />
-            <Limit name="bitrate" range="1-10000000" />
-            <Feature name="adaptive-playback" />
-        </MediaCodec>
         <MediaCodec name="c2.android.vp9.decoder" type="video/x-vnd.on2.vp9" update="true">
             <Alias name="OMX.google.vp9.decoder" />
             <Limit name="alignment" value="2x2" />

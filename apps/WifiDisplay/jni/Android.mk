@@ -28,12 +28,15 @@ LOCAL_C_INCLUDES:= \
         $(TOP)/frameworks/native/include/media/hardware \
         $(TOP)/frameworks/base/core/jni/include  \
 
-ifeq (1, $(strip $(shell expr $(PLATFORM_VERSION) \<= 12)))
+ifeq (1, $(strip $(shell expr $(PLATFORM_VERSION) \>= 14)))
 LOCAL_C_INCLUDES += \
-	$(TOP)/frameworks/av/media/libstagefright/mpeg2ts
+	$(TOP)/frameworks/av/media/module/mpeg2ts/include/mpeg2ts/
+else ifeq (1, $(strip $(shell expr $(PLATFORM_VERSION) \>= 12)))
+LOCAL_C_INCLUDES += \
+        $(TOP)/frameworks/av/media/libstagefright/mpeg2ts/include/mpeg2ts
 else
 LOCAL_C_INCLUDES += \
-	$(TOP)/frameworks/av/media/libstagefright/mpeg2ts/include/mpeg2ts
+        $(TOP)/frameworks/av/media/libstagefright/mpeg2ts
 endif
 
 LOCAL_SHARED_LIBRARIES:= \

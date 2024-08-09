@@ -961,7 +961,12 @@ void WifiDisplaySink::onGetParameterRequest(
 	bool find = data->findString("Session",&msession);
     if(!find)
     {
-#if PLATFORM_SDK_VERSION >= 29
+#if (PLATFORM_VERSION >= 14)
+        const auto ids = SurfaceComposerClient::getPhysicalDisplayIds();
+        CHECK(!ids.empty());
+        const auto display = SurfaceComposerClient::getPhysicalDisplayToken(ids.front());
+        CHECK(display != nullptr);
+#elif (PLATFORM_VERSION >= 10)
 	  sp<IBinder> display(SurfaceComposerClient::getInternalDisplayToken()); 
 #else
           sp<IBinder> display(SurfaceComposerClient::getBuiltInDisplay(

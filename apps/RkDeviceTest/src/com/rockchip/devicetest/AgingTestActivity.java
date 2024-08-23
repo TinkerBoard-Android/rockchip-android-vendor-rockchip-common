@@ -15,6 +15,7 @@ package com.rockchip.devicetest;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Arrays;
 
 import com.rockchip.devicetest.aging.AgingCallback;
 import com.rockchip.devicetest.aging.AgingConfig;
@@ -50,7 +51,6 @@ import android.os.Environment;
 import android.os.Handler;
 import android.widget.TextView;
 import android.widget.Toast;
-
 
 public class AgingTestActivity extends BaseActivity implements AgingCallback {
 
@@ -96,7 +96,10 @@ public class AgingTestActivity extends BaseActivity implements AgingCallback {
 		//read config
 		InputStream in = null;
 		try{
-			in = getAssets().open(ResourceConstants.AGING_CONFIG_FILE);
+			if (Arrays.asList(getAssets().list("")).contains(ResourceConstants.AGING_CONFIG_PRODUCT_FILE))
+				in = getAssets().open(ResourceConstants.AGING_CONFIG_PRODUCT_FILE);
+			else
+				in = getAssets().open(ResourceConstants.AGING_CONFIG_FILE);
 			mIniConfig = new IniEditor();
 			mIniConfig.load(in);
 		}catch(Exception e){

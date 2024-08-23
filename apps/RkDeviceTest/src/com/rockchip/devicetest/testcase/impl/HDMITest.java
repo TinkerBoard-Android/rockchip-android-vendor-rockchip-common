@@ -15,6 +15,7 @@ package com.rockchip.devicetest.testcase.impl;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Arrays;
 
 import android.app.AlertDialog;
 import android.content.Context;
@@ -137,7 +138,10 @@ public class HDMITest extends BaseTestCase {
 	public File getTestVideoFile(){
 		InputStream in = null;
 		try{
-			in = mContext.getAssets().open(ResourceConstants.AGING_CONFIG_FILE);
+			if (Arrays.asList(mContext.getAssets().list("")).contains(ResourceConstants.AGING_CONFIG_PRODUCT_FILE))
+				in = mContext.getAssets().open(ResourceConstants.AGING_CONFIG_PRODUCT_FILE);
+			else
+				in = mContext.getAssets().open(ResourceConstants.AGING_CONFIG_FILE);
 			IniEditor agingConfig = new IniEditor();
 			agingConfig.load(in);
 			String mediaFile = agingConfig.get(AgingType.VPU.getType(), "testvideo");

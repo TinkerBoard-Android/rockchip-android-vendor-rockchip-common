@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <SurfaceView
+        android:id="@+id/camera_preview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <Button
+        android:id="@+id/camera_switch_btn"
+        android:layout_width="100dip"
+        android:layout_height="60dip"
+        android:layout_gravity="top|right"
+        android:text="@string/camera_switch"
+        android:textColor="#ffffff00"
+        android:textSize="20dip"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/nocamera"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:text="@string/nocamera"
+        android:textColor="#ffff0000"
+        android:textSize="20dip"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+</FrameLayout>

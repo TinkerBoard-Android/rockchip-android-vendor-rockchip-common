@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="log_switch_entries">
+        <item>Turn on logs</item>
+        <item>Turn off logs</item>
+    </string-array>
+    <string-array name="log_switch_values">
+        <item>1</item>
+        <item>0</item>
+    </string-array>
+    <string-array name="log_level_entries">
+        <item>VERBOSE</item>
+        <item>DEBUG</item>
+        <item>INFO</item>
+        <item>WARN</item>
+        <item>ERROR</item>
+        <item>FATAL</item>
+    </string-array>
+    <string-array name="log_level_values">
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+    <string-array name="log_day_entries">
+        <item>1 day</item>
+        <item>2 days</item>
+        <item>3 days</item>
+        <item>4 days</item>
+        <item>5 days</item>
+        <item>6 days</item>
+        <item>7 days</item>
+    </string-array>
+    <string-array name="log_day_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+    
+    <string-array name="update_time_labels">
+        <item>100毫秒</item>
+        <item>200毫秒</item>
+        <item>1秒</item>
+        <item>30秒</item>
+        <item>1分钟</item>
+        <item>5分钟</item>
+        <item>15分钟</item>
+        <item>30分钟</item>
+        <item>45分钟</item>
+        <item>1小时</item>
+    </string-array>
+
+    <integer-array name="update_time_values">
+        <item>100</item>
+        <item>200</item>
+        <item>1000</item>
+        <item>30000</item>
+        <item>60000</item>
+        <item>300000</item>
+        <item>900000</item>
+        <item>1800000</item>
+        <item>2700000</item>
+        <item>3600000</item>
+    </integer-array>
+    
+    <string-array name="update_timeddr_labels">
+        <item>1秒</item>
+        <item>30秒</item>
+        <item>1分钟</item>
+        <item>5分钟</item>
+        <item>15分钟</item>
+        <item>30分钟</item>
+        <item>45分钟</item>
+        <item>1小时</item>
+        <item>3小时</item>
+        <item>6小时</item>
+        <item>12小时</item>
+        <item>24小时</item>
+    </string-array>
+
+    <integer-array name="update_timeddr_values">
+        <item>1000</item>
+        <item>30000</item>
+        <item>60000</item>
+        <item>300000</item>
+        <item>900000</item>
+        <item>1800000</item>
+        <item>2700000</item>
+        <item>3600000</item>
+        <item>10800000</item>
+        <item>21600000</item>
+        <item>43200000</item>
+        <item>86400000</item>
+    </integer-array>
+
+    <string-array name="update_ddr_labels">
+        <item>240M</item>
+        <item>300M</item>
+        <item>330M</item>
+        <item>360M</item>
+        <item>400M</item>
+        <item>460M</item>
+        <item>500M</item>
+        <item>528M</item>
+    </string-array>
+    <string-array name="update_ddr_values">
+        <item>c:240M</item>
+        <item>c:300M</item>
+        <item>c:330M</item>
+        <item>c:360M</item>
+        <item>c:400M</item>
+        <item>c:460M</item>
+        <item>c:500M</item>
+        <item>c:528M</item>
+    </string-array>
+    
+    
+    
+
+</resources>

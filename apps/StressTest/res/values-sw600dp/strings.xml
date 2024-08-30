@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--for dpi160,1024x600 -->
+    <string name="modepositions_x">973</string>
+    <string name="modepositions_y">406</string>
+    
+    <string name="modeVideo_x">889</string>
+    <string name="modeVideo_y">411</string>
+    
+    <string name="modePicture_x">973</string>
+    <string name="modePicture_y">406</string>
+    
+    <string name="touch_x">977</string>
+    <string name="touch_y">276</string>
+ 
+</resources>

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="app_name">Stresstest for rockchip</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="btn_set">Set</string>
+    <string name="max_test_time">Max test times(0 means not limit):</string>
+    <string name="already_test_time">Already test times:</string>
+    <string name="config">------Config------</string>
+    <string name="start_confirm_dialog_msg">Are you sure to start test ? It will start in <xliff:g id="number">%d</xliff:g> seconds.</string>
+    <string name="start_test_countdown">Test will start after : </string>
+
+	<!-- reboot test -->
+    <string name="reboot_title">Reboot Test</string>
+    <string name="btn_start">Start</string>
+    <string name="btn_stop">Stop</string>
+    <string name="btn_exit">Exit</string>
+    <string name="btn_setting">Setting Max Times</string>
+    <string name="btn_setting_delay">Set DelayTime</string>
+    <string name="btn_clear">Clear Setting</string>
+    <string name="reboot_dialog_msg">Are you sure to start reboot test ? It will start in <xliff:g id="number">%d</xliff:g> seconds.</string>
+    <string name="reboot_dialog_title">Reboot</string>
+    <string name="dialog_ok">Ok</string>
+    <string name="dialog_cancel">Cancel</string>
+    <string name="reboot_countdown">System will reboot after : </string>
+     <string name="reboot_time">Already reboot times: </string>
+    <string name="reboot_maxtime">Reboot max times: </string>
+    <string name="not_setting">not setting</string>
+    <string name="opening_wifi">wifi is opening...</string>
+    <string name="open_wifi_timeout">Open wifi timeout</string>
+    <string name="scan_wifi_timeout">Scan wifi timeout</string>
+    <string name="scan_wifi_list_empty">the wifi list is empty</string>
+    <string name="open_bt_failed">Open bt failed</string>
+    <string name="scanning_bt">Scanning bt device...</string>
+    <string name="scan_bt_success">Found bt device success</string>
+    <string name="scan_bt_empty">Found not bt device</string>
+    <string name="open_mobile_data">Waiting Mobile data...</string>
+    <string name="checking_mobile_data">Checking Mobile data...</string>
+    <string name="network_connect_success">Network is connected</string>
+    <string name="network_connect_failed">Network unreached</string>
+    
+    <string name="check_sd_state">Reboot and check sd card state.</string>
+    <string name="check_sd_result">Sdcard check:</string>
+    <string name="check_sys_state">Auto check system </string>
+    <string name="check_wifi_bt_state">Auto check wifi and bt</string>
+    <string name="check_mobile_data_state">Auto check mobile data</string>
+    
+    <!-- sleep test -->
+    <string name="sleep_title">Sleep Test</string>
+    <string name="wake_string">Wake up time (s):</string>
+    <string name="wake_set">Set</string>
+    <string name="interval_string">Interval time (s):</string>
+    <string name="interval_set">Set</string>
+    <string name="dialog_title">Setting</string>
+    <string name="maxcount_string"> Max Test Counts: </string>
+    <string name="nowcount_string"> Now Test Counts: </string>
+    <string name="max_set">Set</string>
+	
+    <!-- open camera test -->
+    <string name="camera_title">Camera Test</string>
+    <string name="use_system">Select to Use System Camera Launcher.</string>
+    <string name="test_select">Select test</string>
+    <string name="camera_test_open">Open/Close test</string>
+    <string name="camera_test_take_photo">Take photo test</string>
+    <string name="camera_test_switch_mode">Switch mode test</string>
+    <string name="camera_select_camera">Select Camera</string>
+    <string name="front_camera">Front camera</string>
+    <string name="back_camera">Back camera</string>
+    <string name="camera_select_mode">Select Mode</string>
+    <string name="picture_camera">Picture Mode</string>
+    <string name="video_camera">Video Mode</string>
+    <string name="camera_set">Set</string>
+    <string name="camera_switch">Switch</string>
+	<string name="nocamera">No Camera</string>
+    
+    <!-- video test -->
+    <string name="video_title">Video Test</string>
+    <string name="video_path">video path :</string>
+    <string name="max_time">Max test time is (0 means not limit):</string>
+    <string name="system_video">Select System Video for Test</string> 
+    <string name="select_video">Select Video</string> 
+    <string name="delete_video">Delete Video</string> 
+    <string name="error_video">Please Select Video!</string>
+    
+    <!-- wifi open test -->
+    <string name="wifi_open_test">Wifi Open Test</string>
+    <string name="wifi_maxtime">Wifi Max Test Times:</string>
+
+    <!-- data open test -->
+    <string name="data_open_test">Data Open Test</string>
+    <string name="data_maxtime">Data Max Test Times:</string>
+
+    <!-- bt open test -->
+    <string name="bt_open_test">Bluetooth Open Test</string>
+    <string name="bt_maxtime">Bluetooth Max Test Time:</string>
+    
+    <!-- fly mode test -->
+    <string name="fly_mode_test">Fly Mode Open Test</string>
+    <string name="flymode_maxtime">Flymode Max Test Time:</string>
+    <!-- compare -->
+    <string name="server_title">Server</string>
+    <string name="client_title">Client</string>
+    <string name="compare_pro_title">Waitting...</string>
+    <string name="pro_msg_send_sn">Sending SN file to server...</string>
+    <string name="pro_msg_get_ini">Getting INI file from server...</string>
+    <string name="dialog_msg_network_err">Network err! Please check the network and retry!</string>
+    <string name="dialog_msg_unknown_err">Unknown err! Please check the log!</string>
+    <string name="dialog_msg_ini_timeout">Get ini from server timeout!(10s)</string>
+    <string name="dialog_btn_retry">Retry</string>
+    
+    <string name="runin_title">Runin Test</string>
+    <!-- sms send test -->
+    <string name="sms_send_title">Sms Send Test</string>
+    <string name="sms_send_num_tv">Phone Num</string>
+    <string name="sms_send_content_tv">Sms Content</string>
+    <string name="sms_send_count_tv">Sms Send Max Count</string>
+    <!-- call num test -->
+    <string name="call_num_title">Call Num Test:</string>
+    <string name="call_num_tv">Call number:</string>
+    <string name="call_num_count_tv">Call Num Max Count:</string>
+    
+    <string name="log_setting">Log Setting</string>
+    <string name="log_switch_title">Log Switch</string>
+    <string name="log_switch_and_level_title">Log Setting</string>
+    <string name="log_day_title">Log Day</string>
+    <string name="log_switch_default_value">0</string>
+    <string name="log_day_default_value">1</string>
+    <string name="log_level_default_value">3</string>
+    
+    <!-- recovery test -->
+    <string name="recovery_title">Recovery Test</string>
+    <string name="erase_sd">Erase SD</string>
+    <string name="erase_flash">Erase Flash</string>
+    <string name="wipe_all">Wipe All (Recovery cmd)</string>
+    <string name="warning_tf">Make sure insert TF card already before!</string>
+
+    <!-- dvfs test -->
+    <string name="dvfs_title">DVFS Test</string>
+
+    <!-- arm freq test -->
+    <string name="app_title">Arm/Gpu变频测试工具</string>
+    <string name="fixed_frequency_text">固定Arm测试</string>
+    <string name="random_frequency_text">随机Arm测试</string>
+    <string name="cur_random_frequency">当前频点：</string>
+    <string name="set_fixed_frequency">设置频点</string>
+    <string name="set_random_frequency">设置间隔时间</string>
+    <string name="random_gpufreq_text">随机Gpu测试</string>
+    <string name="cur_random_gpufreq">当前等级：</string>
+    <string name="set_random_gpufreq">设置间隔时间</string>
+    <string name="fixed_ddrfreq_text">变频DDR测试</string>
+    <string name="set_ddr_frequency">设置间隔时间</string>
+    <string name="cur_ddr_frequency">当前频率：</string>
+    <string name="start_test">开始测试</string>
+    <string name="end_test">结束测试</string>
+    <string name="exit_text">退出</string>
+    <string name="not_select_alert">"目前正在进行%1$s，不能选择，请先结束测试"</string>
+    <string name="select_mode_alert">请选择测试方式</string>
+    <string name="no_test_msg">目前正在进行%1$s，确认要退出测试吗？</string>
+    <string name="exit_msg">目前正在进行%1$s，确认要结束测试退出应用吗？</string>
+    <string name="ok">确定</string>
+    <string name="cancel">取消</string>
+    <string name="alert">提示</string>
+    <string name="close">关闭</string>
+    <string name="factory_reset_excep">恢复出厂测试异常</string>
+    <string name="panic_reboot">检测到本次为panic重启，详情请看last_log</string>
+    <string name="watchdog_reboot">检测到本次为watchdog重启，详情请看last_log</string>
+    <string name="system_excep">检测到系统异常，详情请看logcat</string>
+
+    <!--
+         <string name="alert_message">scaling_governor和scaling_setspeed节点无system用户写权限，请按如下步骤操作:\n
+                                 1、usb连接电脑，控制台adb shell连接电脑;\n
+                                 2、运行cd /sys/devices/system/cpu/cpu0/cpufreq/;\n
+                                 3、chmod 777 scaling_governor scaling_setspeed;\n
+                                 4、可以进行arm频点测试了.</string>
+
+    -->
+    <string name="alert_message">scaling_governor和scaling_setspeed节点无system用户写权限，请按如下步骤操作:\n
+                                 1、打开device/rockchip/rksdk/init.rk30board.rc文件;\n
+                                 2、在on boot下添加以下几句：\n
+                                    chown system system /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor\n
+                                    chmod 0664 /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor\n
+                                    chown system system /sys/devices/system/cpu/cpu0/cpufreq/scaling_setspeed\n
+                                    chmod 0664 /sys/devices/system/cpu/cpu0/cpufreq/scaling_setspeed\n
+                                 3、编译固件，重新烧写boot.img\n
+                                 4、测试工具可以使用了。</string>
+                                 
+    
+    <!-- Board id switch test -->
+    <string name="boardid_title">Boardid Switch Test</string>
+    <string name="boardid_default">Boardid:</string>
+    <string name="btn_get">Get</string>
+    
+    <string name="modepositions_x">721</string>
+    <string name="modepositions_y">343</string>
+    
+    <string name="modeVideo_x">643</string>
+    <string name="modeVideo_y">345</string>
+    
+    <string name="modePicture_x">721</string>
+    <string name="modePicture_y">345</string>
+    
+    <string name="touch_x">713</string>
+    <string name="touch_y">242</string>
+    
+    <string name="freq_width">500</string>
+	<string name="freq_high">300</string>
+    <string name="camera_width">250</string>
+    <string name="camera_high">130</string>
+    <string name="video_width">250</string>
+    <string name="video_high">130</string>
+
+    <string name="delayed_at_least_msg">The delayed time is at least<xliff:g id="number">%d</xliff:g> seconds.</string>
+</resources>

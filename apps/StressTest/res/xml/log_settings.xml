@@ -1,0 +1,14 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListPreference
+            android:key="log_switch"
+            android:title="@string/log_switch_title"
+            android:entries="@array/log_switch_entries"
+            android:entryValues="@array/log_switch_values"
+            android:defaultValue="@string/log_switch_default_value" />
+    <ListPreference 
+            android:key="log_day" 
+            android:title="@string/log_day_title"
+		    android:entries="@array/log_day_entries" 
+		    android:entryValues="@array/log_day_values"
+		    android:defaultValue="@string/log_day_default_value" />          
+</PreferenceScreen>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <VideoView
+        android:id="@+id/video_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+    
+    <Button
+        android:id="@+id/stop_btn"
+        android:layout_width="100dip"
+        android:layout_height="60dip"
+        android:layout_gravity="top|right"
+        android:text="@string/btn_stop"
+        android:textColor="#ffffff00"
+        android:textSize="20dip"
+        android:textStyle="bold" />
+
+</RelativeLayout>

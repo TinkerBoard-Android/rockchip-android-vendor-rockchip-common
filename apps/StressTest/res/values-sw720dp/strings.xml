@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 1024x768 -->
+    <string name="modepositions_x">973</string>
+    <string name="modepositions_y">495</string>
+    
+    <string name="modeVideo_x">893</string>
+    <string name="modeVideo_y">498</string>
+    
+    <string name="modePicture_x">973</string>
+    <string name="modePicture_y">498</string>
+    
+    <string name="touch_x">970</string>
+    <string name="touch_y">364</string>
+<string name="freq_width">550</string>
+          <string name="freq_high">420</string>
+               <string name="camera_width">250</string>
+                    <string name="camera_high">140</string>
+                         <string name="video_width">250</string>
+	     <string name="video_high">140</string>  
+</resources>
